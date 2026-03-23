@@ -872,7 +872,7 @@ body.woocommerce-order-received .woocommerce {
         });
     }
 
-    // ─── Step 1: "DODAJ" → add to order, then show grid ───
+    // ─── Step 1: "PRIDAŤ" → add to order, then show grid ───
     var addBtn = document.getElementById('ty-btn-add');
     if (addBtn) {
         addBtn.addEventListener('click', function() {
@@ -942,7 +942,7 @@ body.woocommerce-order-received .woocommerce {
         // "Ne želim" — close all, show summary without upsells
         document.getElementById('ty-grid-close').addEventListener('click', closeAll);
 
-        // "DODAJ K NARUDŽBI" — add all selected items, then close
+        // "PRIDAŤ K OBJEDNÁVKE" — add all selected items, then close
         var gridAddAll = document.getElementById('ty-grid-add-all');
         if (gridAddAll) {
             gridAddAll.addEventListener('click', function() {
