@@ -51,7 +51,7 @@ if ( $upsell_is_majice ) {
     );
     $upsell_title_text = 'Pridajte tričká teraz – 50% zľava';
 } else {
-    $upsell_product_id = 2781; // Čierne boxerky
+    $upsell_product_id = 3186; // Čierne boxerky
     $upsell_name       = 'Čierne boxerky';
     $upsell_qty_prices = array( 1 => 7.99, 3 => 19.99, 5 => 29.99 );
     $upsell_qty_names  = array( 1 => '1x Crne Bokserice', 3 => '3x Crne Bokserice', 5 => '5x Crnih Bokseric' );

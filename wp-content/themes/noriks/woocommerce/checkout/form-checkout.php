@@ -67,7 +67,7 @@ if ( WC()->cart->is_empty() ) return;
 
         <!-- VAT -->
         <div id="hs-vat-tax-checkout-prompt">
-          <span class="tax-and-vat-checkout-claims">Žiadne ďalšie colné poplatky</span>
+          <span class="tax-and-vat-checkout-claims">Žiadne dodatočné náklady na colné konanie</span>
           <span class="tax-and-vat-checkout-claims">DPH je zahrnutá v cene</span>
         </div>
 
