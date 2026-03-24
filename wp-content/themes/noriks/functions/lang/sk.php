@@ -21,3 +21,24 @@ function translate_labels_sk( $translated_text, $text, $domain ) {
     if ( isset( $translations[$text] ) ) return $translations[$text];
     return $translated_text;
 }
+
+// SK: Override WC default placeholders
+add_filter( 'gettext', 'noriks_sk_placeholders', 20, 3 );
+function noriks_sk_placeholders( $translated, $text, $domain ) {
+    $t = array(
+        'House number and street name' => 'Ulica',
+        'Apartment, suite, unit, etc.' => 'Číslo domu',
+        'Apartment, suite, unit, etc. (optional)' => 'Číslo domu',
+        'Street address' => 'Ulica',
+        'Town / City' => 'Mesto',
+        'Postcode / ZIP' => 'PSČ',
+        'Phone' => 'Telefón',
+        'Email address' => 'E-mailová adresa',
+        'First name' => 'Krstné meno',
+        'Last name' => 'Priezvisko',
+        'Place order' => 'Objednať',
+        'Country / Region' => 'Krajina',
+        '(optional)' => '(nepovinné)',
+    );
+    return isset( $t[$text] ) ? $t[$text] : $translated;
+}
