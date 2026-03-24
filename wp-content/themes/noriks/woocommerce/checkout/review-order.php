@@ -31,7 +31,7 @@ defined( 'ABSPATH' ) || exit;
 
       <!-- Shipping -->
       <div class="c--darkgray review-section-container review-addons shipping_order_review">
-        <div class="review-addons-title"><div>Kuriérska služba</div></div>
+        <div class="review-addons-title"><div>Doručenie - SPS</div></div>
                 <div class="review-addons-price review-sale-price" id="noriks-shipping-price"><?php
           $shipping_total = (float) WC()->cart->get_shipping_total();
           if ( $shipping_total > 0 ) {
