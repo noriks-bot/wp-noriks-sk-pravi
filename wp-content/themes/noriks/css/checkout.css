@@ -261,7 +261,7 @@ body.woocommerce-checkout #payment .payment_box fieldset {
   line-height: 1.4 !important;
 }
 #billing_phone_field::before {
-  content: 'Pre pomoc s doručením' !important;
+  content: 'Určené na pomoc pri doručovaní' !important;
   position: absolute !important;
   right: 0 !important;
   bottom: -20px !important;
