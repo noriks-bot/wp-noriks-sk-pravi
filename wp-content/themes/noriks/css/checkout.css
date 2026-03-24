@@ -407,3 +407,13 @@ body.woocommerce-checkout .noriks-order-summary .review-product-info div {
 
 /* More space between total and Naruči button */
 .noriks-order-summary .vigo-checkout-total__sum { margin-bottom: 10px !important; }
+
+/* SK: Ulica + Číslo domu full width on desktop */
+@media (min-width: 576px) {
+  p#billing_address_1_field,
+  p#billing_address_2_field {
+    float: none !important;
+    width: 100% !important;
+    clear: both !important;
+  }
+}

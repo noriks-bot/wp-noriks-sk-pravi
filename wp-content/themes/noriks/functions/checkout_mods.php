@@ -460,8 +460,8 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     // phone/email priorities already set above (10/20)
 
     // Labels, placeholders, required
-    $fields['billing']['billing_first_name']['label'] = 'Meno';
-    $fields['billing']['billing_first_name']['placeholder'] = 'Meno';
+    $fields['billing']['billing_first_name']['label'] = 'Krstné meno';
+    $fields['billing']['billing_first_name']['placeholder'] = 'Krstné meno';
     $fields['billing']['billing_last_name']['label'] = 'Priezvisko';
     $fields['billing']['billing_last_name']['placeholder'] = 'Priezvisko';
     $fields['billing']['billing_address_1']['label'] = 'Ulica';
