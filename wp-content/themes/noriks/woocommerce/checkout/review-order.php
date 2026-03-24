@@ -67,7 +67,7 @@ defined( 'ABSPATH' ) || exit;
   </div>
   <div class="vigo-checkout-total__sum flex flex--middle border_price">
     <div class="flex__item f--l">
-      Celkom: <span class="f--bold price_total_wrapper"><?php wc_cart_totals_order_total_html(); ?></span>
+      Celková suma: <span class="f--bold price_total_wrapper"><?php wc_cart_totals_order_total_html(); ?></span>
     </div>
   </div>
 </div>
