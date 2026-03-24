@@ -472,7 +472,7 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_postcode']['label'] = 'PSČ';
     $fields['billing']['billing_postcode']['placeholder'] = 'PSČ';
     $fields['billing']['billing_city']['label'] = 'Mesto';
-    $fields['billing']['billing_city']['placeholder'] = 'Vyberte mesto';
+    $fields['billing']['billing_city']['placeholder'] = 'Mesto';
     $fields['billing']['billing_phone']['label'] = 'Telefón';
     $fields['billing']['billing_phone']['placeholder'] = 'Číslo mobilného telefónu';
     $fields['billing']['billing_phone']['required'] = true;
