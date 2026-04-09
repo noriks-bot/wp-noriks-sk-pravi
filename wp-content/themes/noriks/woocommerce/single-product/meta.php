@@ -482,14 +482,14 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
                   
     <?php elseif(  $is_mixed_bundle ): ?>
     
-     <img src="https://noriks.com/sk/wp-content/uploads/2026/02/noriks_tablica_sk.jpg">
+     <img src="https://noriks.com/sk/wp-content/uploads/2026/04/sk_majice.jpeg">
      
         <img src="https://noriks.com/sk/wp-content/uploads/2026/02/boxers_size_sk.png">
         
           <?php else: ?>
       
       
-       <img src="https://noriks.com/sk/wp-content/uploads/2026/02/noriks_tablica_sk.jpg">
+       <img src="https://noriks.com/sk/wp-content/uploads/2026/04/sk_majice.jpeg">
         
             
         <?php endif; ?>
