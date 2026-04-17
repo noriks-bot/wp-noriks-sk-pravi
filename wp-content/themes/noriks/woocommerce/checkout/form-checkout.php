@@ -31,6 +31,7 @@ if ( WC()->cart->is_empty() ) return;
       <div class="woocommerce-additional-fields">
 
         <!-- SHIPPING -->
+        <?php WC()->cart->calculate_totals(); ?>
         <div id="custom_shipping">
           <h3>Doručenie</h3>
           <ul class="shipping_method_custom">
@@ -44,16 +45,7 @@ if ( WC()->cart->is_empty() ) return;
                     <strong class="hs-custom-date" id="js-delivery-dates"></strong>
                   </div>
                   <div class="inner-wrapper-img">
-                    <span class="shipping_method_delivery_price tag tag--red">
-                      <?php
-                        $ship = (float) WC()->cart->get_shipping_total();
-                        if ( $ship > 0 ) {
-                          echo wc_price( $ship );
-                        } else {
-                          echo 'Zadarmo';
-                        }
-                      ?>
-                    </span>
+                    <span class="shipping_method_delivery_price tag tag--red"><?php $ship = (float) WC()->cart->get_shipping_total(); echo $ship > 0 ? wc_price($ship) : 'Zadarmo'; ?></span>
                     <span class="delivery_img"><img decoding="async" class="slovenska_posta standard" src="<?php echo get_template_directory_uri(); ?>/img/sps-logo.svg"/></span>
                   </div>
                 </div>
