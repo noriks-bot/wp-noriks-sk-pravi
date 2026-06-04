@@ -371,14 +371,21 @@ function gck_register_orto_countdown_fields() {
     ) );
 }
 
-function gck_sk_majice_phrase( int $n, bool $free = false ) : string {
-    $m100 = $n % 100;
-    if ( $n === 1 ) {
-        $noun = 'tričko';
-    } elseif ( in_array( $n % 10, array( 2, 3, 4 ), true ) && ! in_array( $m100, array( 12, 13, 14 ), true ) ) {
-        $noun = 'trička';
+function gck_sk_majice_phrase( int $n, bool $free = false, string $type = 'majica' ) : string {
+    $m100  = $n % 100;
+    $is1   = ( $n === 1 );
+    $is234 = ( in_array( $n % 10, array( 2, 3, 4 ), true ) && ! in_array( $m100, array( 12, 13, 14 ), true ) );
+
+    if ( $type === 'bokserica' ) {
+        $noun = ( $is1 || $is234 ) ? 'boxerky' : 'boxeriek';
     } else {
-        $noun = 'tričiek';
+        if ( $is1 ) {
+            $noun = 'tričko';
+        } elseif ( $is234 ) {
+            $noun = 'trička';
+        } else {
+            $noun = 'tričiek';
+        }
     }
     return $free ? ( $noun . ' zadarmo' ) : $noun;
 }
@@ -400,6 +407,16 @@ function gck_render_bundle_selector() {
     $precheck_second       = (bool) get_field( 'orto_precheck_second', $product_id );
     $show_gratis           = (bool) get_field( 'orto_show_gratis_labels', $product_id );
     $show_price_highlights = (bool) get_field( 'orto_show_price_highlights', $product_id );
+
+    // Garment type for gratis labels: "bokserica" (boxers) vs default "majica" (t-shirt).
+    $gck_garment = 'majica';
+    if (
+        has_term( array( 'orto-bokserice', 'orto-bokserice2' ), 'product_cat', $product_id )
+        || ( stripos( (string) $product->get_slug(), 'bokseric' ) !== false )
+        || ( stripos( (string) $product->get_name(), 'bokseric' ) !== false )
+    ) {
+        $gck_garment = 'bokserica';
+    }
 
     $show_countdown    = (bool) get_field( 'orto_show_countdown', $product_id );
     $countdown_minutes = (int) get_field( 'orto_countdown_minutes', $product_id );
@@ -424,6 +441,7 @@ function gck_render_bundle_selector() {
 
     // "4-attribute case" in your implementation means we have 2 selector groups (majica + bokserica)
     $show_group_titles = ( count($attr_groups) > 1 );
+    $gck_split_garments = ( strtoupper( (string) $product->get_sku() ) === 'NORIKS-ORTO-SHBOX' && count( $attr_groups ) >= 2 );
 
     ?>
     <style>
@@ -932,7 +950,7 @@ function gck_render_bundle_selector() {
     </div>
     <?php endif; ?>
 
-    <div id="bundle-selector" class="bundle-box">
+    <div id="bundle-selector" class="bundle-box" data-split-garments="<?php echo $gck_split_garments ? '1' : '0'; ?>">
         <?php
         $default_index = ( $precheck_second && count( $offers ) > 1 ) ? 1 : 0;
         $loop_index    = 0;
@@ -962,7 +980,11 @@ function gck_render_bundle_selector() {
             }
 
             // Price highlights: per-piece regular price + discount %.
-            $per_regular  = ( $pairs > 0 ) ? ( (float) $data['regular'] / $pairs ) : 0;
+            $gck_pieces   = $gck_split_garments ? ( $pairs * 2 ) : $pairs;
+            $per_regular  = ( $gck_pieces > 0 ) ? ( (float) $data['regular'] / $gck_pieces ) : 0;
+            $gck_per_new  = $gck_split_garments
+                ? ( ( $gck_pieces > 0 ) ? ( floor( ( (float) $data['total'] / $gck_pieces ) * 100 ) / 100 ) : 0 )
+                : (float) $data['per'];
             $discount_pct = ( (float) $data['regular'] > 0 )
                 ? (int) round( ( ( (float) $data['regular'] - (float) $data['total'] ) / (float) $data['regular'] ) * 100 )
                 : 0;
@@ -1007,13 +1029,13 @@ function gck_render_bundle_selector() {
                         <?php if ( $per_regular > (float) $data['per'] ) : ?>
                             <span class="gck-per-old"><?php echo number_format( $per_regular, 2 ); ?>€</span>
                         <?php endif; ?>
-                        <span class="gck-per-new"><?php echo number_format( (float) $data['per'], 2 ); ?>€ / ks</span>
+                        <span class="gck-per-new"><?php echo number_format( $gck_per_new, 2 ); ?>€ / ks</span>
                     </span>
                     <?php if ( $discount_pct > 0 ) : ?>
                         <span class="gck-discount-badge">−<?php echo (int) $discount_pct; ?>%</span>
                     <?php endif; ?>
                 <?php else : ?>
-                    — <span class="bundle-option-title"><?php echo number_format( (float) $data['per'], 2 ); ?>€ / ks</span>
+                    — <span class="bundle-option-title"><?php echo number_format( $gck_per_new, 2 ); ?>€ / ks</span>
                 <?php endif; ?>
                 
                 
@@ -1058,15 +1080,30 @@ function gck_render_bundle_selector() {
                     }
                     $gck_show_sections = ( $show_gratis && ! $show_group_titles && ( $gck_paid + $gck_free ) > 0 );
                     ?>
+                    <?php
+                    if ( $gck_split_garments ) {
+                        $gck_passes = array(
+                            array( 'group' => 0, 'label' => 'Vyber ' . (int) $pairs . ' ' . gck_sk_majice_phrase( $pairs, false, 'majica' ), 'gratis' => false ),
+                            array( 'group' => 1, 'label' => 'Vyber ešte ' . (int) $pairs . ' ' . gck_sk_majice_phrase( $pairs, true, 'bokserica' ), 'gratis' => true ),
+                        );
+                    } else {
+                        $gck_passes = array( array( 'group' => null, 'label' => null, 'gratis' => false ) );
+                    }
+                    ?>
+                    <?php foreach ( $gck_passes as $gck_pass ) : ?>
+                        <?php if ( $gck_pass['label'] !== null ) : ?>
+                            <div class="gck-pair-label<?php echo $gck_pass['gratis'] ? ' is-gratis' : ''; ?>"><?php echo esc_html( $gck_pass['label'] ); ?></div>
+                        <?php endif; ?>
                     <?php for ( $i = 1; $i <= $pairs; $i++ ) : ?>
-                        <?php if ( $gck_show_sections && $gck_paid > 0 && $i === 1 ) : ?>
+                        <?php if ( $gck_pass['group'] === null && $gck_show_sections && $gck_paid > 0 && $i === 1 ) : ?>
                             <div class="gck-pair-label">Vyber <?php echo (int) $gck_paid; ?> <?php echo esc_html( gck_sk_majice_phrase( $gck_paid ) ); ?></div>
                         <?php endif; ?>
-                        <?php if ( $gck_show_sections && $gck_free > 0 && $i === ( $gck_paid + 1 ) ) : ?>
+                        <?php if ( $gck_pass['group'] === null && $gck_show_sections && $gck_free > 0 && $i === ( $gck_paid + 1 ) ) : ?>
                             <div class="gck-pair-label is-gratis">Vyber ešte <?php echo (int) $gck_free; ?> <?php echo esc_html( gck_sk_majice_phrase( $gck_free, true ) ); ?></div>
                         <?php endif; ?>
                         <div class="bundle-pair">
                             <?php foreach ( $attr_groups as $g_index => $group ) :
+                                if ( $gck_pass['group'] !== null && $g_index !== $gck_pass['group'] ) continue;
 
                                 // Target group (field keys used for saving)
                                 $target_c = $group['color'] ?? null;
@@ -1099,7 +1136,7 @@ function gck_render_bundle_selector() {
                                     if ( $g_index === 1 && $offer_p2 !== '' ) $group_title = $offer_p2;
                                 }
                             ?>
-                                <?php if ( $show_group_titles && $group_title !== '' ) : ?>
+                                <?php if ( $show_group_titles && ! $gck_split_garments && $group_title !== '' ) : ?>
                                     <div class="gck-group-title"><?php echo esc_html($group_title); ?></div>
                                 <?php endif; ?>
 
@@ -1142,6 +1179,7 @@ function gck_render_bundle_selector() {
                             <?php endforeach; ?>
                         </div>
                     <?php endfor; ?>
+                    <?php endforeach; ?>
 
                     <small style="display: block; line-height: 1;"><?php esc_html_e( 'Ponúkame 30 dní na vrátenie peňazí alebo bezplatnú výmenu – bezstarostný nákup!', 'gift-card-kompetentnost' ); ?></small>
                 </div>
@@ -1293,11 +1331,14 @@ document.addEventListener('DOMContentLoaded', function () {
 /* Size sync per size attribute */
 document.addEventListener("DOMContentLoaded", function () {
     function activateSizeSync() {
-        document.querySelectorAll('.bundle-pairs').forEach(pairBlock => {
-            const firstPair = pairBlock.querySelector('.bundle-pair');
-            if (!firstPair) return;
+        const selectorEl = document.getElementById('bundle-selector');
+        const splitMode  = !!(selectorEl && selectorEl.dataset.splitGarments === '1');
 
-            firstPair.querySelectorAll('select.gck-size-select').forEach(firstSelect => {
+        document.querySelectorAll('.bundle-pairs').forEach(pairBlock => {
+            const scope = splitMode ? pairBlock : pairBlock.querySelector('.bundle-pair');
+            if (!scope) return;
+
+            scope.querySelectorAll('select.gck-size-select').forEach(firstSelect => {
                 const sizeKey = firstSelect.dataset.sizeKey || '';
                 if (!sizeKey) return;
 
@@ -1309,10 +1350,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     const selector = document.getElementById('bundle-selector');
                     if (!selector) return;
 
-                    // Sync this size across ALL pairs in ALL offers (e.g. 4+4 -> 2+2)
+                    const sel = splitMode
+                        ? 'select.gck-size-select'
+                        : 'select.gck-size-select[data-size-key="' + CSS.escape(sizeKey) + '"]';
+
                     selector
-                        .querySelectorAll('select.gck-size-select[data-size-key="' + CSS.escape(sizeKey) + '"]')
-                        .forEach(sel => { if (sel !== this) sel.value = newSize; });
+                        .querySelectorAll(sel)
+                        .forEach(s => { if (s !== this) s.value = newSize; });
                 });
             });
         });
