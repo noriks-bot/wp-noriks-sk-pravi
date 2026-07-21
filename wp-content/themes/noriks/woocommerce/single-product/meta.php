@@ -429,19 +429,31 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
       </div>
       <div class="accordion-content">
           
-         <?php if( !$is_boxers &&  !$is_carape &&   !$is_mixed_bundle ): ?>
-         
-         
-         
+         <?php if( !$is_boxers &&  !$is_carape &&   !$is_mixed_bundle && ! ( function_exists('noriks_is_type') && ( noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('ortopas', $current_product_id) ) ) ): ?>
+
+
+
         <?php echo get_field("singlepp_acc_t_1","options"); ?>
-        
-        
+
+
         <?php elseif(  has_term( array( 'orto-starter', 'orto-majica-bokserica' ), 'product_cat', $current_product_id )  ): ?>
-        
-        
-        
+
+
+
                Naše prémiové tričká sú vyrobené z prémiovej zmesi 60 % bavlny pradenej metódou prstencového pradenia a 40 % polyesteru, čo zaručuje mimoriadne mäkkú a nekrčivú látku. <br>Boxerky NORIKS sú vyrobené z prémiovej zmesi 95 % modalu a 5 % elastanu, čo zaručuje mimoriadne mäkkú a elastickú látku, ktorá sa dokonale prispôsobí telu. Elastický pás je navrhnutý pre optimálne prispôsobenie, pohodlie bez stiahnutia a perfektný vzhľad pod oblečením. <br>
-        
+
+        <?php elseif( function_exists('noriks_is_type') && noriks_is_type('fisiorest', $current_product_id) ): ?>
+
+                NORIKS FisioRest je terapeutický vankúš na krk, ktorý spája trakciu, teplo a vibračnú masáž v ergonomickej konštrukcii z pamäťovej peny. Jemne naťahuje krk pod správnym uhlom, odľahčuje krčnú chrbticu a teplom a masážou uvoľňuje svalové napätie. Bezdrôtový, nabíjateľný a obalený v mäkkom chladivom hodvábe – bezpečný aj na spánok.
+
+        <?php elseif( function_exists('noriks_is_type') && noriks_is_type('bunion', $current_product_id) ): ?>
+
+                Korektor vbočeného palca NORIKS s pokročilou terapiou zarovnania a patentovaným kĺbovým mechanizmom jemne vracia palec do prirodzenej polohy, zmierňuje nepohodlie a zabraňuje ďalšiemu rastu výrastku. Pružná konštrukcia umožňuje, aby ste v ňom aj chodili. Padne na všetky veľkosti chodidiel, bez ľavej alebo pravej strany. Na použitie v pokoji – počas oddychu, pozerania TV, čítania alebo spánku.
+
+        <?php elseif( function_exists('noriks_is_type') && noriks_is_type('ortopas', $current_product_id) ): ?>
+
+                Ortopedický pás NORIKS cielene stabilizuje driekovú časť chrbta pomocou cielenej kompresie, správne zarovná panvu a odľahčí sedací nerv. Tenký a nenápadný pod oblečením, s nastaviteľnou mierou opory. Vhodný pri bolestiach krížov, išiase, svalovom napätí a problémoch so SI kĺbom.
+
         <?php else: ?>
         
         
@@ -460,44 +472,55 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
     
      
      <!-- 2 - slika tablica velicina -->
+     <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) ) ) ) : // žiadna tabuľka veľkostí pre bunion + fisiorest ?>
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3>Tabuľky veľkostí</h3>
         <div class="toggle">+</div>
       </div>
       <div class="accordion-content">
-          
-           <?php if( $is_boxers ): ?>
-       
-        
+
+           <?php if( function_exists('noriks_is_type') && noriks_is_type('ortopas', $current_product_id) ): ?>
+
+          <div style="line-height:1.9;">
+            <strong>S/M</strong> : obvod bokov 75 – 110 cm<br>
+            <strong>L/XL</strong> : obvod bokov 110 – 140 cm<br><br>
+            Prosím, zmerajte si obvod bokov, aby ste našli svoju veľkosť.
+          </div>
+
+        <?php elseif( $is_boxers ): ?>
+
+
+
           <img src="https://noriks.com/sk/wp-content/uploads/2026/02/boxers_size_sk.png">
-          
-          
-          
-        
+
+
+
         <?php elseif(  $is_carape ): ?>
-        
-        
+
+
                   <img src="https://noriks.com/sk/wp-content/uploads/2026/02/Nogavice_tabela_velikosti_sk.png">
-                  
+
     <?php elseif(  $is_mixed_bundle ): ?>
-    
+
      <img src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
-     
+
         <img src="https://noriks.com/sk/wp-content/uploads/2026/02/boxers_size_sk.png">
-        
+
           <?php else: ?>
-      
-      
+
+
        <img src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
-        
-            
+
+
         <?php endif; ?>
       </div>
     </div>
+    <?php endif; // /žiadna tabuľka veľkostí pre bunion + fisiorest ?>
 
 
     <!-- 3 - savjeti za pranje-->
+    <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) ) ) ) : // žiadne tipy na pranie pre pás/bunion/fisiorest ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>
@@ -506,20 +529,21 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
       <div class="accordion-content">
              <?php if( !$is_boxers &&  !$is_carape &&   !$is_mixed_bundle ): ?>
         <?php echo get_field("singlepp_acc_t_2","options"); ?>
-        
-         
+
+
         <?php elseif(  has_term( array( 'orto-starter', 'orto-majica-bokserica' ), 'product_cat', $current_product_id )  ): ?>
-        
-        
-        
+
+
+
                        Perte farby s farbami. Jemný cyklus v studenej vode. Sušte vodorovne alebo v sušičke pri nízkej teplote. Nebieliť.
-        
-        
+
+
           <?php else: ?>
             <?php echo get_field("__overwrite_sekcije_bellow_3"); ?>
         <?php endif; ?>
       </div>
     </div>
+    <?php endif; // /žiadne tipy na pranie pre pás/bunion/fisiorest ?>
 
 
 

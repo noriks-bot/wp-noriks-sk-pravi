@@ -25,10 +25,10 @@ function noriks_product_type_map() : array {
         'starter'   => array( 'startovaci-balicek', 'starter-paketi', 'orto-starter', 'orto-majica-bokserica' ),
         'majice'    => array( 'tricka', 'majice', 'orto-tricka', 'orto-majice' ),
         'bokserice' => array( 'boxerky', 'bokserice', 'orto-boxerky', 'orto-bokserice', 'bokserice-sastavi-paket' ),
-        'carape'    => array( 'kompresne-ponozky', 'ponozky', 'orto-kompresne-ponozky', 'orto-kompresijske-nogavice' ),
+        'carape'    => array( 'ponozky', 'orto-kompresijske-carape' ),
 
         // --- sub-variants / special buckets ---
-        'kompresijske-nogavice'   => array( 'kompresne-ponozky', 'ponozky', 'orto-kompresne-ponozky', 'orto-kompresijske-nogavice' ),
+        'kompresijske-nogavice'   => array( 'ponozky', 'orto-kompresijske-carape' ),
         'ortopas'                 => array( 'orto-ortopas', 'ortopas' ),
         'bunion'                  => array( 'orto-bunion', 'bunion' ),
         'fisiorest'               => array( 'orto-fisiorest', 'fisiorest' ),
