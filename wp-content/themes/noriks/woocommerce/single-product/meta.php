@@ -421,14 +421,15 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
  <div class="accordion">
 
 
-    <!-- 1 - detajli -->
+    <!-- 1 - detajli --> <!-- skryté na norikshers (no-attrs) -->
+    <?php if ( ! ( function_exists('noriks_is_type') && noriks_is_type('norikshers', $current_product_id) ) ) : ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_1","options"); ?></h3>
         <div class="toggle">+</div>
       </div>
       <div class="accordion-content">
-          
+
          <?php if( !$is_boxers &&  !$is_carape &&   !$is_mixed_bundle && ! ( function_exists('noriks_is_type') && ( noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('ortopas', $current_product_id) ) ) ): ?>
 
 
@@ -467,12 +468,12 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
         
       </div>
     </div>
-    
-    
-    
-     
+    <?php endif; /* koniec skrytia detailov na norikshers */ ?>
+
+
+
      <!-- 2 - slika tablica velicina -->
-     <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) ) ) ) : // žiadna tabuľka veľkostí pre bunion + fisiorest ?>
+     <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) ) ) ) : // žiadna tabuľka veľkostí pre bunion + fisiorest + norikshers ?>
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3>Tabuľky veľkostí</h3>
@@ -520,7 +521,7 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
 
 
     <!-- 3 - savjeti za pranje-->
-    <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) ) ) ) : // žiadne tipy na pranie pre pás/bunion/fisiorest ?>
+    <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) ) ) ) : // žiadne tipy na pranie pre pás/bunion/fisiorest/norikshers ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>

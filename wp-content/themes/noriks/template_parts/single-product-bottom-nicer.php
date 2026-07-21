@@ -683,9 +683,15 @@ endif;
   $is_ortopas_page    = ( function_exists('noriks_is_type') && noriks_is_type('ortopas', $current_product_id) );
   $is_bunion_page     = ( function_exists('noriks_is_type') && noriks_is_type('bunion', $current_product_id) );
   $is_fisiorest_page  = ( function_exists('noriks_is_type') && noriks_is_type('fisiorest', $current_product_id) );
+  $is_norikshers_review_page = ( function_exists('noriks_is_type') && noriks_is_type('norikshers', $current_product_id) );
+
+  // Fallback product name shown in review cards.
+  $rv_fallback_title = $is_norikshers_review_page ? 'NORIKS HERS' : 'Jedna Siva Majica';
 
   // Include review pools (own pool per product group)
-  if ( $is_fisiorest_page ) {
+  if ( $is_norikshers_review_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/SK_norikshers.php';
+  } elseif ( $is_fisiorest_page ) {
     include get_stylesheet_directory() . '/auto_reviews/SK_fisiorest.php';
   } elseif ( $is_bunion_page ) {
     include get_stylesheet_directory() . '/auto_reviews/SK_bunion.php';
@@ -756,11 +762,13 @@ endif;
       }
 
       $is_bokserice = false;
+      $is_norikshers = false;
       if ( $product_id ) {
           $is_bokserice = has_term( array( 'boxerky','orto-bokserice', 'bokserice-sastavi-paket' ), 'product_cat', $product_id );
+          $is_norikshers = ( function_exists('noriks_is_type') && noriks_is_type('norikshers', $product_id) );
       }
 
-      $cache_key = $transient_key . ( $is_bokserice ? '_bokserice' : '_all' );
+      $cache_key = $transient_key . ( $is_norikshers ? '_norikshers' : ( $is_bokserice ? '_bokserice' : '_all' ) );
 
       if ( function_exists( 'get_transient' ) ) {
           $cached = get_transient( $cache_key );
@@ -777,7 +785,9 @@ endif;
           'order'   => 'DESC',
       ];
 
-      if ( $is_bokserice ) {
+      if ( $is_norikshers ) {
+          $args['category'] = [ 'orto-norikshers', 'orto-noriks-hers' ];
+      } elseif ( $is_bokserice ) {
           $args['category'] = [ 'boxerky' ];
       } else {
           $args['tax_query'] = [
@@ -1022,8 +1032,8 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
 
   // Avatar pools based on page category
   $avatar_type = $is_bokserice_page ? 'bokserice' : 'majice';
-  // Belt + bunion + fisiorest: text-only reviews (no avatar images).
-  $avatar_pool = ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page ) ? array() : get_review_avatar_pool($avatar_type);
+  // Belt + bunion + fisiorest + norikshers: text-only reviews (no avatar images).
+  $avatar_pool = ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_review_page ) ? array() : get_review_avatar_pool($avatar_type);
 
   $product_pool = get_wc_product_pool();
 
@@ -1065,8 +1075,8 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
   $ship_count = count($auto_reviews_ship);
 ?>
 
-<?php if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page ) : ?>
-<style>/* belt + bunion + fisiorest: text-only reviews, no avatar */ #reviews-section .avatar { display: none !important; }</style>
+<?php if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_review_page ) : ?>
+<style>/* belt + bunion + fisiorest + norikshers: text-only reviews, no avatar */ #reviews-section .avatar { display: none !important; }</style>
 <?php endif; ?>
 
 <section id="reviews-section" class="basic-reviews-section" style="margin-bottom:40px!important;padding-bottom:40px!important;">
@@ -1089,7 +1099,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
       <?php if (!empty($initial_product)) : foreach ($initial_product as $review) :
         $name  = $review['name'] ?? 'Anonymní';
         $text  = $review['text'] ?? '';
-        $title = !empty($review['product_title']) ? $review['product_title'] : 'Jedna Siva Majica';
+        $title = !empty($review['product_title']) ? $review['product_title'] : $rv_fallback_title;
         $url   = !empty($review['product_url'])   ? $review['product_url']   : '#';
         $stars = '★★★★★';
         $date_display = $review['assigned_date'] ?? '';
@@ -1124,7 +1134,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
       <?php if (!empty($initial_ship)) : foreach ($initial_ship as $review) :
         $name  = $review['name'] ?? 'Anonymní';
         $text  = $review['text'] ?? '';
-        $title = !empty($review['product_title']) ? $review['product_title'] : 'Jedna Siva Majica';
+        $title = !empty($review['product_title']) ? $review['product_title'] : $rv_fallback_title;
         $url   = !empty($review['product_url'])   ? $review['product_url']   : '#';
         $stars = '★★★★★';
         $date_display = $review['assigned_date'] ?? '';
@@ -1228,7 +1238,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
         article.className = 'review-card is-new';
 
         const url       = review.product_url   || '#';
-        const title     = review.product_title || 'Jedna Siva Majica';
+        const title     = review.product_title || '<?php echo esc_js($rv_fallback_title); ?>';
         const name      = review.name          || 'Anonymní';
         const text      = review.text          || '';
         const headline  = review.headline      || '';
@@ -1488,6 +1498,21 @@ $faq_list3 = get_field('faq_list_3', 'option');
 $is_ortopas_faq   = ( function_exists('noriks_is_type') && noriks_is_type('ortopas') );
 $is_bunion_faq    = ( function_exists('noriks_is_type') && noriks_is_type('bunion') );
 $is_fisiorest_faq = ( function_exists('noriks_is_type') && noriks_is_type('fisiorest') );
+$is_norikshers_faq = ( function_exists('noriks_is_type') && noriks_is_type('norikshers') );
+
+// NORIKS HERS — silikónové kolagénové pásiky na vrásky a jazvy — FAQ o produkte (preklad, NORIKS).
+$norikshers_faq = array(
+  array( 'questioon' => 'Čím sa líši od klasických náplastí na vrásky alebo krémov na jazvy?', 'answer' => 'Väčšina náplastí na vrásky je z papiera alebo hydrokoloidu a krémy na jazvy často zostanú len na povrchu pokožky. NORIKS HERS používa silikón klinickej kvality, ktorému dermatológovia dôverujú už roky pri viditeľnom zlepšovaní textúry jaziev a pružnosti pokožky — a teraz sa využíva aj na zmiernenie vrások.' ),
+  array( 'questioon' => 'Môže jediný pásik naozaj pôsobiť na vrásky aj jazvy?', 'answer' => 'Áno, pretože vrásky aj jazvy sú prejavom rozpadu kolagénu alebo slabej regenerácie pokožky. Silikón podporuje udržanie vlhkosti, obnovu kolagénu a vyhladenie textúry pokožky, čo prospieva obom.' ),
+  array( 'questioon' => 'Za aký čas uvidím výsledky?', 'answer' => 'Väčšina používateľov spozoruje viditeľné vyhladenie jemných vrások už po 1 – 3 použitiach a vzhľad jaziev sa zlepší za 2 – 3 týždne pravidelného používania. Hlbšie jazvy a vrásky môžu trvať dlhšie, no výsledky sa časom stupňujú.' ),
+  array( 'questioon' => 'Je bezpečný pre citlivú pleť alebo pleť náchylnú na akné?', 'answer' => 'Určite. NORIKS HERS je hypoalergénny, bez latexu a dostatočne jemný na citlivé oblasti, ako je okolie očí či úst, a dokonca aj na hojace sa stopy po akné. Ak máte veľmi reaktívnu pokožku, vždy najprv otestujte na malej ploche.' ),
+  array( 'questioon' => 'Ako dlho ho môžem nosiť?', 'answer' => 'Pre najlepšie výsledky odporúčame nosiť NORIKS HERS 6 – 8 hodín, cez noc. Môžete ho použiť aj cez deň — len dbajte na to, aby bola pokožka pod ním čistá a bez olejov či sér.' ),
+  array( 'questioon' => 'Ako dlho vydrží jedna rolka?', 'answer' => 'V závislosti od toho, ako často a kde ho používate, jedna rolka vydrží 3 – 6 týždňov. Keďže je opakovane použiteľný, je oveľa hospodárnejší ako jednorazové náplasti alebo krémy.' ),
+  array( 'questioon' => 'Zostane na mieste, kým spím?', 'answer' => 'Áno! NORIKS HERS je vyrobený s pokožke priateľským, odolným lepidlom, ktoré kopíruje vaše pohyby. Je priedušný a zostane na mieste aj u ľudí, ktorí spia na boku.' ),
+  array( 'questioon' => 'Na ktorých oblastiach ho môžem používať?', 'answer' => 'Kdekoľvek! Väčšina zákazníkov používa NORIKS HERS na: vrásky na čele, vrásky medzi obočím, vrásky od úsmevu, vrásky na krku, stopy po akné, jazvy po cisárskom reze, strie, chirurgické alebo poúrazové jazvy.' ),
+  array( 'questioon' => 'Prečo je NORIKS HERS lepší ako lacné online náplasti?', 'answer' => 'Mnohé náplasti predávané online sú nekvalitné, tenké alebo majú zlé lepidlo. NORIKS HERS používa prémiový silikón, testovaný v laboratóriu na bezpečnosť a odolnosť, a drží na mieste celú noc. Navyše ponúkame dedikovanú zákaznícku podporu a rýchlejšiu výmenu, ak potrebujete pomoc.' ),
+  array( 'questioon' => 'Je k dispozícii záruka vrátenia peňazí?', 'answer' => 'Áno, ponúkame 30-dňovú záruku bez rizika. Ak nie ste spokojní, stačí nás kontaktovať a vyriešime to.' ),
+);
 
 // Korektor vbočeného palca — FAQ o produkte (preklad, NORIKS).
 $bunion_faq = array(
@@ -1525,9 +1550,10 @@ $fisiorest_faq = array(
 
 // Nahrádza LEN kontajner FAQ o produkte pre 3 orto-produkty;
 // kontajnery doručenia/vrátenia zostávajú nedotknuté.
-$faq_pick = function( $title, $list ) use ( $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq ) {
   $t = (string) $title;
   $is_info = ( stripos( $t, 'produkt' ) !== false ) || ( stripos( $t, 'výrobk' ) !== false );
+  if ( $is_norikshers_faq && $is_info ) { return $norikshers_faq; }
   if ( $is_fisiorest_faq && $is_info ) { return $fisiorest_faq; }
   if ( $is_bunion_faq && $is_info )    { return $bunion_faq; }
   if ( $is_ortopas_faq && $is_info )   { return $ortopas_faq; }
