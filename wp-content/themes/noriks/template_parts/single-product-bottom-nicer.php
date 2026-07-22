@@ -205,7 +205,7 @@ Ale prvým krokom je toto – najmenšie riziko, najčistejší dojem.
 
 
 <?php 
-if (  has_term( array( 'tricka',  'orto-tricka' ), 'product_cat', get_the_id() )  ||  has_term( 'sady', 'product_cat', get_the_id() )) : 
+if (  has_term( array( 'tricka',  'orto-tricka', 'orto-majica-darila' ), 'product_cat', get_the_id() )  ||  has_term( 'sady', 'product_cat', get_the_id() )) : 
 ?>
 
 
