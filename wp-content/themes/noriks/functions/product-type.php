@@ -37,6 +37,9 @@ function noriks_product_type_map() : array {
         'kompresijske-majice'     => array( 'orto-kompresijske-majice', 'kompresijske-majice' ),
         'kidsnest'                => array( 'orto-kidsnest', 'kidsnest' ), // detsky vankus pre spravne dychanie
 
+        // ErgoSit orthopedic pillow (ortopedicky vankus na sedenie) — no colour/size, quantity-only bundle.
+        'ortopedski-jastuk'       => array( 'orto-ortopedski-jastuk', 'ortopedski-jastuk' ),
+
         'majica-darila'           => array( 'orto-majica-darila', 'majica-darila' ),
         'majice-bokserice-paketi' => array( 'sady', 'kompleti', 'majice-i-bokserice-paketi' ),
         'black-friday'            => array( 'black-friday' ),
