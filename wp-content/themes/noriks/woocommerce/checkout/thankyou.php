@@ -51,14 +51,14 @@ if ( $upsell_is_majice ) {
     );
     $upsell_title_text = 'Pridajte tričká teraz – 50% zľava';
 } else {
-    $upsell_product_id = 3186; // Čierne boxerky
-    $upsell_name       = 'Čierne boxerky';
+    $upsell_product_id = 3175; // Šedé boxerky (siva verzija, ista struktura kot crna)
+    $upsell_name       = 'Šedé boxerky';
     $upsell_qty_prices = array( 1 => 4.99, 3 => 14.97, 5 => 24.95 );
-    $upsell_qty_names  = array( 1 => '1x Čierne boxerky', 3 => '3x Čierne boxerky', 5 => '5x Čiernych boxeriek' );
+    $upsell_qty_names  = array( 1 => '1x Šedé boxerky', 3 => '3x Šedé boxerky', 5 => '5x Šedých boxeriek' );
     $upsell_qty_images = array(
-        1 => 'https://noriks.com/hr/wp-content/uploads/2025/11/crne-boksarice-produktna.jpg',
-        3 => 'https://noriks.com/hr/wp-content/uploads/2025/11/boksarice_3x_crne.png',
-        5 => 'https://noriks.com/hr/wp-content/uploads/2026/01/boksarice_5x_crne.png',
+        1 => 'https://noriks.com/sk/wp-content/uploads/2026/02/sive-boksarice-produktna.jpg',
+        3 => 'https://noriks.com/sk/wp-content/uploads/2026/02/sive-boksarice-produktna.jpg', // TODO: 3x siva kompozitna, ko obstaja
+        5 => 'https://noriks.com/sk/wp-content/uploads/2026/02/sive-boksarice-produktna.jpg', // TODO: 5x siva kompozitna, ko obstaja
     );
     $upsell_title_text = 'Pridajte boxerky teraz – 50% zľava';
 }
