@@ -35,6 +35,8 @@ function noriks_product_type_map() : array {
         'norikshers'              => array( 'orto-norikshers', 'orto-noriks-hers', 'norikshers' ),
         'leakboxers'              => array( 'orto-leak-boxers', 'leak-boxers' ),
         'kompresijske-majice'     => array( 'orto-kompresijske-majice', 'kompresijske-majice' ),
+        'kidsnest'                => array( 'orto-kidsnest', 'kidsnest' ), // detsky vankus pre spravne dychanie
+
         'majica-darila'           => array( 'orto-majica-darila', 'majica-darila' ),
         'majice-bokserice-paketi' => array( 'sady', 'kompleti', 'majice-i-bokserice-paketi' ),
         'black-friday'            => array( 'black-friday' ),
