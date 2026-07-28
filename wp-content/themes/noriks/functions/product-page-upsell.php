@@ -41,6 +41,14 @@ function noriks_pp_upsell_register_fields() {
 				'instructions' => 'Pridá rámček "Kúpte spolu a ušetrite" hneď pod tlačidlo Pridať do košíka. Zákazník si vyberie veľkosť a 4 kusy sa pridajú za upsell cenu. Platí len pre tento produkt.',
 				'ui'           => 1,
 			),
+			array(
+				'key'          => 'field_noriks_pp_upsell2',
+				'label'        => 'Zobraziť upsell #2 pod tlačidlom (2 tričká: čierne + sivé)',
+				'name'         => 'noriks_pp_upsell2',
+				'type'         => 'true_false',
+				'instructions' => 'Druhý upsell rámček: balíček 2 tričiek (1 čierne + 1 sivé), zákazník si vyberie jednu veľkosť pre obe. Nezávislý od prvého prepínača.',
+				'ui'           => 1,
+			),
 		),
 		'location'   => array(
 			array(
