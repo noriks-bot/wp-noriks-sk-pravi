@@ -17,7 +17,7 @@ $opz_vid_dir      = get_template_directory_uri() . '/img/ortopas-videos/';
 $opz_img_collage  = 'https://noriks.com/hr/wp-content/uploads/2026/07/ortopas-hr-9.png'; // 1) spokojní zákazníci (obrázok) — TODO SK image
 $opz_video_relief = $opz_vid_dir . 'relief.mp4';                                          // 2) prirodzená úľava (video)
 $opz_video_cause  = $opz_vid_dir . 'cause.mp4';                                           // 3) skutočná príčina (video)
-$opz_img_indik    = get_template_directory_uri() . '/img/ortopas/noriks_SK_01_lekar.png'; // lokalizirana grafika indikacij // 5) ako funguje (obrázok) — TODO SK image
+$opz_img_indik    = get_template_directory_uri() . '/img/ortopas/ortopas-indikacije.png'; // lokalizirana grafika indikacij // lokalizirana grafika indikacij // 5) ako funguje (obrázok) — TODO SK image
 $opz_video_feat   = $opz_vid_dir . 'features.mp4';                                        // 6) inovatívne vlastnosti (video)
 
 /* Karty (kruhové videá) — 4) sekcia s 3 kartami */
