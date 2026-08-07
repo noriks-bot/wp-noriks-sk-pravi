@@ -662,6 +662,16 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
 
 
 
+        <?php elseif( noriks_is_type( 'kompresijske-nogavice', $current_product_id ) ): ?>
+
+          <div style="line-height:1.9;">
+            <strong>S/M</strong> : veľkosť obuvi 36–40 / obvod lýtka : 23–36 cm<br>
+            <strong>L/XL</strong> : veľkosť obuvi 40–44 / obvod lýtka : 36–45 cm<br>
+            <strong>2XL</strong> : veľkosť obuvi 44–48 / obvod lýtka : 45–56 cm<br><br>
+            Zmerajte prosím obvod lýtka na najširšom mieste, aby ste zistili svoju veľkosť.<br><br>
+            Odporúčame vybrať veľkosť podľa obvodu lýtka, nie podľa bežnej veľkosti obuvi.
+          </div>
+
         <?php elseif(  $is_carape ): ?>
 
 
