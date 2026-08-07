@@ -575,7 +575,7 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
            <?php if( function_exists('noriks_is_type') && noriks_is_type('kidsnest', $current_product_id) ): ?>
 
           <div class="kn-size">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/kidsnest/tablica-velicine.webp" alt="KidsNest veľkosti podľa veku" style="width:100%;height:auto;border-radius:10px;display:block;margin:0 0 12px;" loading="lazy">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/kidsnest/tablica-velicine-sk.webp" alt="KidsNest veľkosti podľa veku" style="width:100%;height:auto;border-radius:10px;display:block;margin:0 0 12px;" loading="lazy">
             <p style="margin:0;line-height:1.6;"><strong>Dieťa je medzi dvoma veľkosťami?</strong> Vždy vyberte väčšiu. Vankúš je navrhnutý tak, aby podporoval zdravé zarovnanie počas rastu dieťaťa — väčšia veľkosť poskytuje viac priestoru a dlhšie obdobie používania.</p>
           </div>
 
