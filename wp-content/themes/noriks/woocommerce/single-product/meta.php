@@ -662,12 +662,6 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
 
 
 
-        <?php // KOMZIPS (kompresné ponožky so zipsom): vlastná, lokalizovaná tabuľka veľkostí.
-              // Bez tejto vetvy produkt spadne do else a zobrazí sa tabuľka pre TRIČKÁ.
-        elseif ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice', $current_product_id) ): ?>
-
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/kompresijske-tabela-sk.webp" alt="Tabuľka veľkostí — kompresné ponožky">
-
         <?php elseif(  $is_carape ): ?>
 
 
