@@ -31,7 +31,7 @@ $kf_img = function( $file, $alt ) use ( $kf, $kf_path ) {
 <!-- ============ 1) Keď sa každý krok stane nepríjemným ============ -->
 <section class="kfx-sec">
   <div class="kfx-wrap kfx-row2">
-    <div class="kfx-media"><?php echo $kf_img('13_stepenice.jpg','Bolesť kolena pri chôdzi dolu schodmi'); ?></div>
+    <div class="kfx-media"><?php echo $kf_img('kf-sk-3.webp','Bolesť kolena pri chôdzi dolu schodmi'); ?></div>
     <div class="kfx-copy">
       <h2 class="kfx-h2">Keď sa každý krok stane nepríjemným</h2>
       <p class="kfx-lead">Na začiatku je to často len mierne ťahanie.</p>
@@ -133,14 +133,14 @@ $kf_img = function( $file, $alt ) use ( $kf, $kf_path ) {
       <p>NORIKS KneeFix je vyvinutý tak, aby každodenné pohyby boli príjemnejšie — bez zbytočných obmedzení. Flexibilný materiál sa lepšie prispôsobí vášmu dňu a podoprie koleno tam, kde to potrebujete.</p>
       <a class="kfx-cta" href="#bundle-selector">Vyber svoju veľkosť →</a>
     </div>
-    <div class="kfx-media"><?php echo $kf_img('05_lifestyle_SK.webp','KneeFix v bežnom dni — prechádzka, bicykel, tréning'); ?></div>
+    <div class="kfx-media"><?php echo $kf_img('kf-sk-1.webp','KneeFix v bežnom dni — prechádzka, bicykel, tréning'); ?></div>
   </div>
 </section>
 
 <!-- ============ 7) Odporúčané na každodennú podporu kolena ============ -->
 <section class="kfx-sec">
   <div class="kfx-wrap kfx-row2">
-    <div class="kfx-media"><?php echo $kf_img('06_lekar_SK.webp','Odporúčané na každodennú podporu kolena'); ?></div>
+    <div class="kfx-media"><?php echo $kf_img('kf-sk-2.webp','Odporúčané na každodennú podporu kolena'); ?></div>
     <div class="kfx-copy">
       <h2 class="kfx-h2">Odporúčané na každodennú podporu kolena</h2>
       <ul class="kfx-check">
