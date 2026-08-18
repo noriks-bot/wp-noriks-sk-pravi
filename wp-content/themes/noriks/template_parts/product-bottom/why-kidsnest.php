@@ -43,7 +43,7 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
       <p>Ergonomický detský vankúš drží <strong>hlavu a krk v prirodzenom zarovnaní a pomáha zabrániť nakláňaniu hlavy</strong> počas noci. Chrbtica tak zostáva správne zarovnaná — aj keď sa dieťa v spánku veľa prevaľuje.</p>
       <p><strong>Výsledkom je pokojnejší spánok a lepšia regenerácia.</strong></p>
     </div>
-    <div class="kn-media"><img src="<?php echo esc_url( $kn.'02-san.jpg' ); ?>" alt="Dieťa pokojne spí na vankúši KidsNest" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="kn-media"><img src="<?php echo esc_url( $kn.'kn-sk-2.webp' ); ?>" alt="Dieťa pokojne spí na vankúši KidsNest" loading="lazy" onerror="this.style.display='none'"></div>
   </div>
 </section>
 
@@ -92,7 +92,7 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
 <!-- ============ 6) Kvaliteta materijala — slika LIJEVO, tekst DESNO ============ -->
 <section class="kn-sec">
   <div class="kn-wrap kn-row2">
-    <div class="kn-media"><img src="<?php echo esc_url( $kn.'03-detalj.webp' ); ?>" alt="KidsNest — 3-zónová štruktúra a priedušná tkanina zblízka" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="kn-media"><img src="<?php echo esc_url( $kn.'kn-sk-6.webp' ); ?>" alt="KidsNest — 3-zónová štruktúra a priedušná tkanina zblízka" loading="lazy" onerror="this.style.display='none'"></div>
     <div class="kn-copy">
       <h2 class="kn-h2 kn-h2-blue">Kvalita, ktorú cítiť — noc čo noc.</h2>
       <p>Hustá, priedušná pletenina a starostlivo tvarovaný povrch tu nie sú kvôli vzhľadu — <strong>každá zóna má svoju úlohu</strong>. Stred jemne prijíma hlavu, okraje podopierajú krk a štruktúra si drží tvar aj po mesiacoch každodenného používania.</p>
