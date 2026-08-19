@@ -662,7 +662,7 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
 
 
 
-          <img src="https://noriks.com/sk/wp-content/uploads/2026/02/boxers_size_sk.png">
+          <img class="js-open-size-chart" style="cursor:pointer;" src="https://noriks.com/sk/wp-content/uploads/2026/02/boxers_size_sk.png">
 
 
 
@@ -679,18 +679,18 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
         <?php elseif(  $is_carape ): ?>
 
 
-                  <img src="https://noriks.com/sk/wp-content/uploads/2026/02/Nogavice_tabela_velikosti_sk.png">
+                  <img class="js-open-size-chart" style="cursor:pointer;" src="https://noriks.com/sk/wp-content/uploads/2026/02/Nogavice_tabela_velikosti_sk.png">
 
     <?php elseif(  $is_mixed_bundle ): ?>
 
-     <img src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
+     <img class="js-open-size-chart" style="cursor:pointer;" src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
 
-        <img src="https://noriks.com/sk/wp-content/uploads/2026/02/boxers_size_sk.png">
+        <img class="js-open-size-chart" style="cursor:pointer;" src="https://noriks.com/sk/wp-content/uploads/2026/02/boxers_size_sk.png">
 
           <?php else: ?>
 
 
-       <img src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
+       <img class="js-open-size-chart" style="cursor:pointer;" src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
 
 
         <?php endif; ?>
