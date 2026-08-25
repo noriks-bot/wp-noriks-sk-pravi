@@ -105,9 +105,8 @@
 			<div class="nf-wrap nf-main-grid">
 
 				<div class="nf-brand-col">
-					<p class="nf-brand-tagline">Oblečenie pre silnejšiu postavu, strihané tak, aby naozaj sedelo.</p>
 					<p class="nf-brand-desc"><?php echo esc_html( $nf_brand ); ?></p>
-					<a class="nf-btn nf-btn-outline" href="/sk/shop">Pozri si kolekciu</a>
+					<a class="nf-btn nf-btn-outline" href="/sk/shop">Nakupovať teraz</a>
 				</div>
 
 				<nav class="nf-links">
