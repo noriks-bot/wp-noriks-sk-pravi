@@ -63,7 +63,7 @@
 	$nf_col4_c  = get_field( 'footer_midle_col4_content', 'option' );
 	$nf_brand   = get_field( 'footer_brand_desc', 'option' );
 	if ( ! $nf_brand ) {
-		$nf_brand = 'NORIKS navrhuje nadčasové kúsky pre silnejšiu postavu — dlhšie, pohodlnejšie a premyslene spracované tam, kde je to najdôležitejšie.';
+		$nf_brand = 'NORIKS je európska značka výrobkov na každodenné použitie. Zameriavame sa na kvalitu, pohodlie a férové ceny — dôveruje nám už viac ako 120 000 zákazníkov.';
 	}
 	$nf_bg      = get_field( 'footer_bg_image', 'option' ); // background photo behind the brand band
 	$nf_legal   = get_field( 'footer_legal_text', 'option' );
