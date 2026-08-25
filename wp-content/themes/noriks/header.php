@@ -116,17 +116,17 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="marquee">
     <div class="marquee-content">
       <span><a href="/sk/shop"><?php echo $mq_ico_truck; ?>Doprava zadarmo pre objednávky nad 70 €</a></span>
-      <span><a href="/sk/shop"><?php echo $mq_ico_shield; ?>14 dní bez rizika – vyskúšaj bez obáv</a></span>
+      <span><a href="/sk/shop"><?php echo $mq_ico_shield; ?>30 dní bez rizika – vyskúšaj bez obáv</a></span>
       <!--<span><a href="/hr/shop">Zimska ponuda: Do 70% popusta!</a></span>-->
 
       <!-- DUPLICATED for seamless infinite loop -->
       <span><a href="/sk/shop"><?php echo $mq_ico_truck; ?>Doprava zadarmo pre objednávky nad 70 €</a></span>
-      <span><a href="/sk/shop"><?php echo $mq_ico_shield; ?>14 dní bez rizika – vyskúšaj bez obáv</a></span>
+      <span><a href="/sk/shop"><?php echo $mq_ico_shield; ?>30 dní bez rizika – vyskúšaj bez obáv</a></span>
      <!-- <span><a href="/hr/shop">Zimska ponuda: Do 70% popusta!</a></span>-->
       
        <!-- DUPLICATED for seamless infinite loop -->
       <span><a href="/sk/shop"><?php echo $mq_ico_truck; ?>Doprava zadarmo pre objednávky nad 70 €</a></span>
-      <span><a href="/sk/shop"><?php echo $mq_ico_shield; ?>14 dní bez rizika – vyskúšaj bez obáv</a></span>
+      <span><a href="/sk/shop"><?php echo $mq_ico_shield; ?>30 dní bez rizika – vyskúšaj bez obáv</a></span>
      <!-- <span><a href="/hr/shop">Zimska ponuda: Do 70% popusta!</a></span>-->
     </div>
   </div>

@@ -80,7 +80,7 @@ global $product;
         
         <div class="feature">
       <img src="https://noriks.com/hr/wp-content/uploads/2025/07/footer_icon1-1.png" alt="Shirt Icon" class="feature__icon info-icon">
-          <p class="feature__text">Vyskúšajte 14 dní, bez rizika</p>
+          <p class="feature__text">Vyskúšajte 30 dní, bez rizika</p>
         </div>
         
         
@@ -743,7 +743,7 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
       </div>
       <div class="accordion-content">
        <p></p>
-      Sme si takí istí, že si NORIKS zamilujete, že máte <b data-stringify-type="bold">14 dní</b> na jeho bezplatné vrátenie alebo výmenu.
+      Sme si takí istí, že si NORIKS zamilujete, že máte <b data-stringify-type="bold">30 dní</b> na jeho bezplatné vrátenie alebo výmenu.
 Žiadne papierovačky, žiadny stres – vyriešime to niekoľkými kliknutiami.</p>
 <p>
     
