@@ -173,13 +173,13 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   </div>
 </section>
 
-<!-- ============ 11) Isprobajte 60 dana — TAMNA, značka LIJEVO, tekst DESNO ============ -->
+<!-- ============ 11) Isprobajte 30 dana — TAMNA, značka LIJEVO, tekst DESNO ============ -->
 <section class="oj-sec oj-guar-sec">
   <div class="oj-wrap">
   <div class="oj-guarantee oj-row2">
     <div class="oj-guar-badge"><?php echo $oj_img('15_znacka_30_dana.png','60-dňová záruka vrátenia peňazí'); ?></div>
     <div class="oj-guar-copy">
-      <h2 class="oj-h2 oj-h2-light">Vyskúšajte <em class="oj-pink-i">60 dní</em>, bez obáv</h2>
+      <h2 class="oj-h2 oj-h2-light">Vyskúšajte <em class="oj-pink-i">30 dní</em>, bez obáv</h2>
       <p>Nájsť ten správny vankúš nie je ľahké — mnohé sa sploštia alebo jednoducho neprinesú skutočnú úľavu. Preto každý NORIKS <strong>ErgoSit</strong> prichádza s našou <strong>60-dňovou zárukou pohodlia</strong>.</p>
       <p>Vezmite si ho do kancelárie, do auta alebo na dlhé hodiny doma. Ak nepocítite menej bolesti a viac pohodlia pri každodennom sedení, náš tím sa postará, aby bolo všetko tak, ako má byť.</p>
       <p>Pretože keď ide o vaše zdravie a pohodlie, veríme, že rozdiel máte <strong>cítiť</strong>, nie si ho len želať.</p>

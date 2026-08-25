@@ -743,7 +743,7 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
       </div>
       <div class="accordion-content">
        <p></p>
-      Sme si takí istí, že si NORIKS zamilujete, že máte <b data-stringify-type="bold">30 dní</b> na jeho bezplatné vrátenie alebo výmenu.
+      Sme si takí istí, že si NORIKS zamilujete, že máte <b data-stringify-type="bold">30 dní</b> na jeho vrátenie alebo výmenu.
 Žiadne papierovačky, žiadny stres – vyriešime to niekoľkými kliknutiami.</p>
 <p>
     
