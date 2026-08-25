@@ -1762,7 +1762,7 @@ $ortopas_faq = array(
   array( 'questioon' => 'Môžem pás nosiť aj počas spánku?', 'answer' => 'Áno, pás môžete nosiť aj v noci. Dĺžka nosenia nie je obmedzená a dlhšie nosenie nemá negatívne účinky.' ),
   array( 'questioon' => 'Ako tesne ho mám nasadiť?', 'answer' => 'Pás by mal tesne priliehať, ale nie príliš tesne, aby ste sa vyhli nepohodliu. Mali by ste sa bez problémov hýbať bez toho, aby sa pás zarezával alebo šmýkal. Napätie sa jednoducho nastavuje elastickými pásikmi.' ),
   array( 'questioon' => 'Komu ho odporúčate?', 'answer' => 'Všetkým, ktorí zápasia s bolesťami krížov, išiasom, svalovým napätím, prietržou medzistavcovej platničky, bolesťami bokov alebo panvy a problémami so SI kĺbom. Bez ohľadu na vek, pohlavie, výšku a hmotnosť.' ),
-  array( 'questioon' => 'Existuje záruka vrátenia peňazí?', 'answer' => 'Ponúkame záruku spokojnosti! Ak nie ste s pásom NORIKS spokojní, kontaktujte nás na info@noriks.com za účelom vrátenia a preplatenia do 90 dní. Lehota sa počíta od prevzatia pásu.' ),
+  array( 'questioon' => 'Existuje záruka vrátenia peňazí?', 'answer' => 'Ponúkame záruku spokojnosti! Ak nie ste s pásom NORIKS spokojní, kontaktujte nás na info@noriks.com za účelom vrátenia a preplatenia do 14 dní. Lehota sa počíta od prevzatia pásu.' ),
 );
 
 // FisioRest — FAQ o produkte (preklad, NORIKS).
@@ -1774,7 +1774,7 @@ $fisiorest_faq = array(
   array( 'questioon' => 'Je FisioRest bezdrôtový?', 'answer' => 'Áno! NORIKS FisioRest je úplne bezdrôtový a nabíjateľný na každodenné používanie.' ),
   array( 'questioon' => 'Ako sa FisioRest čistí?', 'answer' => 'Látka je odolná voči olejom a prachu, no odporúčame FisioRest po použití utrieť dezinfekčnou utierkou, keďže poťah vankúša nie je možné prať.' ),
   array( 'questioon' => 'Je bezpečný pre každého?', 'answer' => 'NORIKS FisioRest je navrhnutý tak, aby vyhovoval každému bez ohľadu na vek alebo pohlavie. Každá situácia je však iná. Pre podrobné pokyny prispôsobené vašim potrebám odporúčame konzultáciu s lekárom.' ),
-  array( 'questioon' => 'Môžem ho vrátiť, ak nevidím výsledky?', 'answer' => 'Samozrejme! Poskytujeme plnú záruku vrátenia peňazí do 90 dní od doručenia, ak nie ste s produktom spokojní. Napíšte nám na info@noriks.com a odpovieme do 12 hodín od prijatia správy!' ),
+  array( 'questioon' => 'Môžem ho vrátiť, ak nevidím výsledky?', 'answer' => 'Samozrejme! Poskytujeme plnú záruku vrátenia peňazí do 14 dní od doručenia, ak nie ste s produktom spokojní. Napíšte nám na info@noriks.com a odpovieme do 12 hodín od prijatia správy!' ),
 );
 
 // Nahrádza LEN kontajner FAQ o produkte pre 3 orto-produkty;
