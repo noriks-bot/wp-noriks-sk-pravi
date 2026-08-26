@@ -45,7 +45,7 @@ defined( 'ABSPATH' ) || exit;
 
       <!-- Shipping -->
       <div class="c--darkgray review-section-container review-addons shipping_order_review">
-        <div class="review-addons-title"><div>Doručenie - SPS</div></div>
+        <div class="review-addons-title"><div>Doručenie - GLS</div></div>
         <div class="review-addons-price review-sale-price" id="noriks-shipping-price">
           <?php
             $ship = (float) WC()->cart->get_shipping_total();
