@@ -711,8 +711,12 @@ add_action( 'wp_footer', function () {
         return;
     }
     $labels = array(
+        'billing_first_name' => 'Krstné meno',
+        'billing_last_name' => 'Priezvisko',
         'billing_address_1' => 'Ulica',
         'billing_address_2' => 'Číslo domu',
+        'billing_postcode' => 'PSČ',
+        'billing_city' => 'Mesto',
     );
     ?>
     <script id="noriks-address-labels">
