@@ -472,8 +472,8 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_first_name']['placeholder'] = 'Krstné meno';
     $fields['billing']['billing_last_name']['label'] = 'Priezvisko';
     $fields['billing']['billing_last_name']['placeholder'] = 'Priezvisko';
-    $fields['billing']['billing_address_1']['label'] = 'Ulica a číslo domu';
-    $fields['billing']['billing_address_1']['placeholder'] = 'Ulica a číslo domu';
+    $fields['billing']['billing_address_1']['label'] = 'Ulica';
+    $fields['billing']['billing_address_1']['placeholder'] = 'Ulica';
     $fields['billing']['billing_address_2']['label'] = 'Číslo domu';
     $fields['billing']['billing_address_2']['placeholder'] = 'Číslo domu';
     $fields['billing']['billing_address_2']['required'] = true;
@@ -509,10 +509,6 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
         $f['input_class'] = array( 'input-text', 'form-input' );
     }
 
-    // Locene hisne stevilke na tem trgu ne uporabljamo - stevilka gre v polje ulice.
-    unset( $fields['billing']['billing_address_2'] );
-    unset( $fields['shipping']['shipping_address_2'] );
-
     return $fields;
 }, 20 );
 
@@ -523,13 +519,16 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
  * Tu privzete vrednosti nadomestimo z nasimi, da JS ne more nic prepisati.
  */
 add_filter( 'woocommerce_get_country_locale', function( $locale ) {
-    $a1 = array( 'label' => 'Ulica a číslo domu', 'placeholder' => 'Ulica a číslo domu', 'required' => true );
+    $a1 = array( 'label' => 'Ulica', 'placeholder' => 'Ulica', 'required' => true );
+    $a2 = array( 'label' => 'Číslo domu', 'placeholder' => 'Číslo domu', 'required' => true );
     foreach ( array( 'default', 'SK' ) as $cc ) {
         if ( ! isset( $locale[ $cc ] ) || ! is_array( $locale[ $cc ] ) ) {
             $locale[ $cc ] = array();
         }
         $locale[ $cc ]['address_1'] = isset( $locale[ $cc ]['address_1'] ) && is_array( $locale[ $cc ]['address_1'] )
             ? array_merge( $locale[ $cc ]['address_1'], $a1 ) : $a1;
+        $locale[ $cc ]['address_2'] = isset( $locale[ $cc ]['address_2'] ) && is_array( $locale[ $cc ]['address_2'] )
+            ? array_merge( $locale[ $cc ]['address_2'], $a2 ) : $a2;
     }
     return $locale;
 }, 20 );
@@ -695,4 +694,8 @@ add_filter('woocommerce_checkout_posted_data', function($data){
 /**
  * Validate billing_address_2 (kućni broj) is required
  */
-/* Hisna stevilka ni vec loceno polje - preverjanje izklopljeno. */
+add_action('woocommerce_checkout_process', function(){
+    if ( empty( $_POST['billing_address_2'] ) ) {
+        wc_add_notice( 'Prosím zadajte číslo domu.', 'error' );
+    }
+});
