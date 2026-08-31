@@ -27,6 +27,7 @@ function noriks_shop_filter_map() {
 		'__shop__' => array(
 			'bestsellers' => 'Najpredávanejšie',
 			'startovaci-balicek' => 'Štartovací balíček',
+			'velke-baliky' => 'Veľké balíky',
 		),
 		'boxerky' => array(
 			'1-ks-boxerky' => '1 ks',
