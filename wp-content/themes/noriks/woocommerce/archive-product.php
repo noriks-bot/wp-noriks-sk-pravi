@@ -356,12 +356,12 @@ $shop_filter_fields = get_field("shop_filter_fields", "option");
 // SHOP PAGE (/shop)
 if ( is_shop() ) {
 
-    echo do_shortcode('[yith_wcan_filters slug="default-preset-2"]');
+    noriks_shop_filter_links();
 
 // CATEGORY: /bokserice + ALL CHILD CATEGORIES
 } elseif ( is_product_category_or_child('boxerky') ) {
 
-    echo do_shortcode('[yith_wcan_filters slug="boxerky"]');
+    noriks_shop_filter_links();
 
 // CATEGORY GROUP
 } elseif (
@@ -370,27 +370,27 @@ if ( is_shop() ) {
     is_product_category_or_child('starter-paketi')
 ) {
 
-    echo do_shortcode('[yith_wcan_filters slug="default-preset-2"]');
+    noriks_shop_filter_links();
 
 // CATEGORY: /majice + children
 } elseif ( is_product_category_or_child('tricka') ) {
 
-    echo do_shortcode('[yith_wcan_filters slug="tricka"]');
+    noriks_shop_filter_links();
 
 // CATEGORY: /kompleti + children
 } elseif ( is_product_category_or_child('sady') ) {
 
-    echo do_shortcode('[yith_wcan_filters slug="sety"]');
+    noriks_shop_filter_links();
 
 // CATEGORY: /carape + children
 } elseif ( is_product_category_or_child('ponozky') ) {
 
-    echo do_shortcode('[yith_wcan_filters slug="ponozky"]');
+    noriks_shop_filter_links();
 
 // FALLBACK for any other product category
 } elseif ( is_product_category() ) {
 
-    echo do_shortcode('[yith_wcan_filters slug="default-preset-2"]');
+    noriks_shop_filter_links();
 }
 ?>
         </div>
