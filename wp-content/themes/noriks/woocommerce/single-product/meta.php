@@ -513,7 +513,12 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
 
                 NORIKS KidsNest je vyrobený z hypoalergénnej pamäťovej peny s certifikátom OEKO-TEX® — bez formaldehydu, ťažkých kovov a BPA — s priedušným, prateľným poťahom, ktorý sa jednoducho sťahuje.<br><br>Jeho 3-zónová ergonomická štruktúra jemne prijíma hlavu, podopiera krk a pomáha udržať chrbticu v prirodzenom zarovnaní — aj keď sa dieťa počas noci veľa otáča. Tým podporuje dýchanie nosom a pokojnejší, hlbší spánok.<br><br>Dostupný v troch veľkostiach (1 – 3, 3 – 9 a 9 – 14 rokov), rastie s vaším dieťaťom a poskytuje správnu výšku opory v každej fáze vývoja.
 
-         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) ): ?>
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('controlpro', $current_product_id) ): ?>
+
+                NORIKS ControlPro je mechanický tréner panvového dna so skutočným fyzickým odporom. Namiesto stláčania naprázdno dostanete niečo, proti čomu môžete tlačiť — rovnaký princíp postupného zaťaženia, ktorým posilňuje každý iný sval v tele.<br><br>Používa sa v sede: prístroj vložíte medzi kolená a stláčate proti odporu — 3 série po 10 opakovaní denne, približne päť minút. Bez sond a zavádzania, bez káblov, gélu, batérií a aplikácií. Zabudované počítadlo opakovaní ukazuje, koľko ste odcvičili.<br><br>Konštrukcia je pevná, s mäkkými podložkami na opierkach, ktoré netlačia ani po viacerých sériách. Odpor sa postupne zvyšuje, ako svaly silnejú.<br><br>Je určený mužom, ktorí chcú získať späť kontrolu nad mechúrom — po operácii prostaty, pri úniku počas námahy alebo po dlhých mesiacoch Kegelových cvikov bez výsledku. Doručenie je diskrétne, v neutrálnej krabici bez označenia.
+
+
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) || noriks_is_type('controlpro', $current_product_id) ): ?>
 
                 NORIKS KneeFix je flexibilná ortéza na koleno, ktorá spája štyri funkcie v jednom systéme podpory: nastaviteľnú kompresiu pomocou presného kolieska, dvojité bočné stabilizátory, gélovú vložku, ktorá odľahčuje jabĺčko, a silikónový protišmykový okraj, ktorý ortézu udrží na mieste.<br><br>Na rozdiel od tuhých ortéz KneeFix koleno neznehybní — podopiera ho počas prirodzeného pohybu. Kompresiu nastavíte za sekundu: ráno pevnejšie, popoludní voľnejšie, podľa toho, koľko ste na nohách. Koleno tak získa stabilitu pri vstávaní, na schodoch, pri chôdzi aj pri dlhšom státí.<br><br>Látka je ľahká, priedušná a odvádza vlhkosť, takže ortézu môžete nosiť hodiny bez potenia a bez zarezávania. Je tenká a diskrétna — pod nohavicami ju takmer nevidno.<br><br>K dispozícii je vo veľkostiach od S po 2XL podľa telesnej hmotnosti a vo verzii na ľavé aj pravé koleno, takže padne presne.
 
@@ -568,7 +573,7 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
 
 
      <!-- 2 - slika tablica velicina -->
-     <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) || noriks_is_type('ortopedski-jastuk', $current_product_id) ) )  && ! ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) )) : // žiadna tabuľka veľkostí pre bunion + fisiorest + norikshers + ortopedický vankúš ?>
+     <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) || noriks_is_type('ortopedski-jastuk', $current_product_id) ) )  && ! ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) || noriks_is_type('controlpro', $current_product_id) )) : // žiadna tabuľka veľkostí pre bunion + fisiorest + norikshers + ortopedický vankúš ?>
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3>Tabuľky veľkostí</h3>
@@ -700,7 +705,7 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
 
 
     <!-- 3 - savjeti za pranje-->
-    <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) || noriks_is_type('ortopedski-jastuk', $current_product_id) || noriks_is_type('kidsnest', $current_product_id) ) )  && ! ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) )) : // žiadne tipy na pranie pre pás/bunion/fisiorest/norikshers/jastuk/kidsnest ?>
+    <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) || noriks_is_type('ortopedski-jastuk', $current_product_id) || noriks_is_type('kidsnest', $current_product_id) ) )  && ! ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) || noriks_is_type('controlpro', $current_product_id) )) : // žiadne tipy na pranie pre pás/bunion/fisiorest/norikshers/jastuk/kidsnest ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>
