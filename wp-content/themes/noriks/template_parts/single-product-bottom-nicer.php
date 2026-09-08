@@ -26,6 +26,12 @@ if ( function_exists( 'noriks_is_type' ) ) {
         get_template_part( 'template_parts/product-bottom/why-kidsnest' );
     } elseif ( noriks_is_type( 'kompresijske-nogavice' ) ) {
         get_template_part( 'template_parts/product-bottom/why-kompresijske' );
+    } elseif ( noriks_is_type( 'cloath' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-cloath' );
+    } elseif ( noriks_is_type( 'cloud' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-cloud' );
+    } elseif ( noriks_is_type( 'hyd' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-hyd' );
     }
 }
 ?>
@@ -773,9 +779,18 @@ endif;
                      : ( $is_kompmajice_page ? 'NORIKS FIT kompresné tričko'
                      : ( $is_norikshers_review_page ? 'NORIKS HERS' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) );
   if ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ) { $rv_fallback_title = 'NORIKS ControlPro tréner panvového dna'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('hyd') ) { $rv_fallback_title = 'NORIKS HYD'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('cloud') ) { $rv_fallback_title = 'NORIKS Cloud'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('cloath') ) { $rv_fallback_title = 'Polar NORIKS Cloth XXL'; }
 
   // Include review pools (own pool per product group)
-  if ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ) {
+if ( function_exists('noriks_is_type') && noriks_is_type('hyd') ) {
+    include get_stylesheet_directory() . '/auto_reviews/SK_hyd.php';
+} elseif ( function_exists('noriks_is_type') && noriks_is_type('cloud') ) {
+    include get_stylesheet_directory() . '/auto_reviews/SK_cloud.php';
+} elseif ( function_exists('noriks_is_type') && noriks_is_type('cloath') ) {
+    include get_stylesheet_directory() . '/auto_reviews/SK_cloath.php';
+} elseif ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ) {
     include get_stylesheet_directory() . '/auto_reviews/SK_controlpro.php';
   } elseif ( $is_kneefix_page ) {
     include get_stylesheet_directory() . '/auto_reviews/SK_kneefix.php';
@@ -1801,9 +1816,46 @@ $controlpro_faq = array(
   array( 'questioon' => 'Môžem ho vrátiť?', 'answer' => 'Áno, máte <strong>30 dní</strong> na vrátenie peňazí. Stačí e-mail, bez formulárov.' ),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_controlpro_faq, $controlpro_faq, $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq, $is_leakboxers_faq, $leakboxers_faq, $is_kompmajice_faq, $kompmajice_faq, $is_jastuk_faq, $jastuk_faq, $is_kidsnest_faq, $kidsnest_faq, $is_kneefix_faq, $kneefix_faq ) {
+$is_cloath_faq = ( function_exists('noriks_is_type') && noriks_is_type('cloath') );
+$cloath_faq = array(
+  array(
+    'questioon' => 'Čo ak nebudem s nákupom spokojný?',
+    'answer'    => 'Máte 30 dní na to, aby ste handričku vyskúšali bez rizika. Ak nie ste s výsledkom spokojní, napíšte našej podpore a vrátime vám peniaze — bez papierovania a bez vysvetľovania.',
+  ),
+  array(
+    'questioon' => 'Z čoho je handrička vyrobená?',
+    'answer'    => 'Z hustej mikrovláknovej tkaniny s obojstranným dizajnom: chlpatá strana zbiera nečistoty a vodu, sieťkovaná leští do lesku. Okraj je spevnený mäkkým lemom, ktorý nepoškriabe.',
+  ),
+  array(
+    'questioon' => 'Prečo je drahšia než bežné handričky?',
+    'answer'    => 'Pretože je hustejšia a ťažšia než štandardná mikrovlákna — nasaje mnohonásobne viac vody, nepúšťa vlákna a vydrží stovky praní. Jedna nahradí celý rad lacných, ktoré sa po pár praniach začnú strapkať.',
+  ),
+  array(
+    'questioon' => 'Ako dlho vydrží v porovnaní s bežnými?',
+    'answer'    => 'Pri správnej starostlivosti vydrží stovky použití. Handričky z obchodu zvyčajne po asi 20 praniach stratia hustotu a začnú zanechávať šmuhy.',
+  ),
+  array(
+    'questioon' => 'Zanecháva šmuhy alebo škvrny?',
+    'answer'    => 'Nie. Vďaka hustote a obojstrannému dizajnu sa voda nasaje namiesto rozotierania, takže sklo a zrkadlá zostanú bez šmúh — a bez vlákien.',
+  ),
+  array(
+    'questioon' => 'Ako ju najlepšie prať?',
+    'answer'    => 'V práčke na 40 °C, s pracím prostriedkom bez aviváže (aviváž upchá vlákna a zníži nasiakavosť). Nepoužívajte bielidlo a nesušte v sušičke — sušte na vzduchu.',
+  ),
+  array(
+    'questioon' => 'Prečo handrička na niektorých záberoch vyzerá tmavšie?',
+    'answer'    => 'Kvôli osvetleniu. Handrička je tmavosivá s čiernym lemom; pri silnom svetle pôsobí svetlejšie a v interiéri tmavšie.',
+  ),
+  array(
+    'questioon' => 'Je vhodná ako darček?',
+    'answer'    => 'Áno — balenia 3+3 a 8+4 patria medzi najčastejšie darčeky k nasťahovaniu a na sviatky. Handrička prichádza pekne zložená a pripravená na darovanie.',
+  ),
+);
+
+$faq_pick = function( $title, $list ) use ( $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq, $is_leakboxers_faq, $leakboxers_faq, $is_kompmajice_faq, $kompmajice_faq, $is_jastuk_faq, $jastuk_faq, $is_kidsnest_faq, $kidsnest_faq, $is_kneefix_faq, $kneefix_faq ) {
   $t = (string) $title;
   $is_info = ( stripos( $t, 'produkt' ) !== false ) || ( stripos( $t, 'výrobk' ) !== false );
+  if ( $is_cloath_faq && $is_info ) { return $cloath_faq; }
   if ( $is_kneefix_faq && $is_info )    { return $kneefix_faq; }
   if ( $is_controlpro_faq && $is_info ) { return $controlpro_faq; }
   if ( $is_kidsnest_faq && $is_info )  { return $kidsnest_faq; }
