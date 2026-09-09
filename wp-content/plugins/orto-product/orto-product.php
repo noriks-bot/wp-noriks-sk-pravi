@@ -1556,7 +1556,7 @@ function gck_render_bundle_selector() {
                     
   
 
-                <span class="bundle-option-title"><?php echo esc_html( $data['title'] ); ?></span>
+                <span class="gck-offer-head"><span class="bundle-option-title"><?php echo esc_html( $data['title'] ); ?></span>
                 
                   <?php
 
@@ -1567,6 +1567,7 @@ function gck_render_bundle_selector() {
     )  :  ?>
                 <?php if ( $show_price_highlights ) : ?>
                     <br class="gck-hl-break">
+                    <span class="gck-offer-prices">
                     <span class="gck-per-chip">
                         <?php if ( $per_regular > (float) $data['per'] ) : ?>
                             <span class="gck-per-old"><?php echo number_format( $per_regular, 2 ); ?>€</span>
@@ -1576,12 +1577,14 @@ function gck_render_bundle_selector() {
                     <?php if ( $discount_pct > 0 ) : ?>
                         <span class="gck-discount-badge">−<?php echo (int) $discount_pct; ?>%</span>
                     <?php endif; ?>
+                    </span><!-- /.gck-offer-prices -->
                 <?php else : ?>
                     — <span class="bundle-option-title"><?php echo number_format( $gck_per_new, 2 ); ?>€ / ks</span>
                 <?php endif; ?>
                 
                 
                 <?php endif; ?>
+                </span><!-- /.gck-offer-head -->
                 
 
                 <br/>
