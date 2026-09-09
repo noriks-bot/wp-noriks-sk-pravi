@@ -14,7 +14,7 @@ $fis_science = array(
 );
 $fis_v = get_template_directory_uri() . '/img/fisiorest-videos/';
 $fis_i = get_template_directory_uri() . '/img/fisiorest/';
-$fis_hero_video = $fis_v . 'hero.mp4';
+$fis_hero_video = $fis_v . 'hero-v2.mp4';
 
 // 3) Odporúčajú odborníci
 $fis_experts = array(
@@ -147,7 +147,7 @@ $fis_upgrades = array(
       <h2 class="fis-h2">Navrhnuté inžiniermi. Vyrobené podľa štandardov fyzioterapie</h2>
       <p>Investovali sme viac ako 50 000 € a 2 roky vývoja, aby NORIKS nebol len masážny prístroj na krk. Je to komplexné zariadenie na terapiu krku, ktoré skutočne lieči príčinu. Každá objednávka prechádza dôkladnou kontrolou kvality, aby dorazila v perfektnom stave.</p>
     </div>
-    <div class="fis-row2-media"><video src="<?php echo esc_url( $fis_v.'hero.mp4' ); ?>" muted autoplay loop playsinline preload="metadata"></video></div>
+    <div class="fis-row2-media"><video src="<?php echo esc_url( $fis_v.'hero-v2.mp4' ); ?>" muted autoplay loop playsinline preload="metadata"></video></div>
   </div>
 </section>
 
