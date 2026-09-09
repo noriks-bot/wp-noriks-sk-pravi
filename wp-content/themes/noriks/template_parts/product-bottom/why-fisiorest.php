@@ -26,8 +26,8 @@ $fis_experts = array(
 $fis_ugc = array(
     array( 'img' => $fis_i.'fis-uporaba-1.jpg', 'cap' => '„Prvýkrát po dlhom čase som konečne bez bolesti…"' ),
     array( 'img' => $fis_i.'fis-uporaba-2.jpg', 'cap' => '„Vankúš NORIKS je moja nová každodenná nevyhnutnosť…"' ),
-    array( 'img' => $fis_i.'fis-uporaba-3.jpg', 'cap' => '„Veľmi mi pomáha zmierniť napätie v krku a ramenách."' ),
-    array( 'img' => $fis_i.'fis-uporaba-4.jpg', 'cap' => '„Ak ste sa práve stali mamou, toto by mohlo byť presne to, čo potrebujete…"' ),
+    array( 'img' => $fis_i.'fis-uporaba-3.jpg', 'cap' => '„Ak ste sa práve stali mamou, toto by mohlo byť presne to, čo potrebujete…"' ),
+    array( 'img' => $fis_i.'fis-uporaba-4.jpg', 'cap' => '„Veľmi mi pomáha zmierniť napätie v krku a ramenách."' ),
 );
 // 5) ThermoTrac 3-v-1
 $fis_thermo = array(
