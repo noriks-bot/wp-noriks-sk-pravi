@@ -509,7 +509,23 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
       </div>
       <div class="accordion-content">
 
-         <?php if( function_exists('noriks_is_type') && noriks_is_type( 'kidsnest', $current_product_id ) ): ?>
+                  <?php if( function_exists('noriks_is_type') && noriks_is_type('snug', $current_product_id) ): ?>
+
+                <strong>NORIKS Snug</strong> je vankúš na celé telo v tvare písmena S. Väčšina telových vankúšov je rovná — vaše telo nie je. Preto Snug kopíruje líniu tela a podopiera ramená, boky aj kolená naraz.<br><br>Keď spíte na boku bez opory, rameno nesie celú váhu, bok klesá a chrbtica sa krúti. Tri body opory rozložia váhu, takže žiadne miesto nenesie celé zaťaženie.<br><br>Rozmery sú 105 cm dĺžky a 30 cm šírky — dosť na to, aby vás podopieral od ramena po kolená, a pritom nezaberie celú posteľ. Výplň tvoria tisíce jemných pružných vlákien, ktoré sa vracajú do tvaru a nesplasnú ani po mesiacoch používania.<br><br>Chladivá obliečka sa dá zložiť a vyprať v práčke na 40 °C a látka prepúšťa vzduch celú noc. Dostupný je v šiestich farbách: modrá, ružová, sivá, zelená, fialová a tmavomodrá.
+
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kompwom', $current_product_id) ): ?>
+
+                <strong>NORIKS FIT Woman</strong> je tvarujúce tričko, v ktorom je reliéf votkaný priamo do látky, nie na ňu potlačený. Široký pás prechádza cez brucho a boky, druhý ide cez chrbát.<br><br>Kompresia je rozložená do šírky, nie stlačená do jedného bodu, takže nič nezareže. Brucho zostáva vyhladené, pás užší a chrbát dostáva oporu, ktorá pomáha stáť vzpriamenejšie.<br><br>Úplet je bezšvový, tenký a matný — zmizne pod košeľou, sakom alebo priliehavými šatami. Cez deň sa neroluje a nečrtá sa pod oblečením.<br><br>Perte v práčke na 30 °C, bez bielidiel, žehlenia a sušičky. Dostupné je v troch farbách (čierna, tmavosivá, ružová) a vo veľkostiach od S po 3XL. Ak ste medzi dvomi veľkosťami, vezmite väčšiu.
+
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('pal', $current_product_id) ): ?>
+
+                <strong>NORIKS Pal</strong> je vychádzková palica navrhnutá okolo jedného problému: vstávania. Okrem hornej rukoväte má aj druhú, nižšie, ktorej sa chytíte, keď vstávate z kresla, z postele alebo z nízkej stoličky — bez predklonu a bez cudzej pomoci.<br><br>Štyri gumené nožičky držia palicu vzpriamene, keď ju pustíte. Nepadne na zem, takže sa po nej nemusíte zohýnať. Základňa je protišmyková a zostáva stabilná na dlažbe, parketách aj na nerovnom teréne.<br><br>V rukoväti je zabudované svetlo, ktoré osvetlí cestu pred vami — na cestu do kúpeľne v noci alebo na prechádzku za súmraku. Popri ňom je aj zvukový alarm, ktorý upozorní domácich, ak spadnete alebo potrebujete pomoc.<br><br>Palica je skladacia a zmestí sa do tašky alebo do priehradky v aute, výška sa nastaví za pár sekúnd, bez náradia, pre každú postavu.
+
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('red', $current_product_id) ): ?>
+
+                <strong>NORIKS RedRelief</strong> je pás na zápästie, ktorý spája dve najpreskúmanejšie vlnové dĺžky v terapii červeným svetlom: červené svetlo 660 nm upokojuje povrchový zápal a infračervené 850 nm preniká hlbšie, k tkanivu okolo stredového nervu.<br><br>Svetlo sa v tkanive mení na bunkovú energiu (ATP) a podnecuje miestne prekrvenie — dva procesy, ktoré sú súčasťou prirodzenej regenerácie tela. Preto sa používa pri syndróme karpálneho tunela, zápale šliach, artritíde a bolestiach ruky a zápästia.<br><br>V páse je zabudovaných 48 dvojitých LED diód rozložených po celej vnútornej strane, takže svetlo pokryje celé zápästie, nie len jeden bod. K dispozícii sú 4 režimy a 3 úrovne výkonu.<br><br>Zariadenie je bezdrôtové a nabíja sa cez kábel USB-C — jedno nabitie stačí na až 4 ošetrenia. Váži iba 126 g, má otvor na palec a nastaviteľný remienok, takže sadne na ľavú aj pravú ruku. Odporúča sa jedno 15-minútové ošetrenie denne; zariadenie sa na konci samo vypne.
+
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type( 'kidsnest', $current_product_id ) ): ?>
 
                 NORIKS KidsNest je vyrobený z hypoalergénnej pamäťovej peny s certifikátom OEKO-TEX® — bez formaldehydu, ťažkých kovov a BPA — s priedušným, prateľným poťahom, ktorý sa jednoducho sťahuje.<br><br>Jeho 3-zónová ergonomická štruktúra jemne prijíma hlavu, podopiera krk a pomáha udržať chrbticu v prirodzenom zarovnaní — aj keď sa dieťa počas noci veľa otáča. Tým podporuje dýchanie nosom a pokojnejší, hlbší spánok.<br><br>Dostupný v troch veľkostiach (1 – 3, 3 – 9 a 9 – 14 rokov), rastie s vaším dieťaťom a poskytuje správnu výšku opory v každej fáze vývoja.
 
@@ -573,7 +589,7 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
 
 
      <!-- 2 - slika tablica velicina -->
-     <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) || noriks_is_type('ortopedski-jastuk', $current_product_id) ) )  && ! ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) || noriks_is_type('controlpro', $current_product_id) )) : // žiadna tabuľka veľkostí pre bunion + fisiorest + norikshers + ortopedický vankúš ?>
+     <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) || noriks_is_type('ortopedski-jastuk', $current_product_id) ) )  && ! ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) || noriks_is_type('controlpro', $current_product_id) ) && ! ( function_exists('noriks_is_type') && noriks_is_type('snug', $current_product_id) ) && ! ( function_exists('noriks_is_type') && noriks_is_type('pal', $current_product_id) ) && ! ( function_exists('noriks_is_type') && noriks_is_type('red', $current_product_id) )) : // žiadna tabuľka veľkostí pre bunion + fisiorest + norikshers + ortopedický vankúš ?>
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3>Tabuľky veľkostí</h3>
@@ -686,7 +702,55 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
 
                   <img class="js-open-size-chart" style="cursor:pointer;" src="https://noriks.com/sk/wp-content/uploads/2026/02/Nogavice_tabela_velikosti_sk.png">
 
-    <?php elseif(  $is_mixed_bundle ): ?>
+    <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kompwom', $current_product_id) ): ?>
+
+          <div class="kwm-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veľkosť vyberajte podľa <strong>obvodu hrudníka</strong> — ten určuje, ako tričko sadne na prsia a ramená. Ak ste medzi dvomi veľkosťami, vezmite <strong>väčšiu</strong>.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a8536b;color:#fff;">
+                  <th style="padding:9px 10px;text-align:left;">Veľkosť</th>
+                  <th style="padding:9px 10px;text-align:left;">Obvod hrudníka</th>
+                  <th style="padding:9px 10px;text-align:left;">Obvod pása</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr style="background:#fff;border-bottom:1px solid #f0e6ea;">
+                    <td style="padding:9px 10px;font-weight:700;">S<span style="display:block;font-size:11.5px;font-weight:600;color:#a08d95;">US 0–4</span></td>
+                    <td style="padding:9px 10px;">78 – 83 cm</td>
+                    <td style="padding:9px 10px;">65 – 71 cm</td>
+                  </tr>
+                  <tr style="background:#fbf7f8;border-bottom:1px solid #f0e6ea;">
+                    <td style="padding:9px 10px;font-weight:700;">M<span style="display:block;font-size:11.5px;font-weight:600;color:#a08d95;">US 6–8</span></td>
+                    <td style="padding:9px 10px;">83 – 89 cm</td>
+                    <td style="padding:9px 10px;">71 – 77 cm</td>
+                  </tr>
+                  <tr style="background:#fff;border-bottom:1px solid #f0e6ea;">
+                    <td style="padding:9px 10px;font-weight:700;">L<span style="display:block;font-size:11.5px;font-weight:600;color:#a08d95;">US 10–12</span></td>
+                    <td style="padding:9px 10px;">89 – 95 cm</td>
+                    <td style="padding:9px 10px;">77 – 83 cm</td>
+                  </tr>
+                  <tr style="background:#fbf7f8;border-bottom:1px solid #f0e6ea;">
+                    <td style="padding:9px 10px;font-weight:700;">XL<span style="display:block;font-size:11.5px;font-weight:600;color:#a08d95;">US 14</span></td>
+                    <td style="padding:9px 10px;">95 – 102 cm</td>
+                    <td style="padding:9px 10px;">83 – 88 cm</td>
+                  </tr>
+                  <tr style="background:#fff;border-bottom:1px solid #f0e6ea;">
+                    <td style="padding:9px 10px;font-weight:700;">2XL<span style="display:block;font-size:11.5px;font-weight:600;color:#a08d95;">US 16–18</span></td>
+                    <td style="padding:9px 10px;">102 – 108 cm</td>
+                    <td style="padding:9px 10px;">88 – 94 cm</td>
+                  </tr>
+                  <tr style="background:#fbf7f8;border-bottom:1px solid #f0e6ea;">
+                    <td style="padding:9px 10px;font-weight:700;">3XL<span style="display:block;font-size:11.5px;font-weight:600;color:#a08d95;">US 20</span></td>
+                    <td style="padding:9px 10px;">108 – 115 cm</td>
+                    <td style="padding:9px 10px;">94 – 100 cm</td>
+                  </tr>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Ako merať:</strong> hrudník cez najširšie miesto, pás na najužšom mieste. Merajte cez spodnú bielizeň, páska priliehavá, ale nie stiahnutá.</p>
+          </div>
+
+        <?php elseif(  $is_mixed_bundle ): ?>
 
      <img class="js-open-size-chart" style="cursor:pointer;" src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
 

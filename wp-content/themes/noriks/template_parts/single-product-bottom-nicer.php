@@ -32,6 +32,14 @@ if ( function_exists( 'noriks_is_type' ) ) {
         get_template_part( 'template_parts/product-bottom/why-cloud' );
     } elseif ( noriks_is_type( 'hyd' ) ) {
         get_template_part( 'template_parts/product-bottom/why-hyd' );
+    } elseif ( noriks_is_type( 'snug' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-snug' );
+    } elseif ( noriks_is_type( 'kompwom' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-kompwom' );
+    } elseif ( noriks_is_type( 'pal' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-pal' );
+    } elseif ( noriks_is_type( 'red' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-red' );
     }
 }
 ?>
@@ -782,8 +790,21 @@ endif;
   if ( function_exists('noriks_is_type') && noriks_is_type('hyd') ) { $rv_fallback_title = 'NORIKS HYD'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('cloud') ) { $rv_fallback_title = 'NORIKS Cloud'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('cloath') ) { $rv_fallback_title = 'Polar NORIKS Cloth XXL'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) { $rv_fallback_title = 'NORIKS Snug vankúš na celé telo'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('kompwom') ) { $rv_fallback_title = 'NORIKS FIT Woman tvarujúce tričko'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('pal') ) { $rv_fallback_title = 'NORIKS Pal vychádzková palica'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('red') ) { $rv_fallback_title = 'NORIKS RedRelief terapia červeným svetlom'; }
 
   // Include review pools (own pool per product group)
+if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) {
+  include get_stylesheet_directory() . '/auto_reviews/SK_snug.php';
+} elseif ( function_exists('noriks_is_type') && noriks_is_type('kompwom') ) {
+  include get_stylesheet_directory() . '/auto_reviews/SK_kompwom.php';
+} elseif ( function_exists('noriks_is_type') && noriks_is_type('pal') ) {
+  include get_stylesheet_directory() . '/auto_reviews/SK_pal.php';
+} elseif ( function_exists('noriks_is_type') && noriks_is_type('red') ) {
+  include get_stylesheet_directory() . '/auto_reviews/SK_red.php';
+} else
 if ( function_exists('noriks_is_type') && noriks_is_type('hyd') ) {
     include get_stylesheet_directory() . '/auto_reviews/SK_hyd.php';
 } elseif ( function_exists('noriks_is_type') && noriks_is_type('cloud') ) {
@@ -1205,7 +1226,11 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
         noriks_is_type('bra') ||
         noriks_is_type('hyd') ||
         noriks_is_type('snore') ||
-        noriks_is_type('cloud')
+        noriks_is_type('cloud') ||
+        noriks_is_type('snug') ||
+        noriks_is_type('kompwom') ||
+        noriks_is_type('pal') ||
+        noriks_is_type('red')
   );
   // fotografije osoba: samo na odjeci (majice, bokserice, kompleti), ne na ortopedskim pomagalima
   $avatar_pool = $noriks_no_photos ? array() : get_review_avatar_pool($avatar_type);
@@ -1924,9 +1949,161 @@ $hyd_faq = array(
   ),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq, $is_leakboxers_faq, $leakboxers_faq, $is_kompmajice_faq, $kompmajice_faq, $is_jastuk_faq, $jastuk_faq, $is_kidsnest_faq, $kidsnest_faq, $is_kneefix_faq, $kneefix_faq ) {
+$is_snug = ( function_exists('noriks_is_type') && noriks_is_type('snug') );
+$snug_faq = array(
+  array(
+    'questioon' => 'Aké sú rozmery vankúša?',
+    'answer'    => 'Jedna veľkosť: <strong>105 cm dĺžky a 30 cm šírky</strong>. Podopiera od ramena po kolená, ale nezaberie celú posteľ — preto sa ľahko drží a ľahko sa s ním otočíte.',
+  ),
+  array(
+    'questioon' => 'Časom sa sploští?',
+    'answer'    => 'Nie. Výplň tvoria tisíce jemných pružných vlákien, ktoré sa vracajú do tvaru. Opora, ktorú cítite prvú noc, je rovnaká aj po deväťdesiatich nociach.',
+  ),
+  array(
+    'questioon' => 'Čím je vyplnený?',
+    'answer'    => 'Vysoko pružnou vláknitou výplňou — zvonku mäkkou a príjemnou, vnútri pevnou a podopierajúcou. Bez pamäťovej peny, ktorá sa zahrieva.',
+  ),
+  array(
+    'questioon' => 'Ako sa perie?',
+    'answer'    => 'Obliečka sa dá zložiť a vyprať v práčke na 40 °C. Samotný vankúš neperte v práčke — v prípade potreby ho vyvetrajte a nechajte vyschnúť na vzduchu.',
+  ),
+  array(
+    'questioon' => 'Je vhodný počas tehotenstva?',
+    'answer'    => 'Áno. Tvar S podopiera brucho spredu a chrbát zozadu, pričom odporúčaná poloha v tehotenstve je spánok na ľavom boku. Pri zdravotných komplikáciách sa poraďte s lekárom.',
+  ),
+  array(
+    'questioon' => 'Ako dlho trvá zvyknúť si?',
+    'answer'    => 'Väčšina ľudí si nájde svoju polohu do druhej noci. Tvar S je iný ako rovný vankúš, takže prvé noci sa telo učí, kam si ľahnúť.',
+  ),
+  array(
+    'questioon' => 'Aké farby sú dostupné?',
+    'answer'    => 'Šesť farieb: modrá, ružová, sivá, zelená, fialová a tmavomodrá. Farbu si vyberáte na tejto stránke pred pridaním do košíka.',
+  ),
+  array(
+    'questioon' => 'Môžem ho vrátiť?',
+    'answer'    => 'Áno, máte <strong>30 dní</strong> na vrátenie peňazí alebo výmenu. Stačí e-mail, bez formulárov.',
+  ),
+);
+
+$is_kompwom = ( function_exists('noriks_is_type') && noriks_is_type('kompwom') );
+$kompwom_faq = array(
+  array(
+    'questioon' => 'Ako si vybrať veľkosť?',
+    'answer'    => 'Podľa obvodu hrudníka — ten rozhoduje, ako tričko sadne na prsiach a ramenách. Ak ste medzi dvomi veľkosťami, vezmite <strong>väčšiu</strong>. Dostupné sú veľkosti od S po 3XL.',
+  ),
+  array(
+    'questioon' => 'Vidno ho pod oblečením?',
+    'answer'    => 'Nie. Úplet je bezšvový, tenký a matný, takže zmizne pod košeľou, sakom alebo priliehavými šatami. Nemá okraj, ktorý by sa črtal.',
+  ),
+  array(
+    'questioon' => 'Roluje sa cez deň?',
+    'answer'    => 'Nie. Kompresia sa rozkladá do šírky namiesto toho, aby tlačila v jednom bode, takže tričko zostane na mieste aj po celom dni.',
+  ),
+  array(
+    'questioon' => 'Sú 3D línie potlačené?',
+    'answer'    => 'Nie. Väzba je <strong>votkaná priamo do látky</strong>, takže nič nepraská a nič sa časom neodlupuje, bez ohľadu na počet praní.',
+  ),
+  array(
+    'questioon' => 'Ako silno sťahuje?',
+    'answer'    => 'Rozhodne, ale nikdy tesne. Musíte normálne dýchať a jesť bez toho, aby ste na tričko mysleli. Ak je stopa na koži viditeľná dvadsať minút po vyzlečení, veľkosť je primalá.',
+  ),
+  array(
+    'questioon' => 'Ako sa perie?',
+    'answer'    => 'V práčke na <strong>30 °C</strong>. Bez bielidiel, bez žehlenia a bez sušičky — nechajte vyschnúť na vzduchu.',
+  ),
+  array(
+    'questioon' => 'Aké farby sú dostupné?',
+    'answer'    => 'Tri farby: čierna, tmavosivá a ružová. Farbu a veľkosť si vyberáte na tejto stránke pred pridaním do košíka.',
+  ),
+  array(
+    'questioon' => 'Môžem ho vrátiť?',
+    'answer'    => 'Áno, máte <strong>30 dní</strong> na vrátenie peňazí alebo výmenu veľkosti. Stačí e-mail, bez formulárov.',
+  ),
+);
+
+$is_pal = ( function_exists('noriks_is_type') && noriks_is_type('pal') );
+$pal_faq = array(
+  array(
+    'questioon' => 'Na čo slúži druhá rukoväť?',
+    'answer'    => 'Na <strong>vstávanie</strong>. Spodnú rukoväť chytíte, keď vstávate z kresla, z postele alebo z nízkej stoličky — tlak ide zvisle nadol, takže sa nemusíte predkláňať ani prosiť niekoho o pomoc.',
+  ),
+  array(
+    'questioon' => 'Naozaj stojí sama?',
+    'answer'    => 'Áno. Základňa má <strong>štyri gumené nožičky</strong>, ktoré držia palicu vzpriamene, keď ju pustíte. Nepadne na zem, takže sa po nej nemusíte zohýnať.',
+  ),
+  array(
+    'questioon' => 'Kĺže sa na hladkej podlahe?',
+    'answer'    => 'Nie. Nožičky sú z protišmykovej gumy a držia na dlažbe, parketách aj laminátoch. Základňa sa prispôsobí aj nerovnému terénu vonku.',
+  ),
+  array(
+    'questioon' => 'Ako funguje svetlo?',
+    'answer'    => 'Svetlo je zabudované v rukoväti a zapína sa tlačidlom. Osvetlí cestu pred vami — na nočnú cestu do kúpeľne alebo na prechádzku za súmraku.',
+  ),
+  array(
+    'questioon' => 'Čo robí alarm?',
+    'answer'    => 'Stlačením tlačidla sa spustí <strong>hlasný zvukový signál</strong>, ktorý upozorní domácich, ak spadnete alebo potrebujete pomoc.',
+  ),
+  array(
+    'questioon' => 'Dá sa nastaviť výška?',
+    'answer'    => 'Áno. Výška sa nastaví za pár sekúnd, bez náradia, takže palica sadne každej postave.',
+  ),
+  array(
+    'questioon' => 'Dá sa zložiť?',
+    'answer'    => 'Áno. Zloží sa na niekoľko častí a zmestí sa do tašky alebo do priehradky v aute — praktické na cestovanie a návštevy lekára.',
+  ),
+  array(
+    'questioon' => 'Môžem ju vrátiť?',
+    'answer'    => 'Áno, máte <strong>30 dní</strong> na vrátenie peňazí alebo výmenu. Stačí e-mail, bez formulárov.',
+  ),
+);
+
+$is_red = ( function_exists('noriks_is_type') && noriks_is_type('red') );
+$red_faq = array(
+  array(
+    'questioon' => 'Ako terapia červeným svetlom pomáha pri syndróme karpálneho tunela?',
+    'answer'    => 'Červené a infračervené svetlo preniká do tkaniva a stimuluje <strong>tvorbu bunkovej energie (ATP)</strong>, čo pomáha utlmiť zápal okolo stredového nervu, zlepšiť prekrvenie a podporiť prirodzené hojenie.',
+  ),
+  array(
+    'questioon' => 'Ako dlho do prvých výsledkov?',
+    'answer'    => 'Väčšina používateľov cíti menej nočného mravčenia do <strong>1 – 2 týždňov</strong>. Badateľnejšia zmena v sile úchopu zvyčajne prichádza okolo štvrtého týždňa. Odporúčame pravidelné denné používanie aspoň osem týždňov.',
+  ),
+  array(
+    'questioon' => 'Je bezpečné používať to každý deň?',
+    'answer'    => 'Áno. Zariadenie je určené na <strong>denné 15-minútové ošetrenia</strong>. Svetlo pri týchto dávkach tkanivo nezahrieva. Zariadenie sa na konci ošetrenia samo vypne.',
+  ),
+  array(
+    'questioon' => 'Funguje na obidve ruky?',
+    'answer'    => 'Áno, pás sa dá nasadiť <strong>na ľavú aj na pravú ruku</strong>. Ak máte problém na oboch rukách, urobte dve ošetrenia po 15 minút za sebou alebo si vyberte balenie s dvomi zariadeniami.',
+  ),
+  array(
+    'questioon' => 'Na aké veľkosti ruky sa hodí?',
+    'answer'    => 'Pružný pás s nastaviteľným remienkom sadne na <strong>väčšinu veľkostí dospelej ruky</strong>, aj na tie väčšie. Otvor na palec drží zariadenie na mieste počas celého ošetrenia.',
+  ),
+  array(
+    'questioon' => 'Čo je v balení?',
+    'answer'    => '1× pás NORIKS RED, <strong>1× nabíjací kábel USB-C</strong> a návod s odporúčaným protokolom terapie.',
+  ),
+  array(
+    'questioon' => 'Ako dlho vydrží batéria?',
+    'answer'    => 'Jedno nabitie stačí na <strong>až 4 ošetrenia</strong>. Zariadenie sa nabíja cez kábel USB-C, takže ho nabijete z nabíjačky na telefón alebo z notebooku.',
+  ),
+  array(
+    'questioon' => 'Nahrádza to lekára?',
+    'answer'    => 'Nie. NORIKS RED je zariadenie na domáce použitie a <strong>nenahrádza lekárske vyšetrenie</strong> ani predpísanú liečbu. Pri pretrvávajúcich alebo silných ťažkostiach vyhľadajte lekára.',
+  ),
+  array(
+    'questioon' => 'Môžem ho vrátiť?',
+    'answer'    => 'Áno, máte <strong>30 dní</strong> na vrátenie peňazí alebo výmenu. Stačí e-mail, bez formulárov.',
+  ),
+);
+
+$faq_pick = function( $title, $list ) use ( $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq, $is_leakboxers_faq, $leakboxers_faq, $is_kompmajice_faq, $kompmajice_faq, $is_jastuk_faq, $jastuk_faq, $is_kidsnest_faq, $kidsnest_faq, $is_kneefix_faq, $kneefix_faq ) {
   $t = (string) $title;
   $is_info = ( stripos( $t, 'produkt' ) !== false ) || ( stripos( $t, 'výrobk' ) !== false );
+  if ( $is_snug && $is_info ) { return $snug_faq; }
+  if ( $is_kompwom && $is_info ) { return $kompwom_faq; }
+  if ( $is_pal && $is_info ) { return $pal_faq; }
+  if ( $is_red && $is_info ) { return $red_faq; }
   if ( $is_hyd_faq && $is_info ) { return $hyd_faq; }
   if ( $is_cloud_faq && $is_info ) { return $cloud_faq; }
   if ( $is_cloath_faq && $is_info ) { return $cloath_faq; }

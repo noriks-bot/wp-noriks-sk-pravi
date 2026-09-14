@@ -1222,6 +1222,11 @@ function gck_render_bundle_selector() {
       #bundle-selector .swatch-circle.color-zelena     { background: #b3bf9a !important; }
       #bundle-selector .swatch-circle.color-ljubicasta { background: #b48fc4 !important; }
       #bundle-selector .swatch-circle.color-tamnoplava { background: #2b3a63 !important; }
+      /* lokalizirane barve SK */
+      #bundle-selector .swatch-circle.color-modra { background: #b7c4e6 !important; }
+      #bundle-selector .swatch-circle.color-ruzova { background: #e6a8b8 !important; }
+      #bundle-selector .swatch-circle.color-fialova { background: #b48fc4 !important; }
+      #bundle-selector .swatch-circle.color-tmavomodra { background: #2b3a63 !important; }
       @media (max-width: 560px) {
         #bundle-selector .color-swatches { gap: 8px; width: 100% !important; }
         #bundle-selector .color-swatches .swatch { width: 42px !important; height: 42px !important; }
@@ -1242,6 +1247,10 @@ function gck_render_bundle_selector() {
       #bundle-selector .swatch-circle.color-crna      { background: #17161a !important; }
       #bundle-selector .swatch-circle.color-tamnosiva { background: #4a4a4f !important; }
       #bundle-selector .swatch-circle.color-roza      { background: #e28ba4 !important; }
+      /* lokalizirane barve SK */
+      #bundle-selector .swatch-circle.color-cierna { background: #17161a !important; }
+      #bundle-selector .swatch-circle.color-tmavosiva { background: #4a4a4f !important; }
+      #bundle-selector .swatch-circle.color-ruzova { background: #e28ba4 !important; }
 
       /* Cijeli izbornik ponuda u roza/bordo paleti stranice (#a8536b / #5c2331 / #fbf3f4).
          Gumb "Dodaj u kosaricu" ostaje nepromijenjen. */
