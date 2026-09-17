@@ -40,6 +40,8 @@ if ( function_exists( 'noriks_is_type' ) ) {
         get_template_part( 'template_parts/product-bottom/why-pal' );
     } elseif ( noriks_is_type( 'red' ) ) {
         get_template_part( 'template_parts/product-bottom/why-red' );
+    } elseif ( noriks_is_type( 'kneeheat' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-kneeheat' );
     }
 }
 ?>
@@ -794,6 +796,7 @@ endif;
   if ( function_exists('noriks_is_type') && noriks_is_type('kompwom') ) { $rv_fallback_title = 'NORIKS FIT Woman tvarujúce tričko'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('pal') ) { $rv_fallback_title = 'NORIKS Pal vychádzková palica'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('red') ) { $rv_fallback_title = 'NORIKS RedRelief terapia červeným svetlom'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('kneeheat') ) { $rv_fallback_title = 'NORIKS KneeHeat ohrievač a masážny prístroj na koleno'; }
 
   // Include review pools (own pool per product group)
 if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) {
@@ -804,6 +807,8 @@ if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) {
   include get_stylesheet_directory() . '/auto_reviews/SK_pal.php';
 } elseif ( function_exists('noriks_is_type') && noriks_is_type('red') ) {
   include get_stylesheet_directory() . '/auto_reviews/SK_red.php';
+} elseif ( function_exists('noriks_is_type') && noriks_is_type('kneeheat') ) {
+  include get_stylesheet_directory() . '/auto_reviews/SK_kneeheat.php';
 } else
 if ( function_exists('noriks_is_type') && noriks_is_type('hyd') ) {
     include get_stylesheet_directory() . '/auto_reviews/SK_hyd.php';
@@ -1230,7 +1235,8 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
         noriks_is_type('snug') ||
         noriks_is_type('kompwom') ||
         noriks_is_type('pal') ||
-        noriks_is_type('red')
+        noriks_is_type('red') ||
+        noriks_is_type('kneeheat')
   );
   // fotografije osoba: samo na odjeci (majice, bokserice, kompleti), ne na ortopedskim pomagalima
   $avatar_pool = $noriks_no_photos ? array() : get_review_avatar_pool($avatar_type);
@@ -2097,13 +2103,50 @@ $red_faq = array(
   ),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq, $is_leakboxers_faq, $leakboxers_faq, $is_kompmajice_faq, $kompmajice_faq, $is_jastuk_faq, $jastuk_faq, $is_kidsnest_faq, $kidsnest_faq, $is_kneefix_faq, $kneefix_faq ) {
+$is_kneeheat = ( function_exists('noriks_is_type') && noriks_is_type('kneeheat') );
+$kneeheat_faq = array(
+  array(
+    'questioon' => 'Ako prístroj vlastne funguje?',
+    'answer'    => 'Teplo do <strong>42 °C</strong> rozširuje cievy a uľahčuje prísun krvi do hlbšieho tkaniva. Rytmická vzduchová kompresia vytláča nahromadenú tekutinu a privádza čerstvú krv a vibrácie <strong>60 Hz</strong> uvoľňujú stuhnutosť okolo kĺbu. Všetky tri terapie fungujú súčasne.',
+  ),
+  array(
+    'questioon' => 'Na aké ťažkosti je určený?',
+    'answer'    => 'Na chronické, postupne vzniknuté ťažkosti — stuhnuté, bolestivé alebo opuchnuté koleno, ktoré sa objavuje s vekom a záťažou. Pri čerstvom zranení, nedávnej operácii alebo poruchách krvného obehu sa najprv poraďte s lekárom.',
+  ),
+  array(
+    'questioon' => 'Ako dlho trvá jedno sedenie?',
+    'answer'    => '<strong>12 minút.</strong> Prístroj sa spúšťa jedným tlačidlom a na konci sedenia sa sám zastaví.',
+  ),
+  array(
+    'questioon' => 'Kedy pocítim rozdiel?',
+    'answer'    => 'Mnohí cítia, že je koleno uvoľnenejšie už po prvom sedení. Citeľnejšia zmena zvyčajne prichádza po <strong>7 až 14 dňoch</strong> každodenného používania.',
+  ),
+  array(
+    'questioon' => 'Môžem ho používať na obe kolená?',
+    'answer'    => 'Áno. Bandáž sedí na ľavú aj pravú nohu — ak vás trápia obe, spustite sedenie na každej.',
+  ),
+  array(
+    'questioon' => 'Čím sa líši od prístroja TENS alebo termofóru?',
+    'answer'    => 'TENS prekrýva signál bolesti a termofór zahrieva len povrch a za pár minút vychladne. KneeHeat spája dlhotrvajúce teplo, kompresiu a vibrácie, aby pôsobil na hlbšie tkanivo.',
+  ),
+  array(
+    'questioon' => 'Treba ho nabíjať?',
+    'answer'    => 'Áno, prístroj je bezdrôtový a nabíja sa priloženým USB-C káblom. Jedno nabitie vydrží na viac sedení.',
+  ),
+  array(
+    'questioon' => 'Sedí na každú veľkosť nohy?',
+    'answer'    => 'Pásy sú nastaviteľné a v balení je aj predlžovací pás pre väčšie obvody nohy.',
+  ),
+);
+
+$faq_pick = function( $title, $list ) use ( $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_kneeheat, $kneeheat_faq, $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq, $is_leakboxers_faq, $leakboxers_faq, $is_kompmajice_faq, $kompmajice_faq, $is_jastuk_faq, $jastuk_faq, $is_kidsnest_faq, $kidsnest_faq, $is_kneefix_faq, $kneefix_faq ) {
   $t = (string) $title;
   $is_info = ( stripos( $t, 'produkt' ) !== false ) || ( stripos( $t, 'výrobk' ) !== false );
   if ( $is_snug && $is_info ) { return $snug_faq; }
   if ( $is_kompwom && $is_info ) { return $kompwom_faq; }
   if ( $is_pal && $is_info ) { return $pal_faq; }
   if ( $is_red && $is_info ) { return $red_faq; }
+  if ( $is_kneeheat && $is_info ) { return $kneeheat_faq; }
   if ( $is_hyd_faq && $is_info ) { return $hyd_faq; }
   if ( $is_cloud_faq && $is_info ) { return $cloud_faq; }
   if ( $is_cloath_faq && $is_info ) { return $cloath_faq; }
