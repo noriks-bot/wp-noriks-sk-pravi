@@ -39,7 +39,7 @@ $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
 <!-- ============ 2) Bez Noriksa / S Noriksom ============ -->
 <section class="ncd-sec ncd-dark">
   <div class="ncd-wrap ncd-row2">
-    <div class="ncd-media"><?php echo $cd_vid('cld-vid-razlika.mp4','cld-bez-s-noriksom.webp','Spavanje bez jastuka i s NORIKS Cloud jastukom'); ?></div>
+    <div class="ncd-media"><?php echo $cd_vid('cld-vid-razlika.mp4','cld-bez-s-noriksom.webp','Spánok bez vankúša a s vankúšom NORIKS Cloud'); ?></div>
     <div class="ncd-copy">
       <h2 class="ncd-h2">Rozdiel, ktorý spoznáte hneď prvú noc</h2>
       <p><strong>Bez vankúša:</strong> vrchná noha padá cez spodnú, panva sa krúti a tlak ide do krížov a do kolien.</p>
@@ -56,10 +56,10 @@ $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
 <!-- ============ B) Koraci — pocnite bolje spavati vec veceras ============ -->
 <?php
 $cd_steps = array(
-  array( 'cld-korak1.webp', 'Otkopčajte traku i postavite jastuk', 'Pritisnite druker da oslobodite traku i stavite jastuk između koljena.' ),
-  array( 'cld-korak2.webp', 'Prilagodite traku svojoj nozi',       'Zategnite traku oko noge u jedan od dva položaja — čvrsto, ali bez pritiska.' ),
-  array( 'cld-korak3.webp', 'Spavajte s pravilnim poravnanjem',    'Jastuk drži razmak nogu, kralježnica ostaje poravnata, a pritisak popušta.' ),
-  array( 'cld-korak4.webp', 'Probudite se bez ukočenosti',         'Bez okretanja pola noći i bez traženja položaja koji ne boli.' ),
+  array( 'cld-korak1.webp', 'Rozopnite pásik a vložte vankúš', 'Stlačte patentku, uvoľnite pásik a vložte vankúš medzi kolená.' ),
+  array( 'cld-korak2.webp', 'Nastavte pásik podľa svojej nohy',       'Utiahnite pásik okolo nohy v jednej z dvoch polôh — pevne, ale bez tlaku.' ),
+  array( 'cld-korak3.webp', 'Spite v správnom postavení',    'Vankúš udržiava nohy v rozstupe, chrbtica zostáva vyrovnaná a tlak povolí.' ),
+  array( 'cld-korak4.webp', 'Zobuďte sa bez stuhnutosti',         'Bez prevaľovania pol noci a bez hľadania polohy, ktorá nebolí.' ),
 );
 ?>
 <section class="ncd-sec">
@@ -86,10 +86,10 @@ $cd_steps = array(
 <!-- ============ A) Recenzije kupaca — vrtuljak (kao prva sekcija na referenci) ============ -->
 <?php
 $cd_revs = array(
-  array( 5, 'Konačno spavam kroz noć',      'Spavam na boku cijeli život i uvijek sam se budila s ukočenim leđima. Prvo jutro nakon jastuka — ništa. Nisam vjerovala da je tako jednostavno.', 'Marina T.' ),
-  array( 5, 'Traka je ono što ga razlikuje', 'Prije mi je obični jastuk ispadao nakon pola sata. Ovaj ostaje između koljena do jutra, i kad se okrenem na drugu stranu.', 'Davor K.' ),
-  array( 5, 'Spas u trudnoći',               'Kupila sam ga u sedmom mjesecu. Konačno mogu ležati na lijevoj strani bez pritiska u kuku i bez vrpoljenja pola noći.', 'Ivana P.' ),
-  array( 5, 'Kukovi me više ne bole ujutro', 'Bila sam skeptična jer je to ipak samo jastuk. Razlika je stvarna — ustajem bez one ukočenosti u zdjelici.', 'Lucija H.' ),
+  array( 5, 'Konečne spím celú noc',      'Spím na boku celý život a vždy som sa budila so stuhnutým chrbtom. Prvé ráno s vankúšom — nič. Neverila som, že je to také jednoduché.', 'Martina T.' ),
+  array( 5, 'Pásik je to, čo ho odlišuje', 'Predtým mi obyčajný vankúš vypadol po pol hodine. Tento zostáva medzi kolenami až do rána, aj keď sa otočím na druhý bok.', 'Dávid K.' ),
+  array( 5, 'Záchrana v tehotenstve',               'Kúpila som si ho v siedmom mesiaci. Konečne môžem ležať na ľavom boku bez tlaku v bedre a bez vrtenia pol noci.', 'Ivana P.' ),
+  array( 5, 'Bedrá ma ráno už nebolia', 'Bola som skeptická, veď je to len vankúš. Rozdiel je však skutočný — vstávam bez tej stuhnutosti v panve.', 'Lucia H.' ),
 );
 ?>
 <section class="ncd-sec ncd-dark">
@@ -125,10 +125,10 @@ $cd_revs = array(
       <p class="ncd-eyebrow">Spánok na boku</p>
       <h2 class="ncd-h2">Získajte späť rána, ktoré ste považovali za stratené</h2>
       <p>Poznáte ten pocit: zobudíte sa stuhnutí, celú noc hľadáte polohu, ktorá nebolí, alebo sa niekoľkokrát zobudíte bez dôvodu.</p>
-      <p>Problem niste vi. Kad spavate na boku bez oslonca između koljena, kukovi se uvijaju, donji dio leđa ostaje napet, a mišići cijelu noć rade da vas stabiliziraju.</p>
-      <p class="ncd-strong">NORIKS Cloud drži noge razmaknute točno koliko treba — kralježnica ostaje poravnata, a tijelo se konačno opusti.</p>
+      <p>Problém nie ste vy. Keď spíte na boku bez opory medzi kolenami, bedrá sa stáčajú, krížová oblasť zostáva napätá a svaly celú noc pracujú, aby vás stabilizovali.</p>
+      <p class="ncd-strong">NORIKS Cloud drží nohy presne tak ďaleko od seba, ako treba — chrbtica zostáva vyrovnaná a telo sa konečne uvoľní.</p>
     </div>
-    <div class="ncd-media"><?php echo $cd_vid('cld-vid-jutra.mp4','cld-jutra.webp','Jutro bez bolova u leđima'); ?></div>
+    <div class="ncd-media"><?php echo $cd_vid('cld-vid-jutra.mp4','cld-jutra.webp','Ráno bez bolesti chrbta'); ?></div>
   </div>
 </section>
 
@@ -137,26 +137,26 @@ $cd_revs = array(
   <div class="ncd-wrap ncd-row2">
     <div class="ncd-copy">
       <h2 class="ncd-h2">Zarovnanie, ktoré pocítite ráno</h2>
-      <p>Kad je razmak nogu pravilan, kralježnica prestaje biti iskrivljena, zdjelica se poravna, a koljena se više ne stišću jedno o drugo.</p>
+      <p>Keď je rozstup nôh správny, chrbtica prestane byť skrútená, panva sa vyrovná a kolená sa už netlačia o seba.</p>
       <ul class="ncd-check">
         <li>Vyrovnaná chrbtica namiesto skrútenej</li>
         <li>Vyrovnaná panva bez krútenia</li>
         <li>Oddelené kolená, bez tlaku</li>
       </ul>
     </div>
-    <div class="ncd-media"><?php echo $cd_img('cld-prije-poslije.webp','Prije i poslije — poravnanje kralježnice'); ?></div>
+    <div class="ncd-media"><?php echo $cd_img('cld-prije-poslije.webp','Pred a po — vyrovnanie chrbtice'); ?></div>
   </div>
 </section>
 
 <!-- ============ 4) Za koga je — krugovi s naslovom i tekstom (kao na referenci) ============ -->
 <?php
 $cd_cases = array(
-  array( 'cld-case-bok.webp',       'Spánok na boku', 'Prilagođeno vašem prirodnom položaju.' ),
-  array( 'cld-case-ledja.webp',     'Bol u leđima',     'Sprječava uvijanje donjeg dijela leđa noću.' ),
-  array( 'cld-case-kukovi.webp',    'Bol u kukovima',   'Drži kukove poravnate umjesto iskrivljene.' ),
-  array( 'cld-case-koljena.webp',   'Bol u koljenima',  'Kraj pritisku koljena o koljeno.' ),
-  array( 'cld-case-trudnoca.webp',  'Trudnoća',         'Podupire kukove i trbuh tijekom trudnoće.' ),
-  array( 'cld-case-operacija.webp', 'Nakon operacije',  'Štedi kuk i koljeno tijekom oporavka.' ),
+  array( 'cld-case-bok.webp',       'Spánok na boku', 'Prispôsobené vašej prirodzenej polohe.' ),
+  array( 'cld-case-ledja.webp',     'Bolesť chrbta',     'Bráni nočnému stáčaniu krížov.' ),
+  array( 'cld-case-kukovi.webp',    'Bolesť bedier',   'Drží bedrá vyrovnané namiesto skrútené.' ),
+  array( 'cld-case-koljena.webp',   'Bolesť kolien',  'Koniec tlaku kolena o koleno.' ),
+  array( 'cld-case-trudnoca.webp',  'Tehotenstvo',         'Podopiera bedrá a bruško počas tehotenstva.' ),
+  array( 'cld-case-operacija.webp', 'Po operácii',  'Šetrí bedro a koleno počas rekonvalescencie.' ),
 );
 ?>
 <section class="ncd-sec">
@@ -189,14 +189,14 @@ $cd_cases = array(
         <li><strong>Udrží tvar</strong> roky, nesplasne</li>
       </ul>
     </div>
-    <div class="ncd-media"><?php echo $cd_img('cld-pjena.webp','Prozračna memorijska pjena s perforacijama'); ?></div>
+    <div class="ncd-media"><?php echo $cd_img('cld-pjena.webp','Priedušná pamäťová pena s perforáciami'); ?></div>
   </div>
 </section>
 
 <!-- ============ 7) Usporedba ============ -->
 <section class="ncd-sec">
   <div class="ncd-wrap ncd-row2">
-    <div class="ncd-media"><?php echo $cd_img('cld-usporedba.webp','NORIKS Cloud u usporedbi s običnim jastucima'); ?></div>
+    <div class="ncd-media"><?php echo $cd_img('cld-usporedba.webp','NORIKS Cloud v porovnaní s bežnými vankúšmi'); ?></div>
     <div class="ncd-copy">
       <h2 class="ncd-h2">Nie všetky vankúše medzi kolená sú rovnaké</h2>
       <ul class="ncd-vs">
