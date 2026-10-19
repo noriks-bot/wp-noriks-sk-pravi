@@ -36,6 +36,8 @@ if ( function_exists( 'noriks_is_type' ) ) {
         get_template_part( 'template_parts/product-bottom/why-snug' );
     } elseif ( noriks_is_type( 'kompwom' ) ) {
         get_template_part( 'template_parts/product-bottom/why-kompwom' );
+    } elseif ( noriks_is_type( 'bowl' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-bowl' );
     } elseif ( noriks_is_type( 'pal' ) ) {
         get_template_part( 'template_parts/product-bottom/why-pal' );
     } elseif ( noriks_is_type( 'red' ) ) {
@@ -795,6 +797,7 @@ endif;
   if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) { $rv_fallback_title = 'NORIKS Snug vankúš na celé telo'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('kompwom') ) { $rv_fallback_title = 'NORIKS FIT Woman tvarujúce tričko'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('pal') ) { $rv_fallback_title = 'NORIKS Pal vychádzková palica'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('bowl') ) { $rv_fallback_title = 'NORIKS Bowl ortopedická miska pre psa'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('red') ) { $rv_fallback_title = 'NORIKS RedRelief terapia červeným svetlom'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('kneeheat') ) { $rv_fallback_title = 'NORIKS KneeHeat ohrievač a masážny prístroj na koleno'; }
 
@@ -803,6 +806,8 @@ if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) {
   include get_stylesheet_directory() . '/auto_reviews/SK_snug.php';
 } elseif ( function_exists('noriks_is_type') && noriks_is_type('kompwom') ) {
   include get_stylesheet_directory() . '/auto_reviews/SK_kompwom.php';
+} elseif ( function_exists('noriks_is_type') && noriks_is_type('bowl') ) {
+  include get_stylesheet_directory() . '/auto_reviews/SK_bowl.php';
 } elseif ( function_exists('noriks_is_type') && noriks_is_type('pal') ) {
   include get_stylesheet_directory() . '/auto_reviews/SK_pal.php';
 } elseif ( function_exists('noriks_is_type') && noriks_is_type('red') ) {
@@ -1234,6 +1239,7 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
         noriks_is_type('cloud') ||
         noriks_is_type('snug') ||
         noriks_is_type('kompwom') ||
+        noriks_is_type('bowl') ||
         noriks_is_type('pal') ||
         noriks_is_type('red') ||
         noriks_is_type('kneeheat')
@@ -1246,7 +1252,7 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
     // Izdelki z lastnim imenom v karticah mnenj ne smejo dobiti nakljucnega izdelka iz kataloga.
   $rv_own_name = ( function_exists('noriks_is_type') && (
       noriks_is_type('cloud') || noriks_is_type('cloath') || noriks_is_type('hyd') || noriks_is_type('snug')
-   || noriks_is_type('kompwom') || noriks_is_type('pal') || noriks_is_type('red') || noriks_is_type('kneeheat')
+   || noriks_is_type('kompwom') || noriks_is_type('bowl') || noriks_is_type('pal') || noriks_is_type('red') || noriks_is_type('kneeheat')
    || noriks_is_type('controlpro') || noriks_is_type('kidsnest') || noriks_is_type('ortopedski-jastuk')
    || noriks_is_type('bunion') || noriks_is_type('fisiorest') || noriks_is_type('ortopas')
    || noriks_is_type('norikshers') || noriks_is_type('kompresijske-nogavice') ) );
@@ -2034,6 +2040,24 @@ $kompwom_faq = array(
   ),
 );
 
+$is_bowl = ( function_exists('noriks_is_type') && noriks_is_type('bowl') );
+$bowl_faq = array(
+  array('questioon' => 'Pre ktoré psy je miska vhodná?',
+    'answer'    => 'Pre <strong>malé plemená</strong> — jazvečík, francúzsky buldoček, knírač, mops, maltézsky psík a podobné. Miska má priemer 15 cm a objem približne 430 ml.'),
+  array('questioon' => 'Načo slúži sklon 15°?',
+    'answer'    => 'Miska je naklonená smerom k psovi, takže krmivo sa zosúva k nemu a hlava s krkom sú v prirodzenejšej polohe. Pes nemusí tlačiť ňufák do rohu misky ani ohýbať krk až k podlahe.'),
+  array('questioon' => 'Prečo je zvýšená?',
+    'answer'    => 'Podstavec s výškou 11 cm zdvihne misku bližšie k výške psa, takže je postojačky, s menším ohýbaním krku a chrbta. To je obzvlášť príjemné pre staršie psy.'),
+  array('questioon' => 'Môžem ju použiť na vodu?',
+    'answer'    => 'Áno. Miska je z nehrdzavejúcej ocele a je rovnako vhodná na krmivo aj na vodu. Mnohí majitelia berú dve — jednu na krmivo, druhú na vodu.'),
+  array('questioon' => 'Ako sa čistí?',
+    'answer'    => 'Misku opláchnite teplou vodou s prostriedkom na riad. Hladká oceľ nenasáva pachy a nedrží zvyšky krmiva ako plast.'),
+  array('questioon' => 'Kĺže sa po podlahe?',
+    'answer'    => 'Podstavec je stabilný a neprevrhne sa, keď pes je. Na veľmi hladkých podlahách odporúčame podložku pod podstavec.'),
+  array('questioon' => 'Môžem ju vrátiť?',
+    'answer'    => 'Áno, máte <strong>30 dní</strong> na vrátenie peňazí. Stačí e-mail, bez formulárov.'),
+);
+
 $is_pal = ( function_exists('noriks_is_type') && noriks_is_type('pal') );
 $pal_faq = array(
   array(
@@ -2146,11 +2170,12 @@ $kneeheat_faq = array(
   ),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_kneeheat, $kneeheat_faq, $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq, $is_leakboxers_faq, $leakboxers_faq, $is_kompmajice_faq, $kompmajice_faq, $is_jastuk_faq, $jastuk_faq, $is_kidsnest_faq, $kidsnest_faq, $is_kneefix_faq, $kneefix_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_bowl, $bowl_faq, $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_kneeheat, $kneeheat_faq, $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq, $is_leakboxers_faq, $leakboxers_faq, $is_kompmajice_faq, $kompmajice_faq, $is_jastuk_faq, $jastuk_faq, $is_kidsnest_faq, $kidsnest_faq, $is_kneefix_faq, $kneefix_faq ) {
   $t = (string) $title;
   $is_info = ( stripos( $t, 'produkt' ) !== false ) || ( stripos( $t, 'výrobk' ) !== false );
   if ( $is_snug && $is_info ) { return $snug_faq; }
   if ( $is_kompwom && $is_info ) { return $kompwom_faq; }
+  if ( $is_bowl && $is_info ) { return $bowl_faq; }
   if ( $is_pal && $is_info ) { return $pal_faq; }
   if ( $is_red && $is_info ) { return $red_faq; }
   if ( $is_kneeheat && $is_info ) { return $kneeheat_faq; }
