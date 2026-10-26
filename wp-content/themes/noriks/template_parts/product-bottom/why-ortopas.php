@@ -14,26 +14,28 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
  *       potrebné SK (slovenské) obrázky.
  * ------------------------------------------------------------------ */
 $opz_vid_dir      = get_template_directory_uri() . '/img/ortopas-videos/';
+// Videi se zamenjajo pod istim imenom, zato jim dodamo verzijo - brez tega brskalnik vrti staro datoteko iz predpomnilnika.
+$opz_vid_v        = '?v=20261026';
 $opz_img_collage  = 'https://noriks.com/hr/wp-content/uploads/2026/10/ortopas-hr-9.webp'; // 1) spokojní zákazníci (obrázok) — TODO SK image
-$opz_video_relief = $opz_vid_dir . 'relief.mp4';                                          // 2) prirodzená úľava (video)
-$opz_video_cause  = $opz_vid_dir . 'cause.mp4';                                           // 3) skutočná príčina (video)
+$opz_video_relief = $opz_vid_dir . 'relief.mp4' . $opz_vid_v;                                          // 2) prirodzená úľava (video)
+$opz_video_cause  = $opz_vid_dir . 'cause.mp4' . $opz_vid_v;                                           // 3) skutočná príčina (video)
 $opz_img_indik    = get_template_directory_uri() . '/img/ortopas/ortopas-indikacije.png'; // lokalizirana grafika indikacij // lokalizirana grafika indikacij // 5) ako funguje (obrázok) — TODO SK image
-$opz_video_feat   = $opz_vid_dir . 'features.mp4';                                        // 6) inovatívne vlastnosti (video)
+$opz_video_feat   = $opz_vid_dir . 'features.mp4' . $opz_vid_v;                                        // 6) inovatívne vlastnosti (video)
 
 /* Karty (kruhové videá) — 4) sekcia s 3 kartami */
 $opz_cards = array(
     array(
-        'video' => $opz_vid_dir . 'card-1.mp4',
+        'video' => $opz_vid_dir . 'card-1.mp4' . $opz_vid_v,
         'title' => 'Zmierňuje ťažkosti',
         'text'  => 'Môže poskytnúť rýchlu úľavu pri išiase a bolestiach chrbta',
     ),
     array(
-        'video' => $opz_vid_dir . 'card-2.mp4',
+        'video' => $opz_vid_dir . 'card-2.mp4' . $opz_vid_v,
         'title' => 'Odľahčenie driekovej chrbtice',
         'text'  => 'Stabilizuje a zarovnáva driekovú časť chrbta',
     ),
     array(
-        'video' => $opz_vid_dir . 'card-3.mp4',
+        'video' => $opz_vid_dir . 'card-3.mp4' . $opz_vid_v,
         'title' => 'Overená metóda',
         'text'  => 'Založená na cielenej kompresnej technológii',
     ),
