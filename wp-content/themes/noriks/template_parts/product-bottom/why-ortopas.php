@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
  *       potrebné SK (slovenské) obrázky.
  * ------------------------------------------------------------------ */
 $opz_vid_dir      = get_template_directory_uri() . '/img/ortopas-videos/';
-$opz_img_collage  = 'https://noriks.com/hr/wp-content/uploads/2026/07/ortopas-hr-9.png'; // 1) spokojní zákazníci (obrázok) — TODO SK image
+$opz_img_collage  = 'https://noriks.com/hr/wp-content/uploads/2026/10/ortopas-hr-9.webp'; // 1) spokojní zákazníci (obrázok) — TODO SK image
 $opz_video_relief = $opz_vid_dir . 'relief.mp4';                                          // 2) prirodzená úľava (video)
 $opz_video_cause  = $opz_vid_dir . 'cause.mp4';                                           // 3) skutočná príčina (video)
 $opz_img_indik    = get_template_directory_uri() . '/img/ortopas/ortopas-indikacije.png'; // lokalizirana grafika indikacij // lokalizirana grafika indikacij // 5) ako funguje (obrázok) — TODO SK image
