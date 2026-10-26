@@ -54,19 +54,19 @@ $opz_cmp_rows = array(
 /* Recenzie s obrázkom — 8) sekcia */
 $opz_reviews = array(
     array(
-        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-1.webp',
+        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-1.webp?v=20261026',
         'title' => 'Veľká pomoc proti bolestiam driekovej časti chrbta',
         'text'  => 'Pás NORIKS mi naozaj veľmi uľahčil život. Funguje presne tak, ako sľubuje. Opäť sa môžem zohnúť bez bolesti.',
         'name'  => 'Alžbeta M.',
     ),
     array(
-        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-2.jpg',
+        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-2.webp?v=20261026',
         'title' => 'Mäkký a pohodlný',
         'text'  => 'Môj fyzioterapeut mi odporučil pás proti bolestiam chrbta. Predtým som skúšal aj iné pásy, ale tento je oveľa pohodlnejší na sedenie a zohýbanie. Napriek tomu poskytuje výbornú oporu!',
         'name'  => 'Júlia U.',
     ),
     array(
-        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-3.webp',
+        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-3.webp?v=20261026',
         'title' => 'Vynikajúce!',
         'text'  => 'Pomáha mi sedieť vzpriamene a mám pocit, že chodím vzpriamenejšie. Bolesti sa výrazne zmiernili a konečne môžem bez bolesti vstať aj po dlhšom sedení. Pás nosím približne 2 – 3 hodiny denne – väčšinou v práci.',
         'name'  => 'Ivan D.',
@@ -187,7 +187,7 @@ $opz_no  = '<svg class="opz-no" viewBox="0 0 24 24" width="20" height="20" aria-
           <tr>
             <th class="opz-th-feat"></th>
             <th class="opz-th-brand">NORIKS</th>
-            <th class="opz-th-alt">Fyzio</th>
+            <th class="opz-th-alt">Fyzioterapia</th>
           </tr>
         </thead>
         <tbody>
