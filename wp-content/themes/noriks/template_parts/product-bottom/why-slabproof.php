@@ -139,7 +139,7 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
         <div class="wslabproof__pog"><strong>30 dní</strong><span>na vrátenie peňazí</span></div>
         <div class="wslabproof__pog"><strong>Doprava zadarmo</strong><span>nad 70 €</span></div>
         <div class="wslabproof__pog"><strong>Platba na dobierku</strong><span>zaplatíte, keď príde balík</span></div>
-        <div class="wslabproof__pog"><strong>120.000 zákazníkov</strong><span>priemerné hodnotenie 4,8</span></div>
+        <div class="wslabproof__pog"><strong>120 000 zákazníkov</strong><span>priemerné hodnotenie 4,8</span></div>
       </div>
     </div>
   </div>
