@@ -517,6 +517,10 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
 
                 <strong>NORIKS FIT Woman</strong> je tvarujúce tričko, v ktorom je reliéf votkaný priamo do látky, nie na ňu potlačený. Široký pás prechádza cez brucho a boky, druhý ide cez chrbát.<br><br>Kompresia je rozložená do šírky, nie stlačená do jedného bodu, takže nič nezareže. Brucho zostáva vyhladené, pás užší a chrbát dostáva oporu, ktorá pomáha stáť vzpriamenejšie.<br><br>Úplet je bezšvový, tenký a matný — zmizne pod košeľou, sakom alebo priliehavými šatami. Cez deň sa neroluje a nečrtá sa pod oblečením.<br><br>Perte v práčke na 30 °C, bez bielidiel, žehlenia a sušičky. Dostupné je v troch farbách (čierna, tmavosivá, ružová) a vo veľkostiach od S po 3XL. Ak ste medzi dvomi veľkosťami, vezmite väčšiu.
 
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('slim', $current_product_id) ): ?>
+
+                <strong>NORIKS Slim</strong> sú tvarujúce nohavičky s vysokým pásom. Široký pás prechádza krížom cez brucho a pokračuje na boky a chrbát, takže kompresia je rozložená okolo celého pása, a nie stlačená do jednej línie.<br><br>Brucho je vyhladené, pás vyzerá užší a oblečenie padne rovnejšie — bez záhybov nad nohavicami a bez okraja, ktorý vidno pod šatami.<br><br>Úplet je tenký, mäkký a priedušný, s elastickými sieťovanými vsadkami a bavlnenou vložkou. Nohavičky sa nerolujú nadol a počas dňa sa nešmýkajú, takže si ich ráno oblečiete a do večera na ne zabudnete.<br><br>Dostupné sú v šiestich farbách (čierna, telová, tmavomodrá, fialová, fuchsiová a slivková) a vo veľkostiach od XS do 5XL. Veľkosť vyberajte podľa obvodu pása; ak ste medzi dvoma veľkosťami, vezmite si väčšiu.
+
          <?php elseif( function_exists('noriks_is_type') && noriks_is_type('tradesman', $current_product_id) ): ?>
 
                 NORIKS Tradesman sú hrubé pracovné ponožky z bambusu pre všetkých, ktorí celý deň stoja a chodia v pracovných čižmách – na stavbe, v sklade, v dielni alebo vonku v zime. Mäkký vankúšik tlmí každý krok na betóne aj zamrznutej zemi, zosilnená päta a prsty vydržia tuhé čižmy a pásik pod klenbou s dvojitou manžetou držia ponožku na mieste celú zmenu.<br><br><strong>Zloženie:</strong> 56 % bambusového lyocelu, 38 % nylonu, 6 % elastanu – prirodzene odolné voči nepríjemnému zápachu, odvádzajú vlhkosť a sú veľmi mäkké na koži. <strong>Prevedenie:</strong> 360° opora členka, pásik pod klenbou, vankúšik, sieťované vetranie, dvojitá manžeta s pútkom, zosilnená päta. Výška: klasická (crew), asi 18 cm od päty po okraj.<br><br><strong>Veľkosti (veľkosť obuvi EU):</strong> M 39–42, L 42,5–46, XL 46,5–49,5. Farby: čierna a biela. <strong>Starostlivosť:</strong> perte nastudeno, sušte na vzduchu.<br><br>S NORIKS máte 30 dní na vrátenie peňazí, dopravu zadarmo nad 70 € a platbu na dobierku.
@@ -717,6 +721,33 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
 
 
                   <img class="js-open-size-chart" style="cursor:pointer;" src="https://noriks.com/sk/wp-content/uploads/2026/02/Nogavice_tabela_velikosti_sk.png">
+
+    <?php elseif( function_exists('noriks_is_type') && noriks_is_type('slim', $current_product_id) ): ?>
+
+          <div class="slm-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veľkosť vyberajte podľa <strong>obvodu pása</strong>, nie podľa bežnej veľkosti oblečenia. Ak ste medzi dvoma veľkosťami, vezmite si <strong>väčšiu</strong>.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a3336b;color:#fff;">
+                  <th style="padding:9px 10px;text-align:left;">Veľkosť</th>
+                  <th style="padding:9px 10px;text-align:left;">EU veľkosť</th>
+                  <th style="padding:9px 10px;text-align:left;">Obvod pása</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_slim_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#fbf2f6' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #f1e3ea;">
+                    <td style="padding:9px 10px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[2] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Ako sa odmerať:</strong> krajčírsky meter oviňte okolo najužšieho miesta trupu, kúsok nad pupkom. Meter má byť vodorovný a priliehavý, ale nie natesno.</p>
+          </div>
 
     <?php elseif( function_exists('noriks_is_type') && noriks_is_type('tradesman', $current_product_id) ): ?>
 
