@@ -517,6 +517,10 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
 
                 <strong>NORIKS FIT Woman</strong> je tvarujúce tričko, v ktorom je reliéf votkaný priamo do látky, nie na ňu potlačený. Široký pás prechádza cez brucho a boky, druhý ide cez chrbát.<br><br>Kompresia je rozložená do šírky, nie stlačená do jedného bodu, takže nič nezareže. Brucho zostáva vyhladené, pás užší a chrbát dostáva oporu, ktorá pomáha stáť vzpriamenejšie.<br><br>Úplet je bezšvový, tenký a matný — zmizne pod košeľou, sakom alebo priliehavými šatami. Cez deň sa neroluje a nečrtá sa pod oblečením.<br><br>Perte v práčke na 30 °C, bez bielidiel, žehlenia a sušičky. Dostupné je v troch farbách (čierna, tmavosivá, ružová) a vo veľkostiach od S po 3XL. Ak ste medzi dvomi veľkosťami, vezmite väčšiu.
 
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('slabproof', $current_product_id) ): ?>
+
+                <strong>NORIKS SlabProof</strong> sú pracovné ponožky urobené pre ľudí, ktorí celý deň stoja na betóne. Pracovné čižmy chodidlo chránia, ale netlmia ho — betón nič nevráti, takže každý krok ide do piet, kolien a chrbta. Jediné, čo ten náraz môže zmierniť, je ponožka.<br><br>Preto majú <strong>zónové polstrovanie</strong>: husté vankúšiky pod pätou a prednou časťou chodidla, presne tam, kde betón udiera, a tenkú pleteninu všade inde, takže čižma nebude pritesná. Päta a prsty sú zosilnené dvojito pleteným nylonom, na dvoch miestach, kde ponožky povolia ako prvé.<br><br>Vzdušná sieťka cez vrchnú časť chodidla a pletenina, ktorá odvádza pot, udržia chodidlá suché celú zmenu. Zmes je bez vlny, takže nič neškriabe a noha sa neprehrieva.<br><br>Široký rebrovaný lem drží ponožku hore bez zvierania lýtka, hlboké vrecko na pätu s jazýčkom nedovolí, aby sa zošmykla do čižmy, a pás okolo klenby drží chodidlo, aby sa nešmýkalo.<br><br>Dostupné sú v čiernej farbe, vo veľkostiach M (EU 39–42), L (EU 43–45) a XL (EU 46–49). Platí <strong>30 dní na vrátenie peňazí</strong> a doprava je zadarmo pri objednávkach nad 70 €.
+
          <?php elseif( function_exists('noriks_is_type') && noriks_is_type('bowl', $current_product_id) ): ?>
 
                 <strong>NORIKS Bowl</strong> je zvýšená miska na krmivo a vodu určená pre malé psy. Miska stojí na oceľovom podstavci s výškou 11 cm a je naklonená o 15°, takže pes je postojačky, s hlavou v prirodzenejšej polohe namiesto toho, aby ohýbal krk až k podlahe.<br><br>Miska je plytká (5 cm), takže fúzy nenarážajú o okraj a krmivo sa netlačí von. Priemer je 15 cm a objem približne 430 ml — dosť na porciu alebo vodu pre malého psa.<br><br>Miska aj podstavec sú vyrobené z nehrdzavejúcej ocele. Hladký povrch nenasáva pachy a nedrží zvyšky krmiva ako plast; stačí ju opláchnuť teplou vodou s prostriedkom na riad.<br><br>Vhodná je pre malé plemená, ako sú jazvečík, francúzsky buldoček, knírač, mops a maltézsky psík.
@@ -710,6 +714,31 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
 
                   <img class="js-open-size-chart" style="cursor:pointer;" src="https://noriks.com/sk/wp-content/uploads/2026/02/Nogavice_tabela_velikosti_sk.png">
 
+    <?php elseif( function_exists('noriks_is_type') && noriks_is_type('slabproof', $current_product_id) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Objednajte si <strong>svoje bežné číslo obuvi</strong>. Pletenina je pružná, takže každá veľkosť pokryje niekoľko čísel.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#d2632e;color:#fff;">
+                  <th style="padding:9px 10px;text-align:left;">Veľkosť</th>
+                  <th style="padding:9px 10px;text-align:left;">EU číslo obuvi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_slabproof_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#faf7f0' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 10px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[1] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Medzi dvoma veľkosťami?</strong> Vezmite väčšiu — vankúšik na päte a pás okolo klenby sadnú na miesto, len keď ponožka nie je primalá.</p>
+          </div>
+
     <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kompwom', $current_product_id) ): ?>
 
           <div class="kwm-size">
@@ -784,7 +813,11 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
         <div class="toggle">+</div>
       </div>
       <div class="accordion-content">
-             <?php if( function_exists('noriks_is_type') && noriks_is_type( 'leakboxers', $current_product_id ) ): ?>
+             <?php if( function_exists('noriks_is_type') && noriks_is_type('slabproof', $current_product_id) ): ?>
+
+                Pranie v práčke nastudeno, spolu s pracovným oblečením. Sušenie v sušičke pri nízkej teplote. Bez ručného prania, sušenia na šnúre a špeciálneho pracieho prostriedku.
+
+             <?php elseif( function_exists('noriks_is_type') && noriks_is_type( 'leakboxers', $current_product_id ) ): ?>
 
                 Perte na 30 – 40 °C, na programe pre jemnú bielizeň. Bez aviváže a bielidla. Sušte na vzduchu. Absorpčnú schopnosť si udržia počas stoviek praní.
 
