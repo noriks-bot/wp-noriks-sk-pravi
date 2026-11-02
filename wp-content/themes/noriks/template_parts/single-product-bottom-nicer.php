@@ -46,6 +46,8 @@ if ( function_exists( 'noriks_is_type' ) ) {
         get_template_part( 'template_parts/product-bottom/why-kneeheat' );
     } elseif ( noriks_is_type( 'slabproof' ) ) {
         get_template_part( 'template_parts/product-bottom/why-slabproof' );
+    } elseif ( noriks_is_type( 'tradesman' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-tradesman' );
     }
 }
 ?>
@@ -322,7 +324,7 @@ if (  has_term( array( 'tricka',  'orto-tricka', 'orto-majica-darila' ), 'produc
       <!--<h4 style="" class="highlight"><?php echo get_field("singlepp_content_standard_reviews_t1","options"); ?></h4>-->
       <h1 style="color:black;     margin-bottom: 4px;">
           
-          <?php if ( function_exists('noriks_is_type') && noriks_is_type('slabproof') ): ?>Nie ste jediný, koho po zmene na betóne pália chodidlá.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('fisiorest') ): ?>
+          <?php if ( function_exists('noriks_is_type') && noriks_is_type('tradesman') ): ?>Nie ste jediný, komu sa chodidlá po celej zmene v pracovných čižmách nevedia dočkať oddychu.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('slabproof') ): ?>Nie ste jediný, koho po zmene na betóne pália chodidlá.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('fisiorest') ): ?>
           
           
           
@@ -390,7 +392,7 @@ if (  has_term( array( 'tricka',  'orto-tricka', 'orto-majica-darila' ), 'produc
           
           
           </h1>
-    <p class="note" style="color: black; margin-top: 0px; margin-bottom: 5px;"><?php if ( function_exists('noriks_is_type') && noriks_is_type('slabproof') ): ?>Tisíce majstrov už pracujú v ponožkách NORIKS SlabProof – zónové polstrovanie tam, kde betón udiera, zosilnená päta a prsty a suché chodidlá celú zmenu.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('fisiorest') ): ?>Tisíce ľudí už používa NORIKS FisioRest na menšiu bolesť a napätie v krku – trakcia, vibrácie a teplo v jednom prístroji.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('bunion') ): ?>Tisíce ľudí už nosí korektor NORIKS na menšiu bolesť a rovnejšie postavenie palca – doma, pri telke alebo počas spánku.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('ortopas') ): ?>Tisíce ľudí už nosí ortopedický pás NORIKS na menšiu bolesť a stabilnejší chrbát – v práci, pri dvíhaní a dlhom sedení.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ): ?>Tisíce mužov už nosí kompresné ponožky NORIKS pre ľahšie a menej unavené nohy – v práci, na cestách aj pri tréningu.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('bokserice') ): ?>Tisíce mužov už nosí boxerky NORIKS – pohodlie, ktoré vydrží celý deň.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('norikshers') ): ?>Tisíce žien už používajú HERS silikónové kolagénové pásiky pre hladšiu, pevnejšiu a mladšie vyzerajúcu pleť.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('leakboxers') ): ?>Tisíce mužov už nosia absorpčné boxerky NORIKS pre suchosť a sebavedomie – bez vložiek a plienok.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-majice') ): ?>Tisíce mužov už nosia kompresné tričko NORIKS pre vyhladené brucho, lepšie držanie tela a viac sebavedomia.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('ortopedski-jastuk') ): ?>Tisíce zákazníkov už používajú ortopedický vankúš NORIKS ErgoSit na sedenie bez bolesti kostrče, chrbta a bokov – v aute, v kancelárii aj doma.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kidsnest') ): ?>Tisíce rodičov už vymenili obyčajný vankúš za NORIKS KidsNest – tichšie noci, dýchanie nosom a spánok, ktorý skutočne regeneruje.<?php else: ?><?php echo get_field("singlepp_content_standard_reviews_t3","options"); ?><?php endif; ?></p>
+    <p class="note" style="color: black; margin-top: 0px; margin-bottom: 5px;"><?php if ( function_exists('noriks_is_type') && noriks_is_type('tradesman') ): ?>Tisíce robotníkov už pracujú v ponožkách NORIKS Tradesman – mäkký vankúšik, zosilnená päta a pásik pod klenbou.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('slabproof') ): ?>Tisíce majstrov už pracujú v ponožkách NORIKS SlabProof – zónové polstrovanie tam, kde betón udiera, zosilnená päta a prsty a suché chodidlá celú zmenu.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('fisiorest') ): ?>Tisíce ľudí už používa NORIKS FisioRest na menšiu bolesť a napätie v krku – trakcia, vibrácie a teplo v jednom prístroji.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('bunion') ): ?>Tisíce ľudí už nosí korektor NORIKS na menšiu bolesť a rovnejšie postavenie palca – doma, pri telke alebo počas spánku.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('ortopas') ): ?>Tisíce ľudí už nosí ortopedický pás NORIKS na menšiu bolesť a stabilnejší chrbát – v práci, pri dvíhaní a dlhom sedení.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ): ?>Tisíce mužov už nosí kompresné ponožky NORIKS pre ľahšie a menej unavené nohy – v práci, na cestách aj pri tréningu.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('bokserice') ): ?>Tisíce mužov už nosí boxerky NORIKS – pohodlie, ktoré vydrží celý deň.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('norikshers') ): ?>Tisíce žien už používajú HERS silikónové kolagénové pásiky pre hladšiu, pevnejšiu a mladšie vyzerajúcu pleť.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('leakboxers') ): ?>Tisíce mužov už nosia absorpčné boxerky NORIKS pre suchosť a sebavedomie – bez vložiek a plienok.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-majice') ): ?>Tisíce mužov už nosia kompresné tričko NORIKS pre vyhladené brucho, lepšie držanie tela a viac sebavedomia.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('ortopedski-jastuk') ): ?>Tisíce zákazníkov už používajú ortopedický vankúš NORIKS ErgoSit na sedenie bez bolesti kostrče, chrbta a bokov – v aute, v kancelárii aj doma.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kidsnest') ): ?>Tisíce rodičov už vymenili obyčajný vankúš za NORIKS KidsNest – tichšie noci, dýchanie nosom a spánok, ktorý skutočne regeneruje.<?php else: ?><?php echo get_field("singlepp_content_standard_reviews_t3","options"); ?><?php endif; ?></p>
     </div>
   </section>
   </div>
@@ -495,6 +497,7 @@ if (  has_term( array( 'tricka',  'orto-tricka', 'orto-majica-darila' ), 'produc
   if ( function_exists('noriks_is_type') && noriks_is_type('red') ) { $rv_fallback_title = 'NORIKS RedRelief terapia červeným svetlom'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('kneeheat') ) { $rv_fallback_title = 'NORIKS KneeHeat ohrievač a masážny prístroj na koleno'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('slabproof') ) { $rv_fallback_title = 'NORIKS SlabProof™ Pracovné ponožky'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('tradesman') ) { $rv_fallback_title = 'Pracovné ponožky NORIKS Tradesman'; }
 
   // Include review pools (own pool per product group)
 if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) {
@@ -511,6 +514,8 @@ if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) {
   include get_stylesheet_directory() . '/auto_reviews/SK_kneeheat.php';
 } elseif ( function_exists('noriks_is_type') && noriks_is_type('slabproof') ) {
   include get_stylesheet_directory() . '/auto_reviews/SK_slabproof.php';
+} elseif ( function_exists('noriks_is_type') && noriks_is_type('tradesman') ) {
+  include get_stylesheet_directory() . '/auto_reviews/SK_tradesman.php';
 } else
 if ( function_exists('noriks_is_type') && noriks_is_type('hyd') ) {
     include get_stylesheet_directory() . '/auto_reviews/SK_hyd.php';
@@ -940,7 +945,8 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
         noriks_is_type('pal') ||
         noriks_is_type('red') ||
         noriks_is_type('kneeheat') ||
-        noriks_is_type('slabproof')
+        noriks_is_type('slabproof') ||
+        noriks_is_type('tradesman')
   );
   // fotografije osoba: samo na odjeci (majice, bokserice, kompleti), ne na ortopedskim pomagalima
   // MAJICE i BOKSERICE: recenzije BEZ fotografija - isti uvjet kao nove why sekcije.
@@ -955,7 +961,7 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
     // Izdelki z lastnim imenom v karticah mnenj ne smejo dobiti nakljucnega izdelka iz kataloga.
   $rv_own_name = ( function_exists('noriks_is_type') && (
       noriks_is_type('cloud') || noriks_is_type('cloath') || noriks_is_type('hyd') || noriks_is_type('snug')
-   || noriks_is_type('kompwom') || noriks_is_type('bowl') || noriks_is_type('pal') || noriks_is_type('red') || noriks_is_type('kneeheat') || noriks_is_type('slabproof')
+   || noriks_is_type('kompwom') || noriks_is_type('bowl') || noriks_is_type('pal') || noriks_is_type('red') || noriks_is_type('kneeheat') || noriks_is_type('slabproof') || noriks_is_type('tradesman')
    || noriks_is_type('controlpro') || noriks_is_type('kidsnest') || noriks_is_type('ortopedski-jastuk')
    || noriks_is_type('bunion') || noriks_is_type('fisiorest') || noriks_is_type('ortopas')
    || noriks_is_type('norikshers') || noriks_is_type('kompresijske-nogavice') ) );
@@ -1743,6 +1749,26 @@ $kompwom_faq = array(
   ),
 );
 
+$is_tradesman = ( function_exists('noriks_is_type') && noriks_is_type('tradesman') );
+$tradesman_faq = array(
+  array('questioon' => 'Z čoho sú vyrobené?',
+    'answer'    => '56 % bambusového lyocelu, 38 % nylonu a 6 % elastanu. Bez bavlny – nylon je zosilnený na päte a prstoch, kde sa ponožky najviac zodierajú. Sú prirodzene odolné voči nepríjemnému zápachu, odvádzajú vlhkosť a sú veľmi mäkké na koži.'),
+  array('questioon' => 'Akú veľkosť si vybrať?',
+    'answer'    => 'Podľa veľkosti obuvi (EU). Pánske: M 39–42, L 42,5–46, XL 46,5–49,5. Dámske: M 37,5–40,5, L 41–44. Ste medzi dvoma veľkosťami? Zoberte väčšiu.'),
+  array('questioon' => 'Zostanú mi chodidlá suché?',
+    'answer'    => 'Bambus celú zmenu odvádza vlhkosť z pokožky a sieťované vetranie púšťa pot von. Poteniu nezabránia, ale držia ho pod kontrolou – aj v ťažkých pracovných čižmách.'),
+  array('questioon' => 'Nezošmyknú sa v čižmách?',
+    'answer'    => 'Nie. Dvojitá manžeta s pútkom na natiahnutie a pásik pod klenbou držia ponožku na mieste – bez krčenia a šmýkania celú zmenu.'),
+  array('questioon' => 'Vydržia dlhé zmeny?',
+    'answer'    => 'Áno. Mäkký vankúšik a zosilnená päta tlmia každý krok – pre tých, čo sú 8–12 hodín na nohách na betóne, štrku alebo nerovnom teréne.'),
+  array('questioon' => 'Aké sú vysoké?',
+    'answer'    => 'Klasická výška (crew) – asi 18 cm od päty po okraj manžety.'),
+  array('questioon' => 'Ako ich prať?',
+    'answer'    => 'Perte nastudeno a sušte na vzduchu. Bambusová látka si aj po mnohých praniach zachová mäkkosť a tvar.'),
+  array('questioon' => 'Môžem ich vrátiť?',
+    'answer'    => 'Áno. Máte 30 dní na vrátenie peňazí. Doprava je zadarmo pri objednávke nad 70 € a platíte na dobierku, keď príde balík.'),
+);
+
 $is_slabproof = ( function_exists('noriks_is_type') && noriks_is_type('slabproof') );
 $slabproof_faq = array(
   array('questioon' => 'Akú veľkosť si mám objednať? Mám veľkú nohu.',
@@ -1893,11 +1919,12 @@ $kneeheat_faq = array(
   ),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_slabproof, $slabproof_faq, $is_bowl, $bowl_faq, $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_kneeheat, $kneeheat_faq, $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq, $is_leakboxers_faq, $leakboxers_faq, $is_kompmajice_faq, $kompmajice_faq, $is_jastuk_faq, $jastuk_faq, $is_kidsnest_faq, $kidsnest_faq, $is_kneefix_faq, $kneefix_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_tradesman, $tradesman_faq, $is_slabproof, $slabproof_faq, $is_bowl, $bowl_faq, $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_kneeheat, $kneeheat_faq, $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq, $is_leakboxers_faq, $leakboxers_faq, $is_kompmajice_faq, $kompmajice_faq, $is_jastuk_faq, $jastuk_faq, $is_kidsnest_faq, $kidsnest_faq, $is_kneefix_faq, $kneefix_faq ) {
   $t = (string) $title;
   $is_info = ( stripos( $t, 'produkt' ) !== false ) || ( stripos( $t, 'výrobk' ) !== false );
   if ( $is_snug && $is_info ) { return $snug_faq; }
   if ( $is_kompwom && $is_info ) { return $kompwom_faq; }
+  if ( $is_tradesman && $is_info ) { return $tradesman_faq; }
   if ( $is_slabproof && $is_info ) { return $slabproof_faq; }
   if ( $is_bowl && $is_info ) { return $bowl_faq; }
   if ( $is_pal && $is_info ) { return $pal_faq; }
