@@ -15,7 +15,7 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
         <h2 class="wslabproof__h2">Pracovná ponožka s vankúšikom, <em>strihaná pod členok</em></h2>
         <p class="wslabproof__p">NORIKS SlabProof je pracovná ponožka s vankúšikom na betón, strihaná pod členok. Je urobená do pracovnej obuvi, ochranných tenisiek s oceľovou špičkou a na horúce dni v krátkych nohaviciach, keď vysoká ponožka len prekáža.</p>
         <p class="wslabproof__p">Pod chodidlom je rovnaký vankúš ako pri vyššom modeli: hustý pod pätou a prednou časťou chodidla, kde betón udiera najsilnejšie. Cez vrchnú časť chodidla vedie sieťovaná časť, päta a prsty sú zosilnené a zvýšený jazýček na päte bráni tomu, aby zadná časť topánky odierala kožu.</p>
-        <p class="wslabproof__p">Ponožka je čierna a dodáva sa v troch veľkostiach: M, L a XL. Perie sa v práčke nastudeno a suší v sušičke pri nízkej teplote, spolu s pracovným oblečením — bez ručného prania a špeciálneho pracieho prostriedku.</p>
+        <p class="wslabproof__p">Ponožka je čierna a dodáva sa v troch veľkostiach: 39–42, 43–45 a 46–49. Perie sa v práčke nastudeno a suší v sušičke pri nízkej teplote, spolu s pracovným oblečením — bez ručného prania a špeciálneho pracieho prostriedku.</p>
         <p class="wslabproof__zak">Vankúš na betón, v strihu do nízkej pracovnej obuvi.</p>
       </div>
     </div>

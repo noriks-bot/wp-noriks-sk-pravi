@@ -7,7 +7,7 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $noriks_st = array(
     'uvod'    => 'Veľkosť vyberte podľa svojej <strong>veľkosti obuvi (EU)</strong>.',
-    'glava'   => array( 'Veľkosť', 'Veľkosť obuvi (EU) – pánska', 'Veľkosť obuvi (EU) – dámska' ),
+    'glava'   => array( 'Veľkosť obuvi (EU)' ),
     'vrstice' => function_exists( 'noriks_tradesman_sizes' ) ? noriks_tradesman_sizes() : array(),
     'opomba'  => 'Ste medzi dvoma veľkosťami? Zoberte väčšiu.',
 );

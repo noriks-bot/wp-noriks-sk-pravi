@@ -523,7 +523,7 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
 
          <?php elseif( function_exists('noriks_is_type') && noriks_is_type('tradesman', $current_product_id) ): ?>
 
-                NORIKS Tradesman sú hrubé pracovné ponožky z bambusu pre všetkých, ktorí celý deň stoja a chodia v pracovných čižmách – na stavbe, v sklade, v dielni alebo vonku v zime. Mäkký vankúšik tlmí každý krok na betóne aj zamrznutej zemi, zosilnená päta a prsty vydržia tuhé čižmy a pásik pod klenbou s dvojitou manžetou držia ponožku na mieste celú zmenu.<br><br><strong>Zloženie:</strong> 56 % bambusového lyocelu, 38 % nylonu, 6 % elastanu – prirodzene odolné voči nepríjemnému zápachu, odvádzajú vlhkosť a sú veľmi mäkké na koži. <strong>Prevedenie:</strong> 360° opora členka, pásik pod klenbou, vankúšik, sieťované vetranie, dvojitá manžeta s pútkom, zosilnená päta. Výška: klasická (crew), asi 18 cm od päty po okraj.<br><br><strong>Veľkosti (veľkosť obuvi EU):</strong> M 39–42, L 42,5–46, XL 46,5–49,5. Farby: čierna a biela. <strong>Starostlivosť:</strong> perte nastudeno, sušte na vzduchu.<br><br>S NORIKS máte 30 dní na vrátenie peňazí, dopravu zadarmo nad 70 € a platbu na dobierku.
+                NORIKS Tradesman sú hrubé pracovné ponožky z bambusu pre všetkých, ktorí celý deň stoja a chodia v pracovných čižmách – na stavbe, v sklade, v dielni alebo vonku v zime. Mäkký vankúšik tlmí každý krok na betóne aj zamrznutej zemi, zosilnená päta a prsty vydržia tuhé čižmy a pásik pod klenbou s dvojitou manžetou držia ponožku na mieste celú zmenu.<br><br><strong>Zloženie:</strong> 56 % bambusového lyocelu, 38 % nylonu, 6 % elastanu – prirodzene odolné voči nepríjemnému zápachu, odvádzajú vlhkosť a sú veľmi mäkké na koži. <strong>Prevedenie:</strong> 360° opora členka, pásik pod klenbou, vankúšik, sieťované vetranie, dvojitá manžeta s pútkom, zosilnená päta. Výška: klasická (crew), asi 18 cm od päty po okraj.<br><br><strong>Veľkosti (veľkosť obuvi EU):</strong> 39–42, 43–45, 46–49. Farba: čierna. <strong>Starostlivosť:</strong> perte nastudeno, sušte na vzduchu.<br><br>S NORIKS máte 30 dní na vrátenie peňazí, dopravu zadarmo nad 70 € a platbu na dobierku.
 
          <?php elseif( function_exists('noriks_is_type') && noriks_is_type('slabproof', $current_product_id) ): ?>
 
@@ -761,9 +761,7 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
             <table style="width:100%;border-collapse:collapse;font-size:14px;">
               <thead>
                 <tr style="background:#a9683f;color:#fff;">
-                  <th style="padding:9px 8px;text-align:left;">Veľkosť</th>
-                  <th style="padding:9px 8px;text-align:left;">Veľkosť obuvi (EU) – pánska</th>
-                  <th style="padding:9px 8px;text-align:left;">Veľkosť obuvi (EU) – dámska</th>
+                  <th style="padding:9px 8px;text-align:left;">Veľkosť obuvi (EU)</th>
                 </tr>
               </thead>
               <tbody>
@@ -789,7 +787,6 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
             <table style="width:100%;border-collapse:collapse;font-size:14px;">
               <thead>
                 <tr style="background:#d2632e;color:#fff;">
-                  <th style="padding:9px 10px;text-align:left;">Veľkosť</th>
                   <th style="padding:9px 10px;text-align:left;">EU číslo obuvi</th>
                 </tr>
               </thead>
@@ -799,7 +796,6 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
                   $bg = ( $i % 2 ) ? '#faf7f0' : '#fff'; ?>
                   <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
                     <td style="padding:9px 10px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
-                    <td style="padding:9px 10px;"><?php echo esc_html( $r[1] ); ?></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>
