@@ -8,7 +8,7 @@ $auto_reviews_en = array(
     array("name" => "Michal L.", "text" => "Skúšal som všetky možné značky. Tieto sú najlepšie. Polstrovanie je naozaj cítiť."),
     array("name" => "Juraj M.", "text" => "Päť mesiacov každodenného nosenia a stále ako nové. Stoja za každé euro."),
     array("name" => "Marek N.", "text" => "Myslel som si, že problém je v topánkach. Ukázalo sa, že mi len chýbali dobré ponožky."),
-    array("name" => "Ján B.", "text" => "Polstrovanie pod pätou je geniálne. Na betóne ho cítiť od prvého dňa."),
+    array("name" => "Ján B.", "text" => "Polstrovanie pod pätou je geniálne. V práci ho cítiť od prvého dňa."),
     array("name" => "Štefan V.", "text" => "V čižmách sa už nepotím. Tieto ponožky naozaj dýchajú."),
     array("name" => "Miroslav Č.", "text" => "Kúpil som dva páry, objednal ďalšie štyri. Nič iné nepotrebujem."),
     array("name" => "Dušan F.", "text" => "Konečne ponožka, ktorá sa nerozpadne po mesiaci. Zosilnená päta naozaj funguje."),
@@ -16,5 +16,5 @@ $auto_reviews_en = array(
     array("name" => "Róbert R.", "text" => "Zosilnená päta a prsty, vankúš pod pätou. Poriadne pracovné ponožky."),
     array("name" => "Lukáš D.", "text" => "Nosia sa pohodlne, nezvierajú, nešmýkajú sa. Všetko, čo potrebujem."),
     array("name" => "Pavol J.", "text" => "Päť hviezdičiek. Objednal som tri páry hneď, ako som vyskúšal prvý."),
-    array("name" => "Milan G.", "text" => "Celý deň robím na betóne. Konečne ponožky, ktoré sú pohodlné až do konca zmeny."),
+    array("name" => "Milan G.", "text" => "Celý deň som v práci na nohách. Konečne ponožky, ktoré sú pohodlné až do konca zmeny."),
 );

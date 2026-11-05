@@ -13,22 +13,22 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">NÍZKY STRIH</div>
         <h2 class="wslabproof__h2">Pracovná ponožka s vankúšikom, <em>strihaná pod členok</em></h2>
-        <p class="wslabproof__p">NORIKS SlabProof je pracovná ponožka s vankúšikom na betón, strihaná pod členok. Je urobená do pracovnej obuvi, ochranných tenisiek s oceľovou špičkou a na horúce dni v krátkych nohaviciach, keď vysoká ponožka len prekáža.</p>
-        <p class="wslabproof__p">Pod chodidlom je rovnaký vankúš ako pri vyššom modeli: hustý pod pätou a prednou časťou chodidla, kde betón udiera najsilnejšie. Cez vrchnú časť chodidla vedie sieťovaná časť, päta a prsty sú zosilnené a zvýšený jazýček na päte bráni tomu, aby zadná časť topánky odierala kožu.</p>
+        <p class="wslabproof__p">NORIKS SlabProof je pracovná ponožka s vankúšikom na celý deň na nohách, strihaná pod členok. Je urobená do pracovnej obuvi, ochranných tenisiek s oceľovou špičkou a na horúce dni v krátkych nohaviciach, keď vysoká ponožka len prekáža.</p>
+        <p class="wslabproof__p">Pod chodidlom je rovnaký vankúš ako pri vyššom modeli: hustý pod pätou a prednou časťou chodidla, kde krok udiera najsilnejšie. Cez vrchnú časť chodidla vedie sieťovaná časť, päta a prsty sú zosilnené a zvýšený jazýček na päte bráni tomu, aby zadná časť topánky odierala kožu.</p>
         <p class="wslabproof__p">Ponožka je čierna a dodáva sa v troch veľkostiach: 39–42, 43–45 a 46–49. Perie sa v práčke nastudeno a suší v sušičke pri nízkej teplote, spolu s pracovným oblečením — bez ručného prania a špeciálneho pracieho prostriedku.</p>
-        <p class="wslabproof__zak">Vankúš na betón, v strihu do nízkej pracovnej obuvi.</p>
+        <p class="wslabproof__zak">Vankúš na každý pracovný deň, v strihu do nízkej pracovnej obuvi.</p>
       </div>
     </div>
   </section>
 
   <section class="wslabproof__s">
     <div class="wslabproof__v wslabproof__v--rev">
-      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'slabproof-05.webp' ); ?>" alt="Polstrovanie presne tam, kde betón udiera najsilnejšie" loading="eager" decoding="async"></div>
+      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'slabproof-05.webp' ); ?>" alt="Polstrovanie presne tam, kde krok udiera najsilnejšie" loading="eager" decoding="async"></div>
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">ZÓNOVÉ POLSTROVANIE</div>
-        <h2 class="wslabproof__h2">Polstrovanie presne tam, kde <em>betón udiera najsilnejšie</em></h2>
+        <h2 class="wslabproof__h2">Polstrovanie presne tam, kde <em>krok udiera najsilnejšie</em></h2>
         <p class="wslabproof__p">Polstrovanie sme nevymysleli my. Ale NORIKS SlabProof je ponožka, ktorej polstrovanie je urobené pre podlahu, na ktorej stojíte celý deň: husté tam, kde dopadá päta a predná časť chodidla, a tenké všade inde, aby nikdy nevyplnilo topánku a nestlačilo chodidlo.</p>
-        <p class="wslabproof__p">Husté vankúšiky sú pod pätou a pod prednou časťou chodidla, presne na miestach, kde betón pri každom kroku búši najviac. Na zvyšku chodidla je ponožka tenká, takže tlmí krok bez toho, aby topánka pôsobila tesne. Vankúšiky sú rozložené podľa miest dopadu, nie rovnomerne po celom chodidle.</p>
+        <p class="wslabproof__p">Husté vankúšiky sú pod pätou a pod prednou časťou chodidla, presne na miestach, ktoré pri každom kroku znášajú najväčší náraz. Na zvyšku chodidla je ponožka tenká, takže tlmí krok bez toho, aby topánka pôsobila tesne. Vankúšiky sú rozložené podľa miest dopadu, nie rovnomerne po celom chodidle.</p>
         <p class="wslabproof__p">Nízky strih pod členok je urobený do pracovnej obuvi, ochranných tenisiek s oceľovou špičkou a na horúce dni v krátkych nohaviciach. Pod chodidlom je rovnaké zónové polstrovanie ako pri vyššom modeli, len ponožka končí pod členkom. Jazýček na päte navyše chráni pätu pred okrajom nízkej topánky.</p>
         <p class="wslabproof__zak">Husté pod pätou a prednou časťou chodidla, tenké všade inde.</p>
       </div>
@@ -69,10 +69,10 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">NIE JE TO TOPÁNKAMI</div>
         <h2 class="wslabproof__h2">Nikdy to nebolo <em>topánkami</em></h2>
-        <p class="wslabproof__p">Ochranná obuv je urobená na to, aby chránila prsty, nie aby tlmila chodidlo. To je jej úloha. Ale betón nepovolí ani o milimeter a každý krok sa niekam musí podieť. Keď topánka už nevládze, zostáva ponožka.</p>
-        <p class="wslabproof__p">Rovnaká topánka, rovnaký betón. Jediné, čo sa zmenilo, je ponožka. Dvanásťhodinové zmeny na betóne sú ako jazda kamiónom bez tlmičov — a jediné, čo ten náraz môže zmierniť, sú zhruba dva a pol centimetra ponožky.</p>
+        <p class="wslabproof__p">Ochranná obuv je urobená na to, aby chránila prsty, nie aby tlmila chodidlo. To je jej úloha. Ale tvrdá podlaha nepovolí ani o milimeter a každý krok sa niekam musí podieť. Keď topánka už nevládze, zostáva ponožka.</p>
+        <p class="wslabproof__p">Rovnaká topánka, rovnaká práca. Jediné, čo sa zmenilo, je ponožka. Dvanásťhodinové zmeny na nohách sú ako jazda kamiónom bez tlmičov — a jediné, čo ten náraz môže zmierniť, sú zhruba dva a pol centimetra ponožky.</p>
         <p class="wslabproof__p">Preto je NORIKS SlabProof urobený tak, aby tie dva a pol centimetra boli, ako majú byť: hustý vankúš pod pätou a prednou časťou chodidla, zvyšok tenký a vzdušný.</p>
-        <p class="wslabproof__zak">Rovnaká topánka, rovnaký betón — len iná ponožka.</p>
+        <p class="wslabproof__zak">Rovnaká topánka, rovnaká práca — len iná ponožka.</p>
       </div>
     </div>
   </section>
@@ -97,10 +97,10 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">POROVNANIE</div>
         <h2 class="wslabproof__h2">Nie všetky pracovné ponožky sú <em>urobené rovnako</em></h2>
-        <p class="wslabproof__p">Lacné multibalenie, drahý pár z vlny alebo ponožka urobená na betón, na ktorom naozaj stojíte. Porovnali sme ich podľa vecí, ktoré sa v práci rátajú: žiadne diery po roku na betóne, polstrovanie tam, kde betón udiera, sviežosť v pracovnej topánke. Každá z týchto vecí sa ukáže až po niekoľkých týždňoch v práci.</p>
+        <p class="wslabproof__p">Lacné multibalenie, drahý pár z vlny alebo ponožka urobená na prácu, ktorú naozaj robíte. Porovnali sme ich podľa vecí, ktoré sa v práci rátajú: žiadne diery po roku práce, polstrovanie tam, kde krok udiera, sviežosť v pracovnej topánke. Každá z týchto vecí sa ukáže až po niekoľkých týždňoch v práci.</p>
         <p class="wslabproof__p">Pozerali sme aj na to, aby nič nesvrbelo od vlny, aby sa noha neprehrievala a aby zadná časť topánky neodierala pätu. Lacné multibalenie je lacné, a potom ho kupujete znova; vlna má vyššiu cenu; NORIKS SlabProof kúpite raz a na dlho.</p>
         <p class="wslabproof__p">Dobrá vlna vydrží, to jej uznávame. Ale v lete škriabe a v pracovnej topánke hreje. NORIKS SlabProof je urobený pre podlahu, na ktorej stojíte, nie pre horský chodník.</p>
-        <p class="wslabproof__zak">Urobená na betón, nie na hory.</p>
+        <p class="wslabproof__zak">Urobená na prácu, nie na hory.</p>
       </div>
     </div>
   </section>
@@ -111,8 +111,8 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">KTO ICH ROBÍ</div>
         <h2 class="wslabproof__h2">Nevymyslel ich predajca ponožiek, ale <em>elektrikár</em></h2>
-        <p class="wslabproof__p">Za touto ponožkou stojí elektrikár s dvadsiatimi dvoma rokmi praxe, väčšinou na veľkých stavbách: nemocnice, sklady, distribučné centrá. Betónové podlahy a dvanásťhodinové dni. Roky robil na nohách, na rovnakom betóne ako vy.</p>
-        <p class="wslabproof__p">V dvadsiatke to necítiš. V štyridsiatich piatich máš nohy hotové do obeda a za mesiac minieš celé balenie ponožiek — prederavené päty, mokré do poludnia. Ponožky boli čoraz tenšie a kratšie, po mesiaci plné dier, a nikto nerobil ponožku pre chlapa, ktorý celý deň stojí na betóne.</p>
+        <p class="wslabproof__p">Za touto ponožkou stojí elektrikár s dvadsiatimi dvoma rokmi praxe, väčšinou na veľkých stavbách: nemocnice, sklady, distribučné centrá. Tvrdé podlahy a dvanásťhodinové dni. Roky robil na nohách, presne ako vy.</p>
+        <p class="wslabproof__p">V dvadsiatke to necítiš. V štyridsiatich piatich máš nohy hotové do obeda a za mesiac minieš celé balenie ponožiek — prederavené päty, mokré do poludnia. Ponožky boli čoraz tenšie a kratšie, po mesiaci plné dier, a nikto nerobil ponožku pre chlapa, ktorý celý deň pracuje na nohách.</p>
         <p class="wslabproof__p">Tak si urobil vlastnú: zosilnenú tam, kde sa vždy pretrhne, suchú a takú, čo zostane na mieste. Rok ju nosil v práci, kým bola pripravená pre ostatných.</p>
         <p class="wslabproof__zak">Urobené majstrom, pre majstrov.</p>
       </div>
