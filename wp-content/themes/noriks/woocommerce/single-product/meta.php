@@ -585,7 +585,7 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
 
         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('fisiorest', $current_product_id) ): ?>
 
-                NORIKS FisioRest je terapeutický vankúš na krk, ktorý spája trakciu, teplo a vibračnú masáž v ergonomickej konštrukcii z pamäťovej peny. Jemne naťahuje krk pod správnym uhlom, odľahčuje krčnú chrbticu a teplom a masážou uvoľňuje svalové napätie. Bezdrôtový, nabíjateľný a obalený v mäkkom chladivom hodvábe – bezpečný aj na spánok.
+                NORIKS NeckRelax je terapeutický vankúš na krk, ktorý spája trakciu, teplo a vibračnú masáž v ergonomickej konštrukcii z pamäťovej peny. Jemne naťahuje krk pod správnym uhlom, odľahčuje krčnú chrbticu a teplom a masážou uvoľňuje svalové napätie. Bezdrôtový, nabíjateľný a obalený v mäkkom chladivom hodvábe – bezpečný aj na spánok.
 
         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('bunion', $current_product_id) ): ?>
 
@@ -957,7 +957,7 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
         'kidsnest' => array( 'noriks-kidsnest.pdf', 'NORIKS KidsNest — detský ortopedický vankúš' ),
         'kneefix' => array( 'noriks-kneefix.pdf', 'NORIKS KneeFix — ortopedická kolenná ortéza' ),
         'ortopedski-jastuk' => array( 'noriks-ergosit.pdf', 'NORIKS ErgoSit — ortopedický sedací vankúš' ),
-        'fisiorest' => array( 'noriks-fisiorest.pdf', 'NORIKS FisioRest — prístroj na krk' ),
+        'fisiorest' => array( 'noriks-fisiorest.pdf', 'NORIKS NeckRelax — prístroj na krk' ),
         'bunion' => array( 'noriks-bunion-fix.pdf', 'NORIKS Bunion Fix — korektor vybočeného palca' ),
         'ortopas' => array( 'noriks-ortopas.pdf', 'NORIKS ortopedický pás na chrbát' ),
     );

@@ -1,5 +1,5 @@
 <?php
-// Review pool for the NORIKS FisioRest neck therapy pillow.
+// Review pool for the NORIKS NeckRelax neck therapy pillow.
 // Text-only (no images), Slovak.
 $auto_reviews_en = array(
     array("name" => "Tina K.",     "text" => "Celý deň sedím za počítačom a krk ma neustále bolel. Po dvoch týždňoch večerného používania bolesť citeľne poľavila, aj držanie tela je lepšie. Konečne spím bez stuhnutosti."),
@@ -15,7 +15,7 @@ $auto_reviews_en = array(
     array("name" => "Matej Z.",    "text" => "Výborný produkt na uvoľnenie po tréningu. Krk a ramená sú menej napäté."),
     array("name" => "Eva K.",      "text" => "Používam ju každý večer po 15 minút. Spánok je hlbší, ranná stuhnutosť je preč."),
     array("name" => "Roman D.",    "text" => "Kvalitne vyrobené, bezdrôtové a praktické. Trakcia naozaj odľahčí krčnú chrbticu."),
-    array("name" => "Špela J.",    "text" => "Po dlhých hodinách za volantom mi FisioRest nádherne uvoľní krk. Už si to bez neho neviem predstaviť."),
+    array("name" => "Špela J.",    "text" => "Po dlhých hodinách za volantom mi NeckRelax nádherne uvoľní krk. Už si to bez neho neviem predstaviť."),
     array("name" => "Luka T.",     "text" => "Spočiatku nezvyčajný pocit naťahovania, ale rýchlo sa stane príjemným. Bolesti sú menšie."),
     array("name" => "Barbora N.",  "text" => "Vankúš je pohodlný a príjemne teplý. Napätie v krku sa uvoľní už po jednom sedení."),
     array("name" => "Andrej M.",   "text" => "Kombinácia tepla, masáže a trakcie naozaj funguje. Každý večer sa teším na používanie."),

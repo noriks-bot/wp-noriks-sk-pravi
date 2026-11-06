@@ -155,7 +155,7 @@ $fis_upgrades = array(
 <!-- ============ 8) 14x lacnejšie ============ -->
 <section class="fis-cheaper">
   <div class="fis-wrap fis-row2">
-    <div class="fis-row2-media"><img src="<?php echo esc_url( $fis_i.'fis-produkt-kvadrat.jpg' . $fis_ver ); ?>" alt="NORIKS FisioRest" loading="lazy"></div>
+    <div class="fis-row2-media"><img src="<?php echo esc_url( $fis_i.'fis-produkt-kvadrat.jpg' . $fis_ver ); ?>" alt="NORIKS NeckRelax" loading="lazy"></div>
     <div class="fis-row2-copy">
       <p class="fis-eyebrow">BEZPEČNÁ A UVOĽŇUJÚCA TERAPIA</p>
       <h2 class="fis-h2">14× lacnejšie ako týždenné sedenia</h2>
