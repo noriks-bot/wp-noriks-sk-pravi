@@ -87,7 +87,7 @@ $nwc_testimonials = array(
 
 <section class="fis-eng"><div class="fis-wrap fis-row2"><div class="fis-row2-copy"><h2 class="fis-h2">Elegantný darček pre milovníkov vína</h2><p>Čierna krabička NORIKS je pripravená na darovanie – na Vianoce, narodeniny alebo ako pozornosť pre hostiteľa. Stačí ju odovzdať.</p></div><div class="fis-row2-media nk-media nk-wide"><video src="<?php echo esc_url( $nwc ); ?>winecooler-gift.mp4" muted autoplay loop playsinline preload="metadata"></video></div></div></section>
 
-<section class="fis-cheaper"><div class="fis-wrap fis-row2"><div class="fis-row2-media nk-media"><img src="<?php echo esc_url( $nwc ); ?>winecooler-3-kusy.jpg" alt="NORIKS WineCooler" loading="lazy"></div><div class="fis-row2-copy"><p class="fis-eyebrow">VÝHODNÝ NÁKUP</p><h2 class="fis-h2">3 kusy: jeden pre vás, dva ako darček</h2><p>Jeden WineCooler stojí <span data-price="1">24,99 €</span>. V balení 3 ks zaplatíte <span data-price="3">54,99 €</span>, teda len <span data-price="3-unit">18,33 €</span> za kus. S 30 dňami na vrátenie peňazí.</p></div></div></section>
+<section class="fis-cheaper"><div class="fis-wrap fis-row2"><div class="fis-row2-media nk-media"><img src="<?php echo esc_url( $nwc ); ?>winecooler-3-kusy.jpg" alt="NORIKS WineCooler" loading="lazy"></div><div class="fis-row2-copy"><p class="fis-eyebrow">VÝHODNÝ NÁKUP</p><h2 class="fis-h2">3 kusy: jeden pre vás, dva ako darček</h2><p>Jeden WineCooler stojí <span data-price="1">29,99 €</span>. V balení 3 ks zaplatíte <span data-price="3">54,99 €</span>, teda len <span data-price="3-unit">18,33 €</span> za kus. S 30 dňami na vrátenie peňazí.</p></div></div></section>
 
 <!-- 5) ODLIČNO 4,8 / 5 -->
 <section class="nwc-sec nwc-tint">
