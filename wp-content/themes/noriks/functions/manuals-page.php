@@ -75,6 +75,90 @@ function noriks_manuals_list() {
             'title' => 'NORIKS KidsNest — detský ortopedický vankúš',
             'sub'   => 'Tri veľkosti, ktoré rastú s dieťaťom a podporujú správnu polohu hlavy.',
         ),
+        array(
+            'file'  => 'noriks-slim.pdf',
+            'sku'   => 'NORIKS-SLIM',
+            'title' => 'NORIKS Slim — tvarujúce nohavičky s vysokým pásom',
+            'sub'   => 'Prekrížený pás 360°, vysoký pás a bezšvový úplet na každodenné nosenie.',
+        ),
+        array(
+            'file'  => 'noriks-redrelief.pdf',
+            'sku'   => 'NORIKS-RED',
+            'title' => 'NORIKS RedRelief — terapia červeným svetlom na zápästie',
+            'sub'   => 'Dvojitá vlnová dĺžka 660 nm a 850 nm, 48 dvojitých LED diód, sedenie 15 minút.',
+        ),
+        array(
+            'file'  => 'noriks-pal.pdf',
+            'sku'   => 'NORIKS-PAL',
+            'title' => 'NORIKS Pal — vychádzková palica s druhou rukoväťou',
+            'sub'   => 'Druhá rukoväť na vstávanie, štyri nožičky, svetlo a alarm. Skladacia a výškovo nastaviteľná.',
+        ),
+        array(
+            'file'  => 'noriks-polar-cloth.pdf',
+            'sku'   => 'NORIKS-CLOATH',
+            'title' => 'Polar NORIKS Cloth XXL — handrička na čistenie iba vodou',
+            'sub'   => 'Formát 60 × 40 cm, obojstranné vyhotovenie, nasaje až 600 ml vody. Bez sprejov a bez chémie.',
+        ),
+        array(
+            'file'  => 'noriks-slabproof.pdf',
+            'sku'   => 'NORIKS-SLABPROOF',
+            'title' => 'NORIKS SlabProof — pracovné ponožky s vankúšikom',
+            'sub'   => 'Nízky strih pod členok, zónové polstrovanie pod pätou a prednou časťou chodidla.',
+        ),
+        array(
+            'file'  => 'noriks-controlpro.pdf',
+            'sku'   => 'NORIKS-CONTROLPRO',
+            'title' => 'NORIKS ControlPro — tréner svalov panvového dna',
+            'sub'   => 'Cvičenie s odporom medzi kolenami: tri série po desať stlačení denne, bez zavádzania a bez aplikácie.',
+        ),
+        array(
+            'file'  => 'noriks-tradesman.pdf',
+            'sku'   => 'NORIKS-SLABPROOF-2',
+            'title' => 'NORIKS Tradesman — pracovné ponožky s vankúšikom a oporou klenby',
+            'sub'   => 'Bambus, zónové polstrovanie, pásik pod klenbou a dvojitá manžeta na dlhé zmeny v pracovných čižmách.',
+        ),
+        array(
+            'file'  => 'noriks-bowl.pdf',
+            'sku'   => 'NORIKS-BOWL',
+            'title' => 'NORIKS Bowl — ortopedická miska pre psov so sklonom 15°',
+            'sub'   => 'Zvýšená na 11 cm a naklonená o 15° — pes je v prirodzenejšej polohe, bez ohýbania krku až k podlahe.',
+        ),
+        array(
+            'file'  => 'noriks-cloud.pdf',
+            'sku'   => 'NORIKS-CLOUD',
+            'title' => 'NORIKS Cloud — ortopedický vankúš medzi kolená',
+            'sub'   => 'Na spánok na boku: drží kolená a boky v línii, s nastaviteľným pásikom, ktorý ho udrží na mieste celú noc.',
+        ),
+        array(
+            'file'  => 'noriks-kneeheat.pdf',
+            'sku'   => 'NORIKS-KNEEHEAT',
+            'title' => 'NORIKS KneeHeat — ohrievanie, kompresia a masáž kolena',
+            'sub'   => 'Tri terapie v jednom sedení: teplo do 42 °C, vzduchová kompresia a vibrácia 60 Hz. Sedenie trvá 12 minút.',
+        ),
+        array(
+            'file'  => 'noriks-mamafit.pdf',
+            'sku'   => 'NORIKS-SLIM-2',
+            'title' => 'NORIKS MamaFit — popôrodné kompresné nohavičky 360°',
+            'sub'   => 'Vysoký pás a prekrížená kompresia 360° — opora brucha spredu, zboku aj zozadu.',
+        ),
+        array(
+            'file'  => 'noriks-snug.pdf',
+            'sku'   => 'NORIKS-SNUG',
+            'title' => 'NORIKS Snug — vankúš na celé telo v tvare písmena S',
+            'sub'   => 'Podopiera ramená, boky aj kolená naraz. Rozmery 105 × 30 cm, chladivý poťah.',
+        ),
+        array(
+            'file'  => 'noriks-hyd.pdf',
+            'sku'   => 'NORIKS-HYD',
+            'title' => 'NORIKS HYD — fľaša na vodíkovú vodu s PEM elektrolýzou',
+            'sub'   => 'Mení obyčajnú vodu na vodíkovú. Cyklus 3 alebo 10 minút, trvalý filter, sklo a nehrdzavejúca oceľ.',
+        ),
+        array(
+            'file'  => 'noriks-winecooler.pdf',
+            'sku'   => 'NORIKS-WINECOOLER',
+            'title' => 'NORIKS WineCooler — chladič vína s nalievačom',
+            'sub'   => 'Tyčinka z nehrdzavejúcej ocele, ktorá chladí fľašu zvnútra a nalieva bez kvapkania.',
+        ),
     );
 }
 

@@ -960,6 +960,20 @@ $is_mixed_bundle = has_term( array( 'sady','orto-starter','orto-majica-bokserica
         'fisiorest' => array( 'noriks-fisiorest.pdf', 'NORIKS NeckRelax — prístroj na krk' ),
         'bunion' => array( 'noriks-bunion-fix.pdf', 'NORIKS Bunion Fix — korektor vybočeného palca' ),
         'ortopas' => array( 'noriks-ortopas.pdf', 'NORIKS ortopedický pás na chrbát' ),
+        'slim' => array( 'noriks-slim.pdf', 'NORIKS Slim — tvarujúce nohavičky s vysokým pásom' ),
+        'red' => array( 'noriks-redrelief.pdf', 'NORIKS RedRelief — terapia červeným svetlom na zápästie' ),
+        'pal' => array( 'noriks-pal.pdf', 'NORIKS Pal — vychádzková palica s druhou rukoväťou' ),
+        'cloath' => array( 'noriks-polar-cloth.pdf', 'Polar NORIKS Cloth XXL — handrička na čistenie iba vodou' ),
+        'slabproof' => array( 'noriks-slabproof.pdf', 'NORIKS SlabProof — pracovné ponožky s vankúšikom' ),
+        'controlpro' => array( 'noriks-controlpro.pdf', 'NORIKS ControlPro — tréner svalov panvového dna' ),
+        'tradesman' => array( 'noriks-tradesman.pdf', 'NORIKS Tradesman — pracovné ponožky s vankúšikom a oporou klenby' ),
+        'bowl' => array( 'noriks-bowl.pdf', 'NORIKS Bowl — ortopedická miska pre psov so sklonom 15°' ),
+        'cloud' => array( 'noriks-cloud.pdf', 'NORIKS Cloud — ortopedický vankúš medzi kolená' ),
+        'kneeheat' => array( 'noriks-kneeheat.pdf', 'NORIKS KneeHeat — ohrievanie, kompresia a masáž kolena' ),
+        'mamafit' => array( 'noriks-mamafit.pdf', 'NORIKS MamaFit — popôrodné kompresné nohavičky 360°' ),
+        'snug' => array( 'noriks-snug.pdf', 'NORIKS Snug — vankúš na celé telo v tvare písmena S' ),
+        'hyd' => array( 'noriks-hyd.pdf', 'NORIKS HYD — fľaša na vodíkovú vodu s PEM elektrolýzou' ),
+        'winecooler' => array( 'noriks-winecooler.pdf', 'NORIKS WineCooler — chladič vína s nalievačom' ),
     );
     $noriks_manual = null;
     if ( function_exists('noriks_is_type') ) {
