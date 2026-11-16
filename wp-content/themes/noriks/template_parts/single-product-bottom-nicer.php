@@ -38,6 +38,8 @@ if ( function_exists( 'noriks_is_type' ) ) {
         get_template_part( 'template_parts/product-bottom/why-kompwom' );
     } elseif ( noriks_is_type( 'bowl' ) ) {
         get_template_part( 'template_parts/product-bottom/why-bowl' );
+    } elseif ( noriks_is_type( 'mamabelt' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-mamabelt' );
     } elseif ( noriks_is_type( 'winecooler' ) ) {
         get_template_part( 'template_parts/product-bottom/why-winecooler' );
     } elseif ( noriks_is_type( 'pal' ) ) {
@@ -502,6 +504,7 @@ if (  has_term( array( 'tricka',  'orto-tricka', 'orto-majica-darila' ), 'produc
   if ( function_exists('noriks_is_type') && noriks_is_type('kompwom') ) { $rv_fallback_title = 'NORIKS FIT Woman tvarujúce tričko'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('pal') ) { $rv_fallback_title = 'NORIKS Pal vychádzková palica'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('bowl') ) { $rv_fallback_title = 'NORIKS Bowl ortopedická miska pre psa'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('mamabelt') ) { $rv_fallback_title = 'NORIKS MamaBelt | Bezpečnostný pás pre tehotné do auta'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('winecooler') ) { $rv_fallback_title = 'NORIKS WineCooler chladič vína'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('red') ) { $rv_fallback_title = 'NORIKS RedRelief terapia červeným svetlom'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('kneeheat') ) { $rv_fallback_title = 'NORIKS KneeHeat ohrievač a masážny prístroj na koleno'; }
@@ -516,6 +519,8 @@ if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) {
   include get_stylesheet_directory() . '/auto_reviews/SK_kompwom.php';
 } elseif ( function_exists('noriks_is_type') && noriks_is_type('bowl') ) {
   include get_stylesheet_directory() . '/auto_reviews/SK_bowl.php';
+} elseif ( function_exists('noriks_is_type') && noriks_is_type('mamabelt') ) {
+  include get_stylesheet_directory() . '/auto_reviews/SK_mamabelt.php';
 } elseif ( function_exists('noriks_is_type') && noriks_is_type('winecooler') ) {
   include get_stylesheet_directory() . '/auto_reviews/SK_winecooler.php';
 } elseif ( function_exists('noriks_is_type') && noriks_is_type('pal') ) {
@@ -955,7 +960,7 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
         noriks_is_type('cloud') ||
         noriks_is_type('snug') ||
         noriks_is_type('kompwom') ||
-        ( noriks_is_type('bowl') || noriks_is_type('winecooler') ) ||
+        ( noriks_is_type('bowl') || noriks_is_type('winecooler') || noriks_is_type('mamabelt') ) ||
         noriks_is_type('pal') ||
         noriks_is_type('red') ||
         noriks_is_type('kneeheat') ||
@@ -976,7 +981,7 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
     // Izdelki z lastnim imenom v karticah mnenj ne smejo dobiti nakljucnega izdelka iz kataloga.
   $rv_own_name = ( function_exists('noriks_is_type') && (
       noriks_is_type('cloud') || noriks_is_type('cloath') || noriks_is_type('hyd') || noriks_is_type('snug')
-   || noriks_is_type('kompwom') || ( noriks_is_type('bowl') || noriks_is_type('winecooler') ) || noriks_is_type('pal') || noriks_is_type('red') || noriks_is_type('kneeheat') || noriks_is_type('slabproof') || noriks_is_type('tradesman') || noriks_is_type('slim')
+   || noriks_is_type('kompwom') || ( noriks_is_type('bowl') || noriks_is_type('winecooler') || noriks_is_type('mamabelt') ) || noriks_is_type('pal') || noriks_is_type('red') || noriks_is_type('kneeheat') || noriks_is_type('slabproof') || noriks_is_type('tradesman') || noriks_is_type('slim')
    || noriks_is_type('controlpro') || noriks_is_type('kidsnest') || noriks_is_type('ortopedski-jastuk')
    || noriks_is_type('bunion') || noriks_is_type('fisiorest') || noriks_is_type('ortopas')
    || noriks_is_type('norikshers') || noriks_is_type('kompresijske-nogavice') ) );
