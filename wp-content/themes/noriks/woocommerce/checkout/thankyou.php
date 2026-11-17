@@ -951,7 +951,7 @@ body.woocommerce-order-received .woocommerce {
                     <div class="ty-row"><span class="ty-row-label">Adresa</span><span class="ty-row-value"><?php echo esc_html( $order->get_billing_address_1() . ' ' . $order->get_billing_address_2() ); ?></span></div>
                     <div class="ty-row"><span class="ty-row-label">Mesto</span><span class="ty-row-value"><?php echo esc_html( $order->get_billing_postcode() . ' ' . $order->get_billing_city() ); ?></span></div>
                     <?php if ( $order->get_billing_phone() ) : ?>
-                    <div class="ty-row"><span class="ty-row-label">Telefon</span><span class="ty-row-value"><?php echo esc_html( $order->get_billing_phone() ); ?></span></div>
+                    <div class="ty-row"><span class="ty-row-label">Telefón</span><span class="ty-row-value"><?php echo esc_html( $order->get_billing_phone() ); ?></span></div>
                     <?php endif; ?>
 
                 </div>
