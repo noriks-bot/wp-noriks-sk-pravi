@@ -213,17 +213,15 @@ $cd_cases = array(
 
 <!-- ============ 8) Standardi ============ -->
 <section class="ncd-sec ncd-dark">
-  <div class="ncd-wrap ncd-row2">
+  <div class="ncd-wrap">
     <div class="ncd-copy">
       <h2 class="ncd-h2">Vyrobené podľa prísnych noriem</h2>
       <p>Materiály sú testované na škodlivé látky a pena je certifikovaná. Dizajn vznikol podľa švajčiarskych noriem kvality.</p>
       <ul class="ncd-check">
-        <li><strong>OEKO-TEX® STANDARD 100</strong> — bez škodlivých látok</li>
         <li><strong>CertiPUR-EU</strong> — certifikovaná pamäťová pena</li>
         <li><strong>Navrhnuté vo Švajčiarsku</strong>, vyrobené podľa európskych noriem</li>
       </ul>
     </div>
-    <div class="ncd-media"><?php echo $cd_img('cld-certifikati.webp','OEKO-TEX i CertiPUR-EU certifikati'); ?></div>
   </div>
 </section>
 

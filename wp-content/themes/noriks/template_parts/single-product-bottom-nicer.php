@@ -1461,7 +1461,7 @@ $jastuk_faq = array(
   array( 'questioon' => 'Ako NORIKS ErgoSit zmierňuje bolesť pri sedení?', 'answer' => 'ErgoSit má výrez pre kostrč, ktorý odstraňuje priamy tlak na kostrčovú kosť a sedací nerv, zatiaľ čo anatomický tvar z pamäťovej peny s vysokou hustotou rovnomerne rozkladá váhu na boky a stehná. Tým sa odľahčujú citlivé body a podporuje zdravé, vzpriamené držanie tela.' ),
   array( 'questioon' => 'Kde všade môžem vankúš používať?', 'answer' => 'Kdekoľvek, kde sedíte — v aute, na kancelárskej stoličke, jedálenskej stoličke, invalidnom vozíku alebo doma. Stabilná protišmyková základňa ho drží na mieste, takže pohodlie ide s vami celý deň.' ),
   array( 'questioon' => 'Sploští sa pena časom?', 'answer' => 'Nie. ErgoSit používa pamäťovú penu s vysokou hustotou, ktorá si udrží tvar a pevnosť aj po dlhodobom každodennom používaní, na rozdiel od lacných vankúšov, ktoré sa rýchlo sploštia.' ),
-  array( 'questioon' => 'Dá sa poťah prať?', 'answer' => 'Áno. Poťah sa dá stiahnuť a prať v práčke, takže vankúš zostáva svieži a čistý. Tkanina je priedušná, hypoalergénna a certifikovaná OEKO-TEX®.' ),
+  array( 'questioon' => 'Dá sa poťah prať?', 'answer' => 'Áno. Poťah sa dá stiahnuť a prať v práčke, takže vankúš zostáva svieži a čistý. Tkanina je priedušná a hypoalergénna.' ),
   array( 'questioon' => 'Sadne na moju stoličku alebo sedadlo?', 'answer' => 'ErgoSit má univerzálny tvar a sadne na väčšinu autosedadiel, kancelárskych a kuchynských stoličiek aj invalidných vozíkov. Nemá veľkosti — jeden model sadne každému.' ),
   array( 'questioon' => 'Za aký čas pocítim rozdiel?', 'answer' => 'Väčšina používateľov pocíti menší tlak na kostrč a pohodlnejšie sedenie už od prvého dňa. Lepšie držanie tela a menej bolestí chrbta sa pri pravidelnom používaní ďalej stupňujú.' ),
   array( 'questioon' => 'Existuje záruka vrátenia peňazí?', 'answer' => 'Áno, každý NORIKS ErgoSit prichádza so 60-dňovou zárukou pohodlia. Ak nepocítite menej bolesti a viac pohodlia, kontaktujte nás a vyriešime to.' ),
@@ -1478,7 +1478,7 @@ $kompmajice_faq = array(
 
 // NORIKS LEAK BOXERS (inkontinenčné boxerky) — FAQ o produkte (preklad, NORIKS).
 $leakboxers_faq = array(
-  array( 'questioon' => 'Prečo si NORIKS vybralo viac ako 123 000 mužov?', 'answer' => 'NORIKS sú najabsorpčnejšie prateľné boxerky pre mužský únik moču: udržia až 300 ml, majú certifikát Oeko-Tex® a neobsahujú škodlivé látky, sú prateľné a opakovane použiteľné (ekologická alternatíva jednorazových vložiek), navrhnuté pre celodenné pohodlie a sebavedomie. Až 87 % zákazníkov si po prvom nákupe objedná znova.' ),
+  array( 'questioon' => 'Prečo si NORIKS vybralo viac ako 123 000 mužov?', 'answer' => 'NORIKS sú najabsorpčnejšie prateľné boxerky pre mužský únik moču: udržia až 300 ml, neobsahujú škodlivé látky, sú prateľné a opakovane použiteľné (ekologická alternatíva jednorazových vložiek), navrhnuté pre celodenné pohodlie a sebavedomie. Až 87 % zákazníkov si po prvom nákupe objedná znova.' ),
   array( 'questioon' => 'Koľko absorbujú?', 'answer' => 'Až 300 ml — takmer 3-krát viac ako väčšina produktov na trhu. Vďaka 7-vrstvovému jadru PureDry™ sa tekutina okamžite absorbuje a uzamkne hlboko vo vnútri, takže pokožka zostáva suchá a vonkajšia vrstva je vodoodpudivá.' ),
   array( 'questioon' => 'Vidno ich pod oblečením?', 'answer' => 'Nie. Boxerky NORIKS sú tenké, diskrétne a flexibilné — vyzerajú a pôsobia ako bežná spodná bielizeň, bez objemnosti a bez pocitu „plienky“.' ),
   array( 'questioon' => 'Ako sa perú?', 'answer' => 'Perte na 30 – 40 °C, bez aviváže a bielidla, sušte na vzduchu. Absorpčnú schopnosť si udržia počas stoviek praní.' ),
@@ -1521,7 +1521,7 @@ $kneefix_faq = array(
 $kidsnest_faq = array(
   array( 'questioon' => 'Ako rýchlo uvidím, že dýchanie ústami prestáva?', 'answer' => 'Väčšina rodičov si všimne tichšie dýchanie a menej prebúdzaní s otvorenými ústami počas prvých 5 – 7 nocí. Do 14. noci sa u väčšiny detí chrápanie upokojí a pery zostávajú zatvorené. Plný rozdiel — viditeľne lepšiu polohu a pokojnejší spánok — rodičia najčastejšie opisujú okolo 21. až 30. dňa. Používajte ho každú noc.' ),
   array( 'questioon' => 'Pre aký vek je KidsNest určený?', 'answer' => 'KidsNest prichádza v troch veľkostiach: 1 – 3, 3 – 9 a 9 – 14 rokov. Najdôležitejšie okno je medzi 3. a 9. rokom, keď sa podnebie a čeľusť vyvíjajú najintenzívnejšie — no každý vek má svoju veľkosť a svoj prínos.' ),
-  array( 'questioon' => 'Je bezpečný? Čo je vo vnútri?', 'answer' => 'KidsNest je vyrobený z hypoalergénnej pamäťovej peny s certifikátom OEKO-TEX® — bez formaldehydu, ťažkých kovov a BPA. Je odolný voči roztočom a priedušný a poťah sa dá stiahnuť a prať v práčke.' ),
+  array( 'questioon' => 'Je bezpečný? Čo je vo vnútri?', 'answer' => 'KidsNest je vyrobený z hypoalergénnej pamäťovej peny — bez formaldehydu, ťažkých kovov a BPA. Je odolný voči roztočom a priedušný a poťah sa dá stiahnuť a prať v práčke.' ),
   array( 'questioon' => 'Bude ho moje dieťa naozaj používať?', 'answer' => 'Áno. Ergonomický tvar pôsobí ako opora, nie ako niečo zvláštne — väčšina detí si zvykne za 1 – 2 noci. Rodičia často hlásia, že deti po prvom týždni nechcú spať bez neho. 3-zónová štruktúra prirodzene prijíma hlavu — neexistuje „správny spôsob“, žiadny boj pred spaním.' ),
   array( 'questioon' => 'Funguje, ak moje dieťa už dýcha ústami?', 'answer' => 'Áno — presne pre takéto deti je navrhnutý. 3-zónová štruktúra pomáha zabrániť zakláňaniu hlavy dozadu, kvôli ktorému sa ústa v spánku otvárajú. U väčšiny detí sa počas 7 – 14 nocí pery prirodzene zatvárajú a dýchanie nosom sa vracia.' ),
   array( 'questioon' => 'Čo ak môjmu dieťaťu nepomôže?', 'answer' => 'Nechajte dieťa spať na KidsNest 30 nocí. Ak nevidíte rozdiel — menej dýchania ústami, tichšie noci, pokojnejší spánok — ozvite sa nám a vrátime vám peniaze. Bez otázok a bez drobných písmen.' ),
@@ -1641,7 +1641,7 @@ $cloud_faq = array(
   ),
   array(
     'questioon' => 'Z čoho je vankúš vyrobený?',
-    'answer'    => 'Jadro je z pamäťovej peny medicínskej kvality s perforáciami, ktoré zaisťujú prúdenie vzduchu. Poťah je z priedušnej tkaniny, dá sa zložiť a vyprať. Materiály sú certifikované podľa OEKO-TEX® STANDARD 100 a CertiPUR-EU.',
+    'answer'    => 'Jadro je z pamäťovej peny medicínskej kvality s perforáciami, ktoré zaisťujú prúdenie vzduchu. Poťah je z priedušnej tkaniny, dá sa zložiť a vyprať. Pena je certifikovaná podľa CertiPUR-EU.',
   ),
   array(
     'questioon' => 'Je príliš tvrdý alebo príliš mäkký?',
