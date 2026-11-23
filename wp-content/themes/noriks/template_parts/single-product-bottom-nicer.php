@@ -499,7 +499,7 @@ if (  has_term( array( 'tricka',  'orto-tricka', 'orto-majica-darila' ), 'produc
   if ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ) { $rv_fallback_title = 'NORIKS ControlPro tréner panvového dna'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('hyd') ) { $rv_fallback_title = 'NORIKS HYD'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('cloud') ) { $rv_fallback_title = 'NORIKS Cloud'; }
-  if ( function_exists('noriks_is_type') && noriks_is_type('cloath') ) { $rv_fallback_title = 'Polar NORIKS Cloth XXL'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('cloath') ) { $rv_fallback_title = 'NORIKS DuoDry'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) { $rv_fallback_title = 'NORIKS Snug vankúš na celé telo'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('kompwom') ) { $rv_fallback_title = 'NORIKS FIT Woman tvarujúce tričko'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('pal') ) { $rv_fallback_title = 'NORIKS Pal vychádzková palica'; }
@@ -1621,7 +1621,7 @@ $cloath_faq = array(
   ),
   array(
     'questioon' => 'Je vhodná ako darček?',
-    'answer'    => 'Áno — balenia 3+3 a 8+4 patria medzi najčastejšie darčeky k nasťahovaniu a na sviatky. Handrička prichádza pekne zložená a pripravená na darovanie.',
+    'answer'    => 'Áno — balíky 4 a 6 handričiek sú častým darčekom k nasťahovaniu a na sviatky. Handričky prichádzajú pekne zložené a pripravené na darovanie.',
   ),
 );
 
